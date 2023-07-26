@@ -1,5 +1,3 @@
-
-
-export const setLoading = () => (dispatch) =>{
+export const setLoading = () => (dispatch) => {
   //some action
-}
+};

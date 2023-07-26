@@ -1,5 +1,42 @@
-*, *::after, *::before {
+@import "fonts.css";
+
+:root {
+  --font-family: 'SF Pro Display', 'Roboto', sans-serif;
+  --color-bg: #040c18;
+  --color-footer: #031b34;
+  --color-blog: #042c54;
+  --color-text: #81afdd;
+  --color-subtext: #ff8a71;
+}
+
+*,
+*::after,
+*::before {
   margin: 0;
   padding: 0;
+  border: 0;
+  outline: 0;
   box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+
+body {
+  font-family: var(--font-family);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-weight: 500;
+}
+
+.container {
+  max-width: 70%;
+  margin: auto;
 }

@@ -1,6 +1,5 @@
-import axios from "axios";
-import {APP_API} from "../config/index.js";
-
+import axios from 'axios';
+import { APP_API } from '@config';
 
 export function api() {
   axios.create({
