@@ -1,9 +1,13 @@
-import styles from './style.module.css';
-import { useTranslation } from 'react-i18next';
+import Hero from '@pages/Home/components/Hero/index.jsx';
+import B2bSolution from '@pages/Home/components/B2bSolution/index.jsx';
 
 const Home = () => {
-  const { t } = useTranslation();
-  return <h1 className={styles.title}>{t('home.title')}</h1>;
+  return (
+    <>
+      <Hero />
+      <B2bSolution />
+    </>
+  );
 };
 
 export default Home;
