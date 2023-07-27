@@ -32,14 +32,13 @@
   display: flex;
   width: 305px;
   background-color: #fff;
-  border-top-right-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   align-items: center;
 }
 .heroCategory_search {
   max-width: 240px;
   padding: 20px 50px 20px 14px;
-
+  border-radius: 8px;
   border-left: 1px solid #E1E1E1;
 }
 .heroSearch_button {

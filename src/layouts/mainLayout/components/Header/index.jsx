@@ -21,8 +21,8 @@ const Header = () => {
             <option value='Ru'>Uz</option>
           </select>
         </div>
-        <button className={styles.headerFisrtButton}>Войти</button>
-        <button className={styles.headerSecondButton}>+ Добавить компанию</button>
+        {/* <button className={styles.headerFisrtButton}>Войти</button> */}
+        <button className={styles.headerSecondButton}>+ Добавить свою компанию</button>
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import styles from './styles.module.css'
+import CountrySelect from './CountrySelect'
 
 const HeroForm = () => {
   return (
@@ -10,7 +11,7 @@ const HeroForm = () => {
         <p className={styles.formInput_name}>Ваше имя</p>
         <input type="text" placeholder='Ваше имя' className={styles.formClient_name} />
         <p className={styles.formInput_name}>Страна</p>
-        {/*<CountrySelect />*/}
+        <CountrySelect />
         <p className={styles.formInput_name}>Номер телефона</p>
         <input type="text" placeholder='(+998)' className={styles.formClient_name} />
         <p className={styles.formInput_name}>Название компании</p>
