@@ -2,6 +2,7 @@ import Navbar from '../Navbar';
 import styles from './styles.module.css';
 import { ReactComponent as Logo } from '@assets/svg/logo.svg';
 import { ReactComponent as Globe } from '@assets/svg/globe-alt.svg';
+import { ReactComponent as Menu } from '@assets/svg/menu.svg';
 
 const Header = () => {
   return (
@@ -10,7 +11,9 @@ const Header = () => {
         <a href='/'>
           <Logo />
         </a>
-        <Navbar />
+        <nav className={styles.navbar}>
+          <Navbar />
+        </nav>
       </div>
       <div className={styles.headerRight}>
         <div className={styles.languageChange}>
@@ -23,6 +26,9 @@ const Header = () => {
         </div>
         {/* <button className={styles.headerFisrtButton}>Войти</button> */}
         <button className={styles.headerSecondButton}>+ Добавить свою компанию</button>
+        <button className={styles.menuBtn}>
+          <Menu />
+        </button>
       </div>
     </div>
   );
