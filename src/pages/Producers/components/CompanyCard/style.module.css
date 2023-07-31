@@ -1,0 +1,80 @@
+.companyContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 21px;
+    margin-bottom: 56px;
+}
+.companyTitle {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.companyName {
+    margin-left: 15px;
+}
+.companyProduct {
+    overflow: hidden;
+    color: #121212;
+    text-overflow: ellipsis;
+    font-family: SF Pro Display;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.3;
+}
+.companyCard {
+    width: 397px;
+    border-radius: 4px;
+    background: #FFF;
+    box-shadow: 24px 0px 74px 0px rgba(137, 137, 161, 0.17);
+    padding: 36px 37px 43px 24px;
+}
+.companyAddress {
+    display: flex;
+    max-width: 241px;
+    align-items: start; 
+    margin-bottom: 24px;
+}
+.companyAddress img {
+    margin-right: 10px; 
+}
+.companyAddress_text {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.companyInfo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.companyInfo img {
+    margin-right: 6px;
+}
+.companyRating {
+    color: #EF7F00;
+}
+.companyBox {
+    margin-bottom: 65px;
+}
+.moreInfo {
+    display: flex;
+    align-items: center;
+}
+.moreInfo:hover {
+    cursor: pointer;
+}
+.moreInfo a {
+    color: #1876F2;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    margin-right: 10px;
+}
+
