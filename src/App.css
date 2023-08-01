@@ -39,4 +39,5 @@ h5 {
 .container {
   max-width: 65%;
   margin: auto;
+  overflow-x: hidden;
 }

@@ -1,0 +1,106 @@
+.contactContainer {
+  padding-top: 200px;
+  padding-bottom: 165px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contactTitle {
+  color: #121212;
+  font-size: 32px;
+  font-weight: 500;
+  max-width: 505px;
+  margin-bottom: 36px;
+}
+
+.contactLocation {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 440px;
+  margin-bottom: 25px;
+}
+
+.contactPhone {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+  color: #000;
+}
+
+.contactSocial {
+  display: flex;
+  justify-content: space-between;
+  max-width: 173px;
+  margin-bottom: 10px;
+}
+
+.contactMap {
+  border-radius: 767px;
+  margin-left: -91px;
+  width: 767px;
+}
+
+.contactDetails_box {
+  border-right: 1px solid #DDD;
+  max-width: 676px;
+}
+
+.contactForm {
+  padding-right: 100px;
+  margin-left: 20px;
+}
+
+.contactForm_title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  margin-bottom: 42px;
+  max-width: 446px;
+}
+
+.contactForm_name_input {
+  width: 400px;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 24px;
+  /* opacity: 0.2; */
+}
+
+.contactForm_textarea {
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  width: 400px;
+  padding: 19px 20px 20px 13px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  max-height: 206px;
+  margin-bottom: 24px;
+}
+
+.contactForm_p {
+  color: #000;
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  margin-left: 13px;
+}
+
+.contactForm_btn {
+  border-radius: 6px;
+  background: #1876F2;
+  padding: 20px 42px;
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  display: block;
+}

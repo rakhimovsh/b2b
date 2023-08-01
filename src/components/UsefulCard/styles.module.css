@@ -1,0 +1,44 @@
+@media screen and (max-width: 1536px) {
+  .usefulCard {
+    width: 318px;
+  }
+}
+.usefulImage {
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 1536px) {
+  .usefulImage {
+    max-width: 318px;
+  }
+}
+.usefulDate {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  font-weight: 400;
+  margin-bottom: 9px;
+}
+.usefulCard_name {
+  color: #000;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 12px;
+  max-width: 380px;
+}
+.usefulCard_text {
+  overflow: hidden;
+  color: #000;
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-weight: 400;
+  opacity: 0.6;
+  margin-bottom: 20px;
+}
+.usefulCard_more {
+  color: #1876F2;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 56px;
+}

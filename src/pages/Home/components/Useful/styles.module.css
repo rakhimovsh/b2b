@@ -1,0 +1,30 @@
+.usefulBox {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 1500px) {
+  .usefulBox {
+    width: 318px;
+  }
+}
+.usefulTitle {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 47px;
+}
+.usefulButton {
+  padding: 20px 36px;
+  border-radius: 6px;
+  background: #F5F5F5;
+  color: #121212;
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 64px;
+}

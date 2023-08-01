@@ -1,0 +1,36 @@
+.layoutBg {
+  background-color: #F6F6FA;
+}
+
+.newProductContainer {
+  padding-top: 102px;
+  padding-bottom: 122px;
+
+}
+
+.newProduct_title {
+  color: #000;
+  font-family: var(--font-family);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 32px;
+}
+
+.newProductBox {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.newProduct_button {
+  padding: 20px 36px;
+  margin-top: 60px;
+  background-color: #FFFFFF;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 20px;
+}

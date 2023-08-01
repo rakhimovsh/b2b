@@ -1,0 +1,58 @@
+.productCategoryContainer {
+  padding-top: 117px;
+}
+.productCategory_title {
+  width: 511px;
+  color: #000;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 59px;
+}
+.productImage_bg {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-image: url(@assets/images/threadRound.png);
+  border-radius: 50%;
+  margin-bottom: 18px;
+}
+.productImage_bg img {
+  position: absolute;
+  bottom: 0;
+}
+.productImage2_bg {
+  width: 70px;
+  height: 70px;
+  background-image: url(@assets/images/tshirtsmallRound.png);
+  border-radius: 50%;
+  margin-bottom: 18px;
+
+}
+.productCategory_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.productCategory_name {
+  color: #121212;
+  font-family: var(--font-family);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 23px;
+  width: 250px;
+}
+.productCategory_text {
+  color: #000;
+  font-family: var(--font-family);
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 12px;
+}
+.productCategory_card {
+  margin-right: 76px;
+  margin-bottom: 81px;
+}
