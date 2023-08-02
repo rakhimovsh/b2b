@@ -6,7 +6,7 @@ const Navbar = () => {
       <a href='/producers'>Производители</a>
       <a href='#marketing'>Маркетинг</a>
       <a href='#about'>О Компании</a>
-      <a href='#contact'>Свяжитесь С Нами</a>
+      <a href='/product'>Свяжитесь С Нами</a>
     </div>
   );
 };

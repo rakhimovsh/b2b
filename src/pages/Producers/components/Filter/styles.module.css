@@ -87,3 +87,6 @@
     line-height: 20px;
     padding: 20px 30px;
 }
+.filterCheckbox {
+    max-width: 189px;
+}

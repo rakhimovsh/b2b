@@ -1,0 +1,24 @@
+.sortBox {
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    padding: 35px 56px 34px 20px;
+    max-width: 292px;
+}
+.sortTitle {
+    color: #1F1914;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 31px;
+}
+.sortName {
+    color: #0F2E4A;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 18px;
+}

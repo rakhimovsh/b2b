@@ -9,9 +9,12 @@ const Filter = () => {
                 <img className={styles.searchIcon} src={SearchIcon} alt="" />
             </div>
             <div className={styles.companyMajor_box}>
-                <select className={styles.companyMajor} placeholder='Кеп'>
+                <select className={styles.companyMajor}>
                     <option value="Кепка">Направление компании</option>
-                    <option value="Кепка">Кепка</option>
+                    <input type="checkbox"  id="product" name='product'/>
+                    <option value="Кепка" >
+                           кепка
+                    </option>
                     <option value="Кепка">Кепка</option>
                 </select>
             </div>
