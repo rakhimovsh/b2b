@@ -1,0 +1,20 @@
+.notFoundContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+
+.notFoundTitle {
+  font-size: 64px;
+  font-weight: 500;
+}
+
+
+@media screen and (max-width: 600px) {
+  .notFoundContainer {
+    flex-wrap: wrap;
+    gap: 100px;
+    justify-content: center;
+  }
+}

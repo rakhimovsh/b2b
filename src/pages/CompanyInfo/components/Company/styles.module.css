@@ -1,0 +1,88 @@
+.company {
+  display: flex;
+  gap: 15px;
+  padding: 36px 24px;
+  border-radius: 4px;
+  border: 1px solid #E1E1E1;
+}
+
+.companyImg {
+  border-radius: 50%;
+}
+.companyInfoMobile{
+  display: none;
+}
+
+.companyTitle {
+  margin-top: 15px;
+  overflow: hidden;
+  color: #000;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.companyDesc {
+  margin-bottom: 7px;
+  font-size: 13px;
+  font-weight: 400;
+  opacity: 0.3;
+}
+
+.companyGrade {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 15px;
+  color: #EF7F00;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.companyStarIcon path {
+  stroke: #EF7F00;
+}
+
+.socialNetworks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.socialNetworks li {
+  cursor: pointer;
+}
+
+.companyDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.companyDetails li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #121212;
+  font-size: 16px;
+}
+
+.companyDetails li svg {
+  flex-shrink: 0;
+}
+
+@media screen and (max-width: 700px) {
+  .company {
+    flex-direction: column;
+  }
+  .companyTop{
+    display: flex;
+    gap: 15px;
+  }
+  .companyInfoMobile {
+    display: block;
+  }
+  .companyInfo{
+    display: none;
+  }
+}
