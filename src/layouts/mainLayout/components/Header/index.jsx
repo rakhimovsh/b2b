@@ -21,7 +21,7 @@ const Header = () => {
           <select name='' id='lang-change' className={styles.languageChange_select}>
             <option value='En'>En</option>
             <option value='Ru'>Ru</option>
-            <option value='Ru'>Uz</option>
+            <option value='Ru'>Uz</option>  
           </select>
         </div>
         {/* <button className={styles.headerFisrtButton}>Войти</button> */}

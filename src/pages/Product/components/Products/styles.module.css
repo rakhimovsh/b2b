@@ -17,6 +17,6 @@
 .productsContainer {
     display: flex;
     flex-wrap: wrap;
-    margin-left: 24px;
-    gap: 24px;
+    margin-left: 20px;
+    gap: 15px;
 }
