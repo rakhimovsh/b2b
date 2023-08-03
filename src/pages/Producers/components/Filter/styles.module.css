@@ -1,0 +1,92 @@
+.filterContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    padding-top: 32px;
+}
+.searchInput_box {
+    position: relative;
+    width: 247px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    padding: 21px 21px 20px 18px; 
+}
+.companyRating_box {
+    position: relative;
+    width: 217px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    padding: 21px 25px 20px 18px; 
+}
+.companyMajor_box {
+    position: relative;
+    width: 247px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    padding: 21px 21px 20px 18px; 
+}
+.companyPlace_box {
+    position: relative;
+    width: 257px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    padding: 21px 21px 20px 18px; 
+}
+.searchInput {
+    max-width: 247px;
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    opacity: 0.3;
+}
+.searchIcon {
+    position: absolute;
+    right: 26px;
+    top: 20px;
+}
+.companyMajor {
+    max-width: 247px;
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 14px;
+}
+.companyRating {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 19px;
+}
+.companyPlace {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-right: 10px;
+}
+.filterButton {
+    width: 225px;;
+    border-radius: 6px;
+    background: #1876F2;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    padding: 20px 30px;
+}
+.filterCheckbox {
+    max-width: 189px;
+}

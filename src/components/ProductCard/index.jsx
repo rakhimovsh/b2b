@@ -4,9 +4,9 @@ import Product1Img from '@assets/images/product1.png';
 import Product2Img from '@assets/images/product2.png';
 import Product3Img from '@assets/images/product3.png';
 import Product4Img from '@assets/images/product4.png';
-import { ReactComponent as StarSVG } from '@assets/svg/StarSVG.svg';
 import { ReactComponent as ArrowIconLeft } from '@assets/svg/arrowIcon-left.svg';
 import { ReactComponent as ArrowIconRight } from '@assets/svg/arrowIcon-right.svg';
+import RatingStars from '../RatingStars';
 
 const productData = [
   {
@@ -39,23 +39,7 @@ const ProductCard = () => {
             <a href='#product' className={styles.productCard_category}>
               Футболки
             </a>
-            <div>
-              <button className={styles.productCard_star}>
-                <StarSVG />
-              </button>
-              <button className={styles.productCard_star}>
-                <StarSVG />
-              </button>
-              <button className={styles.productCard_star}>
-                <StarSVG />
-              </button>
-              <button className={styles.productCard_star}>
-                <StarSVG />
-              </button>
-              <button className={styles.productCard_star}>
-                <StarSVG />
-              </button>
-            </div>
+            <RatingStars />
           </div>
         );
       })}

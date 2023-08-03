@@ -53,19 +53,6 @@
   line-height: normal;
   margin-bottom: 14px;
 }
-
-.productCard_star {
-  margin-top: 14px;
-  background: none;
-  transition: 1s;
-}
-
-.productCard_star:hover {
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
-}
-
 .arrowIcon_left {
   position: absolute;
   top: 155px;

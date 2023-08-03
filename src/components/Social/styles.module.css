@@ -1,0 +1,5 @@
+.socialBox {
+    max-width: 152px;
+    display: flex;
+    justify-content: space-between;
+}

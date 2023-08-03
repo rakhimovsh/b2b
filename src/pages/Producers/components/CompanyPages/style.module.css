@@ -1,0 +1,35 @@
+.pagesButtons {
+    display: flex;
+    margin-bottom: 150px;
+    margin-left: 10px;
+}
+.pagesBtn1 {
+    background: #1876F2;
+    align-items: center;
+    text-align: center;
+    padding: 11px 16px 10px 16px;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.pagesBtn2 {
+    border: 1px solid #E1E1E1;
+    background: #FFF;
+    padding: 10px 14px 9px 14px;
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal; 
+}
+.pagesbtn_next {
+    display: flex;
+    border: 1px solid #E1E1E1;
+    background: #FFF;
+    padding: 9px 15px 10px 15px;
+    align-items: center;
+}

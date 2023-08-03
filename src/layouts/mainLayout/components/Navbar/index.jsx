@@ -3,10 +3,10 @@ import styles from './styles.module.css';
 const Navbar = () => {
   return (
     <div className={styles.navbar}>
-      <a href='#producers'>Производители</a>
+      <a href='/producers'>Производители</a>
       <a href='#marketing'>Маркетинг</a>
       <a href='#about'>О Компании</a>
-      <a href='#contact'>Свяжитесь С Нами</a>
+      <a href='/product'>Свяжитесь С Нами</a>
     </div>
   );
 };
