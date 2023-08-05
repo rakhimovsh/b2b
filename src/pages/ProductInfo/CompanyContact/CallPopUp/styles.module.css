@@ -1,0 +1,50 @@
+.popUpContainer {
+    position: absolute;
+    top: 260px;
+    left: 232px;
+    max-width: 776px;
+    display: flex;
+    background: #FFF;
+    box-shadow: 8px 22px 144px 0px rgba(51, 56, 63, 0.13);
+    padding: 46px 36px 66px 42px;
+    justify-content: space-between;
+    align-items: center;
+}
+.callTitle {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 40px;
+}
+.phoneText {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.phoneNumber_box {
+    margin-bottom: 29px;
+}
+.phoneNumber {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.closeIcon {
+    position: absolute;
+    top: 36px;
+    right: 36px;
+    cursor: pointer;
+}
+.popUpImage {
+    margin-left: 152px;
+    margin-right: 20px;
+}

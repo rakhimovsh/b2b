@@ -1,0 +1,135 @@
+.commentsTitle {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 11px;
+}
+.commentNote {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.6;
+    margin-bottom: 25px;
+}
+.clientNote {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 6px;
+}
+.stars {
+    display: flex;
+    align-items: center;
+     
+}
+.productMark {
+    margin-bottom: 28px;   
+}
+.starIcon path{
+    stroke: #F1BD25;
+    fill: #F1BD25;
+}
+.commentTextarea {
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    width: 608px;
+    margin-bottom: 26px;
+    padding: 20px;
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.contactInputs_box {
+    display: flex;
+    margin-bottom: 21px;
+    max-width: 608px;
+    justify-content: space-between;
+}
+.contactInput {
+    border-radius: 4px;
+    border: 1px solid #E1E1E1;
+    padding: 12px 20px;
+    width: 298px;
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.saveData_checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 33px;
+}
+.checkbox {
+    margin-right: 6px;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+}
+.checkboxText {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.12px;
+}
+.sendButton {
+    border-radius: 6px;
+    background: #1876F2;
+    padding: 20px 73px;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 54px;
+}
+.userImage {
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: #E1E1E1;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    margin-right: 8px;
+}
+.userBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.commentDate {
+    margin-left: 11px;
+}
+.littleStarIcon path{
+    fill: #F1BD25;
+    stroke: #F1BD25;
+}
+.littleStars {
+    margin-bottom: 17px;
+}
+.userComment {
+    margin-bottom: 56px;
+}
+.userCommentText {
+    max-width: 554px;
+}

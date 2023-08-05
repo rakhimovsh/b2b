@@ -1,4 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
+import ProductInfo from '../pages/ProductInfo';
 import MainLayout from '@layouts/mainLayout';
 import Home from '@pages/Home';
 import Producers from '@pages/Producers';
@@ -13,10 +14,11 @@ const Router = () => {
   return (
     <Routes>
       <Route path='/' element={<MainLayout />}>
-        <Route index element={<Home />} />
-        <Route path='/producers' element={<Producers />} />
+        <Route index element={<Home/>}/>
+        <Route path='/company' element={<Producers />} />
         <Route path='/product' element={<Product />} />
         <Route path='/company/info/:companyId' element={<CompanyInfo />} />
+        <Route path='/company/product-info/:companyId' element={<ProductInfo />} />
         <Route path='/contact-us' element={<ContactUs />} />
         <Route path='/how-to-buy-product' element={<HowToBuyProduct />} />
         <Route path='/for-companies' element={<ForCompanies />} />

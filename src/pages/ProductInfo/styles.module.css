@@ -1,0 +1,8 @@
+.ProductInfoContainer {
+    position: relative;
+}
+.productInfo_box {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 24px;
+}
