@@ -1,13 +1,26 @@
 import ProductCard from "@components/ProductCard/index.jsx";
 
 import styles from './styles.module.css'
+import { ReactComponent as ArrowIconLeft } from '@assets/svg/arrowIcon-left.svg';
+import { ReactComponent as ArrowIconRight } from '@assets/svg/arrowIcon-right.svg';
 
 const NewProduct = () => {
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Новейшие товары</h3>
-        <ProductCard />
+        <div className={styles.newProductBox}>
+          <button className={styles.arrowIcon_left}>
+            <ArrowIconLeft />
+          </button>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <button className={styles.arrowIcon_right}>
+            <ArrowIconRight />
+          </button>
+        </div>
         <button className={styles.newProduct_button}>Посмотреть больше продуктов</button>
       </div>
     </div>

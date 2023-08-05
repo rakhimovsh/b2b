@@ -1,0 +1,31 @@
+.emptyProducts {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 150px;
+}
+
+.emptyProducts_content {
+  max-width: 490px;
+  margin-top: 50px;
+}
+
+.emptyProducts_content h2 {
+  margin-bottom: 14px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.emptyProducts_content p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 550px) {
+  .emptyProducts {
+    flex-direction: column;
+  }
+  .emptyProducts_content h2, .emptyProducts_content p {
+   text-align: center;
+  }
+}

@@ -16,7 +16,6 @@
     overflow: hidden;
     color: #121212;
     text-overflow: ellipsis;
-    font-family: SF Pro Display;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -24,11 +23,13 @@
     opacity: 0.3;
 }
 .companyCard {
-    width: 397px;
+    max-width: 397px;
     border-radius: 4px;
-    background: #FFF;
-    box-shadow: 24px 0px 74px 0px rgba(137, 137, 161, 0.17);
+    border: 1px solid #E1E1E1;
     padding: 36px 37px 43px 24px;
+}
+.companyCard:hover{
+    box-shadow: 24px 0px 74px 0px rgba(137, 137, 161, 0.17);
 }
 .companyAddress {
     display: flex;
@@ -41,7 +42,6 @@
 }
 .companyAddress_text {
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -70,7 +70,6 @@
 }
 .moreInfo a {
     color: #1876F2;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

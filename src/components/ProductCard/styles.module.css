@@ -7,7 +7,6 @@
 .newProduct_card {
   max-width: 292px;
   text-align: center;
-
 }
 
 @media screen and (max-width: 1536px) {
@@ -16,16 +15,16 @@
   }
 }
 
-@media screen and (max-width: 1536px) {
-  .newProduct_image {
-    padding: 31px 27px;
-  }
-}
-
 .newProduct_image {
-  padding: 51px 46px;
+  /*padding: 51px 46px;*/
+  border: 1px solid #E1E1E1;
   background-color: #fff;
   margin-bottom: 17px;
+}
+
+.newProduct_img{
+  width: 100% ;
+  object-fit: cover;
 }
 
 .productCard_name {
@@ -53,41 +52,10 @@
   line-height: normal;
   margin-bottom: 14px;
 }
-.arrowIcon_left {
-  position: absolute;
-  top: 155px;
-  margin-left: -33px;
-  width: 66px;
-  height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 50%;
-  fill: #FFF;
-  filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
-}
 
-.arrowIcon_left:hover {
-  cursor: pointer;
-}
-
-.arrowIcon_right {
-  position: absolute;
-  top: 155px;
-  right: 0;
-  margin-right: -33px;
-  width: 66px;
-  height: 66px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #fff;
-  border-radius: 50%;
-  fill: #FFF;
-  filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
-}
-
-.arrowIcon_right:hover {
-  cursor: pointer;
+@media screen and (max-width: 768px) {
+  .newProduct_card {
+    width: 100%;
+    max-width: 350px;
+  }
 }
