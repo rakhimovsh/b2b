@@ -2,11 +2,35 @@
     background: #E1E1E1;
     height: 2px;
     width: 1220px;
-    margin-bottom: 18px;
 }
 .productScripts {
     display: flex;
     max-width: 493px;
     justify-content: space-between;
     margin-bottom: 47px;
+}
+.active {
+    color: #1876F2;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    cursor: pointer;
+    border-top: 2px solid #1876F2;
+    padding-top: 18px;
+    margin-top: -1px;
+}
+.notActive {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    cursor: pointer;
+    padding-top: 18px;
+}
+.ProductComment_box {
+    margin-bottom: 250px;
 }

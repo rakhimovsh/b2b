@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.css'
 import CompanyLogo from '@assets/images/mock-company.png'
 import { ReactComponent as StarIcon } from '@assets/svg/StarSVG.svg';
@@ -6,8 +6,18 @@ import Social from '@components/Social'
 import MailSvg from '@assets/svg/mailSvg.svg'
 import PhoneIcon from '@assets/svg/phoneIcon.svg'
 import RequestPopUp from './RequestPopUp';
+import CallPopUp from './CallPopUp';
 
 const CompanyContact = () => {
+    const [openMail, setOpenMail] = useState(false)
+    const [openPhone, setOpenPhone] = useState(false)
+    const toggleMail = () => {
+        setOpenMail(!openMail)
+    }
+    const togglePhone = () => {
+        setOpenPhone(!openPhone)
+    }
+
   return (
     <div className={styles.companyContact}>
         <div className={styles.companyInfo}>
@@ -24,10 +34,15 @@ const CompanyContact = () => {
             </div>
         </div>
         <div>
-            <button className={styles.mailButton}><img style={{marginRight: '6px'}} src={MailSvg} alt="mail icon" />Узнать оптовую цену</button>
-            <button className={styles.phoneButton}><img style={{marginRight: '6px'}} src={PhoneIcon} alt="phone icon" />Связаться с продавцом</button>
+            <button onClick={toggleMail} className={styles.mailButton}><img style={{marginRight: '6px'}} src={MailSvg} alt="mail icon" />Узнать оптовую цену</button>
+            <button onClick={togglePhone} className={styles.phoneButton}><img style={{marginRight: '6px'}} src={PhoneIcon} alt="phone icon" />Связаться с продавцом</button>
         </div>
-        <RequestPopUp />
+        <div >
+            {openMail && ( <RequestPopUp closeMailModal={setOpenMail} /> )}
+        </div>
+        <div>
+            {openPhone && ( <CallPopUp closePhoneModal={setOpenPhone}/> )} 
+        </div>
     </div>
   )
 }

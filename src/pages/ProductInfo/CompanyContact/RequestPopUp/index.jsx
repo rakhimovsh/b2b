@@ -4,7 +4,7 @@ import BoxImage from '@assets/images/box-image.png'
 import RequestForm from '@components/RequestForm'
 import {ReactComponent as CloseIcon} from '@assets/svg/closeIcon.svg'
 
-const RequestPopUp = () => {
+const RequestPopUp = ({closeMailModal}) => {
   return (
     <div className={styles.requestContainer}>
         <div className={styles.requestBg}>
@@ -12,9 +12,9 @@ const RequestPopUp = () => {
             <img className={styles.requestImage} src={BoxImage} alt="box" />
         </div>
         <div className={styles.requestForm}>
-                <RequestForm />
+            <RequestForm />
         </div>
-        <CloseIcon className={styles.closeIcon} />
+        <CloseIcon onClick={() => closeMailModal(false )} className={styles.closeIcon} />
     </div>
   )
 }

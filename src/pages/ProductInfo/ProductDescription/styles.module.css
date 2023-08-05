@@ -1,7 +1,7 @@
 .productDescription {
     display: flex;
     flex-direction: column;
-    gap: 20px;  
+    gap: 20px; 
 }
 .description {
     color: #121212;
