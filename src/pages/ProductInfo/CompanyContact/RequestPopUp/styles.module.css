@@ -1,0 +1,40 @@
+.requestContainer {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    background: #FFF;
+    box-shadow: 8px 22px 144px 0px rgba(51, 56, 63, 0.13);
+}
+.requestBg {
+    position: relative;
+    background-color: #F3F6F8;
+    height: 783px;
+    padding: 69px 36px;
+    margin-right: 56px;
+    
+}
+.requestTitle {
+    max-width: 406px;
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.requestImage {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.requestForm {
+    margin-top: 69px;
+}
+.closeIcon {
+    position: absolute;
+    top: 35px;
+    right: 42px;
+    cursor: pointer;
+}

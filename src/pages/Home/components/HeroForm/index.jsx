@@ -1,5 +1,6 @@
+import CountrySelect from '@components/CountrySelect/'
 import styles from './styles.module.css'
-import CountrySelect from './CountrySelect'
+
 
 const HeroForm = () => {
   return (
