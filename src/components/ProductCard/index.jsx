@@ -1,53 +1,20 @@
 import styles from './styles.module.css';
 
-import Product1Img from '@assets/images/product1.png';
-import Product2Img from '@assets/images/product2.png';
-import Product3Img from '@assets/images/product3.png';
-import Product4Img from '@assets/images/product4.png';
-import { ReactComponent as ArrowIconLeft } from '@assets/svg/arrowIcon-left.svg';
-import { ReactComponent as ArrowIconRight } from '@assets/svg/arrowIcon-right.svg';
 import RatingStars from '../RatingStars';
-
-const productData = [
-  {
-    image: Product1Img,
-  },
-  {
-    image: Product2Img,
-  },
-  {
-    image: Product3Img,
-  },
-  {
-    image: Product4Img,
-  },
-];
 
 const ProductCard = () => {
   return (
-    <div className={styles.newProductBox}>
-      <button className={styles.arrowIcon_left}>
-        <ArrowIconLeft />
-      </button>
-      {productData.map((productDetails) => {
-        return (
-          <div className={styles.newProduct_card}>
-            <div className={styles.newProduct_image}>
-              <img src={productDetails.image} alt='product-img' />
-            </div>
-            <p className={styles.productCard_name}>Футболки – для мужчин и женщин</p>
-            <a href='#product' className={styles.productCard_category}>
-              Футболки
-            </a>
-            <RatingStars />
-          </div>
-        );
-      })}
-      <button className={styles.arrowIcon_right}>
-        <ArrowIconRight />
-      </button>
+    <div className={styles.newProduct_card}>
+      <div className={styles.newProduct_image}>
+        <img className={styles.newProduct_img} src={'https://picsum.photos/600'} alt='product-img' />
+      </div>
+      <p className={styles.productCard_name}>Футболки – для мужчин и женщин</p>
+      <a href='#product' className={styles.productCard_category}>
+        Футболки
+      </a>
+      <RatingStars />
     </div>
-  );
+  )
 };
 
 export default ProductCard;

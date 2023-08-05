@@ -1,0 +1,25 @@
+.recommendedTitle {
+  margin-bottom: 34px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.recommendedList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 200px;
+}
+
+@media screen and (max-width: 840px) {
+  .recommendedList {
+    grid-template-columns: repeat(2, minmax(250px, 1fr));
+  }
+}
+
+@media screen and (max-width:560px) {
+  .recommendedList {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+}

@@ -1,15 +1,14 @@
-import styles from './styles.module.css'
-import Breadcrumb from "@components/Breadcrumb/index.jsx";
-import Company from "./components/Company/index.jsx";
+import Company from './components/Company';
+import Products from './components/Products';
 
-const CompanyInfo = () =>{
- return (
-   <div className='container'>
-     {/*<Breadcrumb/>*/}
-     <Company/>
-   </div>
- )
-}
+const CompanyInfo = () => {
+  return (
+    <div className='container'>
+      {/*<Breadcrumb/>*/}
+      <Company />
+      <Products />
+    </div>
+  );
+};
 
-
-export default CompanyInfo
+export default CompanyInfo;

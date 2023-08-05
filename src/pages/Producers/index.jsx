@@ -1,4 +1,4 @@
-import CompanyCard from "./components/CompanyCard"
+import CompanyCard from "@components/CompanyCard"
 import CompanyPages from "./components/CompanyPages"
 import Filter from "./components/Filter"
 
