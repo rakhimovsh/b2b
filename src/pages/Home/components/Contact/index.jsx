@@ -8,6 +8,7 @@ import { ReactComponent as InstagramIcon } from '@assets/svg/ant-design_instagra
 import { ReactComponent as TelegramIconIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
 import { ReactComponent as YoutubeIcon } from '@assets/svg/akar-icons_youtube-fill.svg';
 import Map from '@assets/images/map1.jpg';
+import RequestForm from '@components/RequestForm';
 
 const Contact = () => {
   return (
@@ -38,18 +39,7 @@ const Contact = () => {
       </div>
       <div className={styles.contactForm}>
         <h2 className={styles.contactForm_title}>Заполните форму запроса продукта</h2>
-        <p className={styles.contactForm_p}>Ваше имя</p>
-        <input className={styles.contactForm_name_input} type='text' placeholder='Ваше имя' />
-        <p className={styles.contactForm_p}>Страна</p>
-        {/*<CountrySelect />*/}
-        <p className={styles.contactForm_p}>Какой продукт вы ищете?*</p>
-        <textarea
-          className={styles.contactForm_textarea}
-          cols='30'
-          rows='10'
-          placeholder='Опишите продукт'
-        ></textarea>
-        <button className={styles.contactForm_btn}>Отправить</button>
+        <RequestForm />
       </div>
     </div>
   );

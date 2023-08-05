@@ -1,0 +1,12 @@
+.line {
+    background: #E1E1E1;
+    height: 2px;
+    width: 1220px;
+    margin-bottom: 18px;
+}
+.productScripts {
+    display: flex;
+    max-width: 493px;
+    justify-content: space-between;
+    margin-bottom: 47px;
+}
