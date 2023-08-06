@@ -8,6 +8,8 @@ const Useful = () => {
       <h2 className={styles.usefulTitle}>Полезное</h2>
       <div className={styles.usefulBox}>
         <UsefulCard />
+        <UsefulCard />
+        <UsefulCard />
       </div>
       <button className={styles.usefulButton}>Посмотреть все</button>
     </div>

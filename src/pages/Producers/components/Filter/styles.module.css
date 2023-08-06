@@ -40,7 +40,6 @@
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    opacity: 0.3;
 }
 .searchIcon {
     position: absolute;
@@ -86,6 +85,7 @@
     font-weight: 500;
     line-height: 20px;
     padding: 20px 30px;
+    cursor: pointer;
 }
 .filterCheckbox {
     max-width: 189px;

@@ -1,0 +1,26 @@
+  .btbSolution_content {
+    display: flex;
+    justify-content: space-between;
+  }
+  .b2bSolution_card {
+    width: 227px;
+  }
+  .solutionCard_icon {
+    margin-bottom: 13px;
+  }
+  .solutionCard_title {
+    margin-bottom: 8px;
+    color: #121212;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .solutionCard_text {
+    color: #121212;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    opacity: 0.6;
+  }

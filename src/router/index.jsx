@@ -7,7 +7,10 @@ import Product from '@pages/Product';
 import CompanyInfo from '@pages/CompanyInfo';
 import NotFound from '@pages/404';
 import ContactUs from '@pages/ContactUs';
-import HowToBuyProduct from '@pages/HowToBuyProduct';
+import HowToBuyProduct from "@pages/HowToBuyProduct";
+import Application from '@pages/Aplication';
+import AllCompanies from '@pages/AllCompanies';
+import About from '@pages/About';
 import ForCompanies from '@pages/ForCompanies';
 import Payment from '@pages/Payment';
 import ReturnPolicy from '@pages/ReturnPolicy';
@@ -29,6 +32,9 @@ const Router = () => {
         <Route path='/return-policy' element={<ReturnPolicy />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='*' element={<NotFound />} />
+        <Route path='/application' element={<Application />} />
+        <Route path='/all-companies' element={<AllCompanies />} />
+        <Route path='/about' element={<About />} />
       </Route>
     </Routes>
   );
