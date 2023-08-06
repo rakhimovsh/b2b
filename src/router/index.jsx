@@ -10,7 +10,8 @@ import ContactUs from '@pages/ContactUs';
 import HowToBuyProduct from '@pages/HowToBuyProduct';
 import ForCompanies from '@pages/ForCompanies';
 import Payment from '@pages/Payment';
-import ReturnPolicy from "@pages/ReturnPolicy";
+import ReturnPolicy from '@pages/ReturnPolicy';
+import FAQ from '@pages/FAQ';
 
 const Router = () => {
   return (
@@ -26,6 +27,7 @@ const Router = () => {
         <Route path='/for-companies' element={<ForCompanies />} />
         <Route path='/payment' element={<Payment />} />
         <Route path='/return-policy' element={<ReturnPolicy />} />
+        <Route path='/faq' element={<FAQ />} />
         <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>
