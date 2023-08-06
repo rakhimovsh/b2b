@@ -1,0 +1,90 @@
+.application {
+    padding-top: 100px;
+    padding-bottom: 250px;
+    display: flex;
+    position: relative;
+}
+.applicationForm {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+}
+.applicationTitle {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 74px;
+    max-width: 716px;
+    margin-right: 178px;
+}
+.applicationItem {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 10px;
+}
+input::-webkit-input-placeholder {
+    opacity: 0.5; 
+}
+.applicationInput {
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+    padding: 20px;
+    width: 470px;
+}
+.applicationButton {
+    border-radius: 6px;
+    background: #1876F2;
+    padding: 20px 42px;
+    color: #FFF;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    width: 173px;
+    cursor: pointer;
+}
+.countrySelect {
+    width: 470px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #E1E1E1;
+}
+.tickbg {
+    background-image: url('../../assets/svg/tickIconBg.svg');
+    width: 46px;
+    height: 46px;
+}
+.successPromt {
+    position: absolute;
+    right: 30%;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 38px 107px 37px 40px;
+    gap: 24px;
+    border-radius: 30px;
+    background: #FFF;
+    box-shadow: 8px 34px 104px 0px rgba(62, 57, 112, 0.12);
+}
+.promtIcon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.promtText {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
