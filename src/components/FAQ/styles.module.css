@@ -26,7 +26,8 @@
   background: white;
   border: 1px solid #DDD;
   border-radius: 50%;
-
+  flex-shrink: 0;
+  margin-left: 17px;
 }
 .faqButton:hover {
   cursor: pointer;
@@ -34,7 +35,26 @@
 .faqQuestion {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #DDD;
   padding: 29px 0 34px 20px;
   align-items: center;
+}
+
+.accordionWrapper {
+  width: 100%;
+  border-bottom: 1px solid #DDD;
+}
+.content {
+  border-top: 1px solid #DDD;
+  padding-top: 10px;
+  margin: 0 20px 34px;
+}
+
+@media screen and (max-width: 425px) {
+  .faqText {
+    font-size: 16px;
+  }
+  .faqButton {
+    width: 48px;
+    height: 48px;
+  }
 }
