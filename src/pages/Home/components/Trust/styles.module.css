@@ -14,3 +14,14 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 800px) {
+  .trustContainer {
+    text-align: center;
+  }
+  .aboutImages {
+    row-gap: 70px;
+    column-gap: 83px;
+    flex-wrap: wrap;
+    padding: 22px 39px;
+  }
+}

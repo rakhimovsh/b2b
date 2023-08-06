@@ -23,7 +23,11 @@
   justify-content: space-between;
   position: relative;
 }
-
+.productCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
 
 .newProduct_button {
   padding: 20px 36px;
@@ -72,4 +76,13 @@
 
 .arrowIcon_right:hover {
   cursor: pointer;
+}
+@media screen and (max-width: 820px) {
+  .newProductContainer {
+   text-align: center;
+   justify-content: center;
+  }
+  .productCards {
+    justify-content: center;
+  }
 }

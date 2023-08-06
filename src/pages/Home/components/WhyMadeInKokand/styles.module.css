@@ -19,4 +19,14 @@
 
 .whyCard {
   text-align: center;
+  width: 269px;
+}
+@media screen and (max-width: 820px) {
+  .whyContainer {
+    text-align: center;
+  }
+  .whyContent {
+    row-gap: 90px;
+    flex-wrap: wrap;
+  }
 }

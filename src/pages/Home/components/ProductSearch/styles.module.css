@@ -3,106 +3,11 @@
   padding-bottom: 89px;
   display: flex;
   justify-content: space-between;
-}
-.productName_input {
-  width: 420px;
-  border-radius: 6px;
-  border: 1px solid #121212;
-  background: #FFF;
-  color: #121212;
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  padding: 22px 14px;
-  opacity: 0.3;
-  margin-bottom: 20px;
-}
-.productSearch_inputs {
-  display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
-.productSearchCard {
-  position: relative;
-  max-width: 608px;
-  padding: 71px 89px 117px 65px;
-  background: #F3F6F8;
-  border-radius: 6px;
-}
-@media screen and (max-width: 1536px) {
-  .productSearchCard {
-    max-width: 486px;
-    padding: 57px 71px 94px 52px;
+@media screen and (max-width: 820px) {
+  .productSearch_container {
+    justify-content: center;
+    gap: 32px;
   }
-}
-.productSearch_button {
-  display: block;
-  color: #FFF;
-  font-family: var(--font-family);
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 20px;
-  border-radius: 6px;
-  background: #1876F2;
-  padding: 20px 30px;
-  margin-bottom: 45px;
-}
-@media screen and (max-width: 1536px) {
-  .productSearch_button {
-    margin-bottom: 65px;
-  }
-}
-.productSearch_title {
-  max-width: 410px;
-  color: #000;
-  font-family: var(--font-family);
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 33px;
-
-}
-.search_boxImage {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.addCompany_title {
-  max-width: 372px;
-  color: #000;
-  font-family: var(--font-family);
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 33px;
-  margin-bottom: 11px;
-}
-.addCompany_text {
-  color: #000;
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  opacity: 0.6;
-  margin-bottom: 29px;
-}
-.addCompany_item1 {
-  color: #1876F2;
-  font-family: var(--font-family);
-  font-size: 36px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-}
-.addCompany_item2 {
-  color: #1876F2;
-  font-family: var(--font-family);
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
 }

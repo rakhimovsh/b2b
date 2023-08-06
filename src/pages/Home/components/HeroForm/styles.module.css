@@ -1,4 +1,4 @@
-.heroForm {
+.formContainer {
   background-color: #fff;
   padding: 50px 58px 45px 44px;
   border-radius: 8px;
@@ -46,4 +46,13 @@
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
+}
+@media screen and (max-width: 800px) {
+  .formContainer {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
 }

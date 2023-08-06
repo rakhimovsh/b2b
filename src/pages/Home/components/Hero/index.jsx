@@ -1,5 +1,4 @@
 import HeroForm from "@pages/Home/components/HeroForm/index.jsx";
-
 import styles from './styles.module.css'
 import {ReactComponent as SearchSvg} from '@assets/svg/search.svg'
 
@@ -7,13 +6,12 @@ const Hero = () => {
   return (
     <div className={styles.heroBg}>
       <div className={'container ' + styles.heroContainer}>
-        <div>
+        <div className={styles.heroMain}>
           <h1 className={styles.heroTitle}>Оптовый рынок для каждого случая</h1>
           <p className={styles.heroText}>
             Мы поможем вам найти товары произведенные в Узбекистане напрямую от производителей
           </p>
           <div className={styles.heroProductCategory}>
-            {/*<HeroCategorySlct width='208px' name='Категория продуктов' />*/}
             <div className={styles.heroSearch}>
               <input
                 placeholder='Название продукта'
@@ -26,7 +24,10 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <HeroForm />
+        <div>
+          <HeroForm />
+        </div>
+        
       </div>
     </div>
   );

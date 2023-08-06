@@ -49,3 +49,21 @@
   border-radius: 8px;
   padding: 15px 20px;
 }
+
+@media screen and (max-width: 800px) {
+  .heroContainer {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .heroMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 54px;
+  }
+  .heroText {
+    max-width: 423px;
+    text-align: center;
+  }
+}

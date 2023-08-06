@@ -13,10 +13,12 @@ const NewProduct = () => {
           <button className={styles.arrowIcon_left}>
             <ArrowIconLeft />
           </button>
+          <div className={styles.productCards}>
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>
+          </div>
           <button className={styles.arrowIcon_right}>
             <ArrowIconRight />
           </button>

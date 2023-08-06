@@ -32,7 +32,8 @@
 }
 .productCategory_box {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap;  
+  column-gap: 50px;
 }
 .productCategory_name {
   color: #121212;
@@ -53,6 +54,28 @@
   margin-bottom: 12px;
 }
 .productCategory_card {
-  margin-right: 76px;
+  /* margin-right: 76px; */
   margin-bottom: 81px;
+}
+
+@media screen and (max-width: 820px) {
+  .productCategoryContainer {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .productCategory_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .productCategory_box {
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 100px;
+  }
 }

@@ -16,7 +16,7 @@ const B2bSolutionContent = ({ Icon, title, text }) => {
 
 const B2bBlock = () => {
   return (
-        <div className={styles.btbSolution_content}>
+        <div className={styles.b2bSolution_content}>
           <B2bSolutionContent
             Icon={IconSearch}
             title='Поиск'

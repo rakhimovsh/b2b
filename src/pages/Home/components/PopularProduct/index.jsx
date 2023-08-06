@@ -13,10 +13,12 @@ const PopularProduct = () => {
           <button className={styles.arrowIcon_left}>
             <ArrowIconLeft />
           </button>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
-          <ProductCard/>
+          <div className={styles.productCards}>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+            <ProductCard/>
+          </div>
           <button className={styles.arrowIcon_right}>
             <ArrowIconRight />
           </button>
