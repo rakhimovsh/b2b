@@ -48,6 +48,7 @@
     background: #1876F2;
     padding: 20px 30px;
     margin-bottom: 45px;
+    cursor: pointer;
 }
 @media screen and (max-width: 1536px) {
     .productSearch_button {

@@ -10,24 +10,21 @@ const Filter = () => {
             </div>
             <div className={styles.companyMajor_box}>
                 <select className={styles.companyMajor}>
-                    <option value="Кепка">Направление компании</option>
-                    <input type="checkbox"  id="product" name='product'/>
-                    <option value="Кепка" >
-                           кепка
-                    </option>
+                    <option value="major" hidden>Направление компании</option>
+                    <option value="Кепка" >кепка</option>
                     <option value="Кепка">Кепка</option>
                 </select>
             </div>
             <div className={styles.companyPlace_box}>
                 <select className={styles.companyPlace} placeholder='Кеп'>
-                    <option value="Кепка">Расположение  компании</option>
+                    <option value="palce" hidden>Расположение  компании</option>
                     <option value="Кепка">Кепка</option>
                     <option value="Кепка">Кепка</option>
                 </select>
             </div>
             <div className={styles.companyRating_box}>
                 <select className={styles.companyRating} placeholder='Кеп'>
-                    <option value="Кепка">Рейтинг компании</option>
+                    <option value="rating" hidden>Рейтинг компании</option>
                     <option value="Кепка">Кепка</option>
                     <option value="Кепка">Кепка</option>
                 </select>

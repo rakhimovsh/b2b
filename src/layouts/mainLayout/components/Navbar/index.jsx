@@ -5,7 +5,7 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <a href='/company'>Производители</a>
       <a href='#marketing'>Маркетинг</a>
-      <a href='#about'>О Компании</a>
+      <a href='/about'>О Компании</a>
       <a href='/product'>Свяжитесь С Нами</a>
     </div>
   );

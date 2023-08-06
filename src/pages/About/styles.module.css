@@ -1,0 +1,44 @@
+.logo {
+    width: 229px;
+    margin-left: 257px;
+    margin-top: 24px;
+}
+.about {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}
+.aboutMain {
+    display: flex;
+    margin-bottom: 44px;
+}
+.aboutTitle {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    max-width: 631px;
+    margin-bottom: 21px;
+}
+.aboutText {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+    opacity: 0.6;
+    max-width: 616px;
+}
+.aboutImage {
+    margin-bottom: 92px;
+}
+.aboutB2b {
+    margin-bottom: 131px;
+}
+.productSearch {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 24px;
+}

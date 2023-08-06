@@ -10,6 +10,7 @@ import ContactUs from '@pages/ContactUs';
 import HowToBuyProduct from "@pages/HowToBuyProduct";
 import Application from '@pages/Aplication';
 import AllCompanies from '@pages/AllCompanies';
+import About from '@pages/About';
 
 const Router = () => {
   return (
@@ -25,6 +26,7 @@ const Router = () => {
         <Route path='*' element={<NotFound />} />
         <Route path='/application' element={<Application />} />
         <Route path='/all-companies' element={<AllCompanies />} />
+        <Route path='/about' element={<About />} />
       </Route>
     </Routes>
   );
