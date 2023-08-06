@@ -1,0 +1,7 @@
+.allCompanies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding-top: 24px;
+    padding-bottom: 250px;
+}

@@ -7,13 +7,7 @@ import UsefulImage3 from '@assets/images/usefulImg3.png';
 const usefulCardData = [
   {
     image: UsefulImage1,
-  },
-  {
-    image: UsefulImage2,
-  },
-  {
-    image: UsefulImage3,
-  },
+  }
 ];
 
 const UsefulCard = () => {

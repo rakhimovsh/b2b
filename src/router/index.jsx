@@ -9,6 +9,7 @@ import NotFound from '@pages/404';
 import ContactUs from '@pages/ContactUs';
 import HowToBuyProduct from "@pages/HowToBuyProduct";
 import Application from '@pages/Aplication';
+import AllCompanies from '@pages/AllCompanies';
 
 const Router = () => {
   return (
@@ -23,6 +24,7 @@ const Router = () => {
         <Route path='/how-to-buy-product' element={<HowToBuyProduct />} />
         <Route path='*' element={<NotFound />} />
         <Route path='/application' element={<Application />} />
+        <Route path='/all-companies' element={<AllCompanies />} />
       </Route>
     </Routes>
   );
