@@ -6,12 +6,12 @@
 
 .newProduct_card {
   max-width: 292px;
-  
+  text-align: center;
 }
 /*   
 @media screen and (max-width: 1536px) {
   .newProduct_card {
-    text-align: center;
+    
   }
 } */
 

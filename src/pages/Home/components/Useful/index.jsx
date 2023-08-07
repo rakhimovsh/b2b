@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const Useful = () => {
   return (
-    <div className='container'>
+    <div className={'container ' + styles.usefulContainer}>
       <h2 className={styles.usefulTitle}>Полезное</h2>
       <div className={styles.usefulBox}>
         <UsefulCard />

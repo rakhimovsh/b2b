@@ -11,3 +11,8 @@
     gap: 32px;
   }
 }
+@media screen and (max-width: 500px) {
+  .productSearch_container {
+    padding-top: 0;
+  }
+}

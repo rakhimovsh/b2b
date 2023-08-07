@@ -9,3 +9,13 @@
     font-family: var(--font-family);
     margin-bottom: 12px;
   }
+  @media screen and (max-width: 500px) {
+    .countrySelect {
+      width: 335px;
+    }
+  }
+  @media screen and (max-width: 340px) {
+    .countrySelect {
+      width: 300px;
+    }
+  }

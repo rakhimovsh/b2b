@@ -56,3 +56,28 @@
     justify-content: center;
   }
 }
+@media screen and (max-width: 500px) {
+  .heroForm_title {
+    max-width: 286px;
+  }
+  .formClient_name {
+    width: 335px;
+  }
+  .formContainer {
+    padding: 50px 10px;
+  }
+  .heroForm_button {
+    width: 335px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .formClient_name {
+    width: 300px;
+  }
+  .formClient_name {
+    width: 300px;
+  }
+  .heroForm_button {
+    width: 300px;
+  }
+}

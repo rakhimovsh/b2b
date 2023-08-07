@@ -67,3 +67,12 @@
     text-align: center;
   }
 }
+@media screen and (max-width: 500px) {
+  .heroTitle {
+    font-size: 42px;
+    max-width: 364px;
+  }
+  .heroText {
+    max-width: 323px;
+  }
+}

@@ -79,3 +79,14 @@
     gap: 100px;
   }
 }
+@media screen and (max-width: 500px) {
+  .productCategoryContainer {
+    padding-top: 84px;
+  }
+  .productCategory_box {
+    gap: 72px;
+  }
+  .productCategory_card {
+    margin-bottom: 0;
+  }
+}

@@ -86,3 +86,9 @@
     justify-content: center;
   }
 }
+@media screen and (max-width: 500px) {
+  .newProductContainer {
+    padding-top: 68px;
+    padding-bottom: 62px;
+  }
+}

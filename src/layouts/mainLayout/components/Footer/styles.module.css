@@ -101,8 +101,15 @@
     padding: 27px 56px 26px 26px;
   }
   .footerContent {
-    /* justify-content: center; */
-    /* gap: 150; */
     flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footerContent {
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    padding-right: 97px;
+    padding-left: 97px;
   }
 }
