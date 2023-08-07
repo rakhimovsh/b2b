@@ -1,0 +1,25 @@
+.checkbox {
+    display: flex;
+    max-width: 211px;
+    align-items: center;
+    gap: 6px;
+}
+.checkboxLabel {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+.checkboxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding: 26px 20px 40px 16px;
+    gap: 28px;
+    margin-top: 9px;
+}
