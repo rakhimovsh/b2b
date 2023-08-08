@@ -34,3 +34,23 @@
   font-weight: 600;
   line-height: 20px;
 }
+
+.productCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media screen and (max-width: 920px) {
+  .newProductContainer {
+    text-align: center;
+  }
+  .productCards {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  .newProductContainer {
+    padding-top: 68px;
+    padding-bottom: 62px;
+  }
+}

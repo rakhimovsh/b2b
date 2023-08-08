@@ -7,9 +7,9 @@ import PopularProduct from './components/PopularProduct/index.jsx';
 import ProductCategory from './components/ProductCategory/index.jsx';
 import WhyMadeInKokand from './components/WhyMadeInKokand/index.jsx';
 import ProductSearch from './components/ProductSearch/index.jsx';
-import FAQ from '../../components/FAQ/index.jsx';
 import Useful from './components/Useful/index.jsx';
 import Contact from "./components/Contact/index.jsx";
+import FAQHome from './components/FAQHome';
 
 const Home = () => {
   return (
@@ -23,7 +23,7 @@ const Home = () => {
       <ProductCategory />
       <WhyMadeInKokand />
       <ProductSearch />
-      <FAQ />
+      <FAQHome />
       <Useful />
       <Contact/>
     </>

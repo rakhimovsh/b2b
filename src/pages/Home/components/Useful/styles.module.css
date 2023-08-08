@@ -1,12 +1,13 @@
 .usefulBox {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
-@media (max-width: 1500px) {
+/* @media (max-width: 1500px) {
   .usefulBox {
     width: 318px;
   }
-}
+} */
 .usefulTitle {
   color: #000;
   font-family: var(--font-family);
@@ -27,4 +28,23 @@
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 64px;
+}
+@media screen and (max-width: 500px) {
+  .usefulTitle {
+    text-align: center;
+    margin-bottom: 41px;
+  }
+  .usefulBox {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .usefulContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .usefulButton {
+    width: 355px;
+  }
 }

@@ -14,3 +14,28 @@
   display: flex;
   justify-content: space-between;
 }
+@media screen and (max-width: 820px) {
+  .trustContainer {
+    text-align: center;
+  }
+  .aboutImages {
+    row-gap: 70px;
+    column-gap: 83px;
+    flex-wrap: wrap;
+    padding: 22px 39px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .trustContainer {
+    padding-top: 100px;
+    padding-bottom: 93px;
+  }
+  .trustTitle {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 395px) {
+  .aboutImages {
+    justify-content: center;
+  }
+}

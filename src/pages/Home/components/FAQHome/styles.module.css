@@ -1,0 +1,13 @@
+.title {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+@media screen and (max-width: 820px) {
+    .title {
+        text-align: center;
+    }
+}

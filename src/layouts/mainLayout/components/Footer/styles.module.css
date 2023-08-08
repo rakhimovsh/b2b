@@ -92,3 +92,24 @@
     gap: 50px
   }
 }
+@media screen and (max-width: 820px) {
+  .footerSocial_icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 180px;
+    padding: 27px 56px 26px 26px;
+  }
+  .footerContent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 500px) {
+  .footerContent {
+    justify-content: center;
+    /* align-items: center; */
+    text-align: center;
+    padding-right: 97px;
+    padding-left: 97px;
+  }
+}
