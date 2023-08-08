@@ -5,14 +5,27 @@ import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 import Placefilter from './PlaceFilter'
 import MajorFilter from './MajorFilter'
 import RatingFilter from './RatingFilter'
+import FilterGroup from './FilterGroup'
 
 const Filter = () => {
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
     const [openRating, setOpenRating] = useState(false)
+    const [openFiltergroup, setOpenFiltergroup] = useState(false)
+
 
     return (
         <div className={styles.filterContainer}>
+            <div className={styles.filterGroup_container}>
+                <div onClick={() => {setOpenFiltergroup(!openFiltergroup)}} className={styles.filterGroup}>
+                    <p className={styles.filterName}>Фильтр</p><IconDown />
+                </div>
+                {openFiltergroup && 
+                    <div className={styles.filterGroup_box}>
+                        <FilterGroup />
+                    </div> 
+                } 
+            </div>
             <div className={styles.searchInput_box}>
                 <input className={styles.searchInput} placeholder='Поиск по имени' />
                 <img className={styles.searchIcon} src={SearchIcon} alt="" />
@@ -35,8 +48,7 @@ const Filter = () => {
                     <div className={styles.placeCheckboxes}>
                         <Placefilter />
                     </div>
-                }
-                    
+                }     
             </div>
             <div className={styles.companyRating_box}>
                 <div onClick={() => {setOpenRating(!openRating)}} className={styles.ratingFilter}>
