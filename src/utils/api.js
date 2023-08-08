@@ -2,7 +2,7 @@ import axios from 'axios';
 import { APP_API } from '@config';
 
 export function api() {
-  axios.create({
+  return  axios.create({
     baseURL: APP_API,
   });
 }
