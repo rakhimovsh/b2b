@@ -1,25 +1,33 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  loading: false,
-  products: [],
-  popularProducts: [],
-  newProducts: [],
-  singleProduct: null,
+  products: {
+    items: [],
+    loading: false,
+  },
+  popularProducts: {
+    items: [],
+    loading: false,
+  },
+  newProducts: {
+    items: [],
+    loading: false,
+  },
+  singleProduct: {
+    item: null,
+    loading: false,
+  },
 };
 
 export const productSlice = createSlice({
   name: 'product',
   initialState,
   reducers: {
-    setLoading: (state, action) => {
-      state.loading = action.payload;
+    setNewProducts: (state, action) => {
+      state.newProducts.items = action.payload;
     },
-    setProducts: (state, action) => {
-      state.products = action.payload;
-    },
-    setSingleProduct: (state, action) => {
-      state.singleProduct = action.payload;
+    setNewProductsLoading: (state, action) => {
+      state.newProducts.loading = action.payload;
     },
   },
 });
