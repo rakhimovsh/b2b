@@ -21,8 +21,8 @@ const Router = () => {
     <Routes>
       <Route path='/' element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path='/company' element={<Producers />} />
         <Route path='/product' element={<Product />} />
+        <Route path='/company' element={<Producers />} />
         <Route path='/company/info/:companyId' element={<CompanyInfo />} />
         <Route path='/company/product-info/:companyId' element={<ProductInfo />} />
         <Route path='/contact-us' element={<ContactUs />} />
@@ -31,10 +31,10 @@ const Router = () => {
         <Route path='/payment' element={<Payment />} />
         <Route path='/return-policy' element={<ReturnPolicy />} />
         <Route path='/faq' element={<FAQ />} />
-        <Route path='*' element={<NotFound />} />
         <Route path='/application' element={<Application />} />
-        <Route path='/all-companies' element={<AllCompanies />} />
+        <Route path='/news' element={<AllCompanies />} />
         <Route path='/about' element={<About />} />
+        <Route path='*' element={<NotFound />} />
       </Route>
     </Routes>
   );

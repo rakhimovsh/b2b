@@ -4,6 +4,7 @@ import { ReactComponent as FacebookIcon } from '@assets/svg/akar-icons_facebook-
 import { ReactComponent as InstagramIcon } from '@assets/svg/ant-design_instagram-filled.svg';
 import { ReactComponent as TelegramIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
 import { ReactComponent as YoutubeIcon } from '@assets/svg/akar-icons_youtube-fill.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -18,14 +19,30 @@ const Footer = () => {
         </div>
         <div className={styles.footerList}>
           <h4 className={styles.footerTitle}>Служба поддержки</h4>
-          <p className={styles.footerText}>Хлопковая пряжа</p>
-          <p className={styles.footerText}>Ткани</p>
-          <p className={styles.footerText}>Аксессуары</p>
+          <Link to='/how-to-buy-product ' className={styles.footerText}>
+            Как купить
+          </Link>
+          <Link to='/for-companies' className={styles.footerText}>
+            Для покупателей
+          </Link>
+          <Link to='/payment' className={styles.footerText}>
+            Платежи
+          </Link>
+          <Link to='/return-policy' className={styles.footerText}>
+            Политика возврата
+          </Link>
+          <Link to='/faq' className={styles.footerText}>
+            Вопросы Ответы
+          </Link>
         </div>
         <div className={styles.footerList}>
           <h4 className={styles.footerTitle}>Быстрые ссылки</h4>
-          <p className={styles.footerText}>Свяжиьесь с нами</p>
-          <p className={styles.footerText}>О компании</p>
+          <Link to='/contact-us' className={styles.footerText}>
+            Свяжиьесь с нами
+          </Link>
+          <Link to='/about' className={styles.footerText}>
+            О компании
+          </Link>
         </div>
         <div className={styles.footerSocial}>
           <button className={styles.footerSocial_icon} href='#facebook'>
