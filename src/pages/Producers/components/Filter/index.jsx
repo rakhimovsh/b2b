@@ -10,6 +10,7 @@ const Filter = () => {
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
     const [openRating, setOpenRating] = useState(false)
+
     return (
         <div className={styles.filterContainer}>
             <div className={styles.searchInput_box}>
@@ -17,28 +18,36 @@ const Filter = () => {
                 <img className={styles.searchIcon} src={SearchIcon} alt="" />
             </div>
             <div className={styles.checkbox_box}>
-                <div className={styles.companyMajor_box}>
-                    <p>Направление компании</p><IconDown />
+                <div onClick={() => {setOpenMajor(!openMajor)}} className={styles.companyMajor_box}>
+                    <p className={styles.filterName}>Направление компании</p><IconDown />
                 </div>
+                {openMajor && 
                 <div className={styles.checkboxes}>
                     <MajorFilter />
-                </div>
+                </div>}
+                
             </div>
             <div className={styles.companyPlace_box}>
-                <div className={styles.placeFilter}>
+                <div  onClick={() => {setOpenPlace(!openPlace)}} className={styles.placeFilter}>
                     <p className={styles.filterName}>Расположение  компании</p><IconDown />
                 </div>
-                <div className={styles.placeCheckboxes}>
-                    <Placefilter />
-                </div>
+                { openPlace && 
+                    <div className={styles.placeCheckboxes}>
+                        <Placefilter />
+                    </div>
+                }
+                    
             </div>
             <div className={styles.companyRating_box}>
-                <div className={styles.ratingFilter}>
-                    <p className={styles.filterName}>Рейтинг компании</p><IconDown />
+                <div onClick={() => {setOpenRating(!openRating)}} className={styles.ratingFilter}>
+                    <p  className={styles.filterName}>Рейтинг компании</p><IconDown />
                 </div>
-                <div className={styles.ratingCheckboxes}>
-                    <RatingFilter />  
-                </div>
+                {openRating && 
+                    <div className={styles.ratingCheckboxes}>
+                        <RatingFilter />  
+                    </div>
+                }
+                
             </div>
             <button className={styles.filterButton}>Применить фильтр</button>
         </div>
