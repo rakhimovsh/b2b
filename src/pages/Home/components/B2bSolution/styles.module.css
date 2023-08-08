@@ -44,3 +44,18 @@
   line-height: normal;
   opacity: 0.6;
 }
+
+@media screen and (max-width: 500px) {
+  .b2bSolution_titleH2 {
+    font-size: 32px;
+  }
+  .b2bSolution_title {
+    text-align: center;
+    max-width: 349px;
+  }
+  .b2bSolution_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

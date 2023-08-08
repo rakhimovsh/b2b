@@ -1,4 +1,4 @@
-  .btbSolution_content {
+  .b2bSolution_content {
     display: flex;
     justify-content: space-between;
   }
@@ -24,3 +24,12 @@
     line-height: normal;
     opacity: 0.6;
   }
+
+@media screen and (max-width: 800px) {
+  .b2bSolution_content {
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: 62px;
+  }
+}

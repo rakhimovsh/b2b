@@ -35,6 +35,7 @@ const Contact = () => {
           <TelegramIconIcon />
           <YoutubeIcon />
         </div>
+        {/* <Social /> */}
         <img className={styles.contactMap} src={Map} alt='map' />
       </div>
       <div className={styles.contactForm}>

@@ -1,16 +1,16 @@
 @media screen and (max-width: 1536px) {
   .usefulCard {
-    width: 318px;
+    width: 355px;
   }
 }
 .usefulImage {
   margin-bottom: 16px;
 }
-@media screen and (max-width: 1536px) {
+
   .usefulImage {
-    max-width: 318px;
+    max-width: 355px;
   }
-}
+
 .usefulDate {
   overflow: hidden;
   color: #000;
@@ -41,4 +41,15 @@
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 56px;
+}
+@media screen and (max-width: 500px) {
+  .usefulCard_more {
+    margin-bottom: 32px;
+  }
+  .usefulCard {
+    width: 355px;
+  }
+  .usefulImage {
+    width: 355px;
+  }
 }

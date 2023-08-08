@@ -51,3 +51,20 @@
     line-height: 20px;
     display: block;
   }
+
+@media screen and (max-width: 820px) {
+  .contactForm_btn {
+    width: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .contactForm_name_input {
+    width: 355px;
+  }
+  .contactForm_textarea {
+    width: 355px;
+  }
+  .contactForm_btn {
+    width: 355px;
+  }
+}

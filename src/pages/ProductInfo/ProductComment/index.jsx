@@ -14,7 +14,7 @@ const ProductComment = () => {
           <p className={commentBlock === 2 ? styles.active : styles.notActive} onClick={()=> setCommentblock(2)}>Отзывы (0)</p>
           <p className={commentBlock === 3 ? styles.active : styles.notActive} onClick={()=> setCommentblock(3)}>Информация о продавце</p>
         </div>
-        <div className={styles.ProductComment_box} style={{ display: commentBlock == 1 ? 'block' : 'none'}}>
+        <div className={styles.ProductComment_box} style={{ display: commentBlock === 1 ? 'block' : 'none'}}>
           <ProductDescription />
         </div>
         <div className={styles.ProductComment_box} style={{display: commentBlock === 2 ? 'block' : 'none'}}>

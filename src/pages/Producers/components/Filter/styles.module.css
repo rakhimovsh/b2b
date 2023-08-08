@@ -11,12 +11,15 @@
     border: 1px solid #DDD;
     padding: 21px 21px 20px 18px; 
 }
-.companyRating_box {
+.ratingFilter {
     position: relative;
     width: 217px;
     border-radius: 4px;
     border: 1px solid #DDD;
     padding: 21px 25px 20px 18px; 
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
 .companyMajor_box {
     position: relative;
@@ -24,13 +27,19 @@
     border-radius: 4px;
     border: 1px solid #DDD;
     padding: 21px 21px 20px 18px; 
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
-.companyPlace_box {
+.placeFilter {
     position: relative;
     width: 257px;
     border-radius: 4px;
     border: 1px solid #DDD;
     padding: 21px 21px 20px 18px; 
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
 }
 .searchInput {
     max-width: 247px;
@@ -89,4 +98,50 @@
 }
 .filterCheckbox {
     max-width: 189px;
+}
+.checkboxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding: 26px 20px 40px 16px;
+    gap: 28px;
+    margin-top: 9px;
+}
+.placeCheckboxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding: 26px 20px 40px 16px;
+    gap: 28px;
+    margin-top: 9px;
+    width: 257px;  
+}
+.ratingCheckboxes {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    padding: 26px 20px 40px 16px;
+    gap: 28px;
+    margin-top: 9px;
+    width: 217px; 
+}
+.filterName {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.ratingFilter {
+    display: flex;
 }

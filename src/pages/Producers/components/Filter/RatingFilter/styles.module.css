@@ -1,0 +1,14 @@
+.checkbox {
+    display: flex;
+    max-width: 211px;
+    align-items: center;
+    gap: 6px;
+}
+.checkboxLabel {
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
