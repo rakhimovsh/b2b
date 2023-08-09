@@ -15,7 +15,7 @@ const About = () => {
             свяжитесь с ними бесплатно.
           </p>
         </div>
-        <img src={AboutImg} alt='curier-img' />
+        <img className={styles.aboutImage} src={AboutImg} alt='curier-img' />
       </div>
     </div>
   );

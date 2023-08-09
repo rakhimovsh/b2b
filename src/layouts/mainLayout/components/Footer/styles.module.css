@@ -115,3 +115,12 @@
     padding-left: 97px;
   }
 }
+@media screen and (max-width: 370px) {
+    .footerSocial {
+      max-width: 310px;
+    }
+    .footerSocial_icon {
+      width: 140px;
+      padding: 10px;
+    }
+}

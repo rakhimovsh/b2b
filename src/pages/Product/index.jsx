@@ -7,7 +7,7 @@ import Products from './components/Products'
 const Product = () => {
   return (
     <div className={'container ' + styles.filterBlock}>
-      <div>
+      <div className={styles.filterbox}>
         <CategoryFilter />
         <Sort />
       </div>

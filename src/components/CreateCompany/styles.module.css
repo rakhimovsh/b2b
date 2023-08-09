@@ -85,3 +85,9 @@
     right: -40px;
   }
 }
+@media screen and (max-width: 370px) {
+  .search_boxImage {
+    width: 300px;
+    right: 0;
+  }
+} 

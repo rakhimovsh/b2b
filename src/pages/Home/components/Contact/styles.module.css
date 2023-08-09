@@ -105,3 +105,18 @@
     width: 355px;
   }
 }
+@media screen and (max-width: 370px) {
+  .contactTitle {
+    width: 300px;
+  }
+  .contactLocation {
+    max-width: 290px;
+  }
+  .contactMap {
+    width: 300px;
+  }
+  .contactForm {
+    width: 300px;
+    margin-left: 0;
+  }
+} 

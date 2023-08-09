@@ -38,3 +38,22 @@
     right: 42px;
     cursor: pointer;
 }
+@media screen and (max-width: 1150px) {
+    .requestImage {
+        display: none;
+    }
+    .requestBg {
+        background-color: #FFF;
+        height: 76px;
+        margin-right: 0;
+    }
+    .requestContainer {
+        display: flex;
+        flex-direction: column;
+        width: 580px;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 42px;
+        left: 13%;
+    }
+}

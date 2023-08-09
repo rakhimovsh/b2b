@@ -11,7 +11,7 @@ import GreenCap from '@assets/images/greenCap.png'
 const ProductImage = () => {
   return (
     <div>
-        <div className={styles.productImage}><img src={ProductImg} alt="product image" /></div>
+        <div className={styles.productImage_box}><img className={styles.productImage} src={ProductImg} alt="product image" /></div>
         <div className={styles.productTypes}>
           <img src={GrayCap} alt="gray cap" />
           <img src={YellowCap} alt="yellow cap" />
