@@ -111,3 +111,24 @@
         width: 339px;
     }
 }
+@media screen and (max-width: 370px) {
+    .productSearchCard {
+        width: 310px;
+    }
+    .selectCategory_box {
+        width: 290px;
+    }
+    .selectCategory {
+        width: 290px;
+    }
+    .productSearch_inputs {
+        align-items: center;
+        justify-content: center;
+    }
+    .productName_input {
+        width: 290px;
+    }
+    .productSearch_button {
+        width: 290px;
+    }
+}

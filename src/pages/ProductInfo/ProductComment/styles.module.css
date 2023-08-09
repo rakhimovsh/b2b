@@ -34,3 +34,8 @@
 .ProductComment_box {
     margin-bottom: 250px;
 }
+@media screen and (max-width: 1150px) {
+    .line {
+        width: 728px;
+    }
+}

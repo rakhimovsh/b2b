@@ -2,7 +2,7 @@
     padding: 35px 20px;
     border-radius: 4px;
     border: 1px solid #EEE;
-    max-width: 292px;
+    width: 292px;
     margin-bottom: 20px;
 }
 .checkboxes {
@@ -67,6 +67,22 @@
     font-weight: 500;
     line-height: 20px;
 }
-.filterName {
-    /* margin-bottom: 25px; */
+@media screen and (max-width: 1150px) {
+   .categoryBox {
+    display: none;
+   } 
+   .categoryFilter_box {
+    width: 355px;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 0;
+   }
+   .categoryTitle {
+    margin-bottom: 0;
+   }
+}
+@media screen and (max-width: 370px) {
+    .categoryFilter_box {
+        width: 310px;
+    }
 }

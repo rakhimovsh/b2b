@@ -1,8 +1,8 @@
-@media screen and (max-width: 1536px) {
-  .usefulCard {
-    width: 355px;
-  }
-}
+  /* @media screen and (max-width: 1536px) {
+    .usefulCard {
+      width: 355px;
+    }
+  } */
 .usefulImage {
   margin-bottom: 16px;
 }
@@ -53,3 +53,16 @@
     width: 355px;
   }
 }
+@media screen and (max-width: 370px) {
+  .usefulCard {
+    width: 290px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .usefulImage {
+    width: 290px;
+  }
+} 

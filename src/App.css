@@ -43,3 +43,13 @@ h5 {
   padding: 0 10px;
   margin: auto;
 }
+@media screen and (max-width: 1150px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    padding: 0 10px;
+  }
+}

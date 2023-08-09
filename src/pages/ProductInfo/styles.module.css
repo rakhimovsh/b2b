@@ -6,3 +6,21 @@
     flex-wrap: wrap;
     padding-top: 24px;
 }
+@media screen and (max-width: 1150px) {
+    .productInfo_box {
+        flex-direction: column;
+        gap: 36px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .ProductInfoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 740px) {
+    .productInfo_box {
+        width: 355px;
+    }
+}

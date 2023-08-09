@@ -43,3 +43,8 @@
     display: none;
   }
 }
+@media screen and (max-width: 370px) {
+  .aboutImage {
+    width: 310px;
+  }
+}
