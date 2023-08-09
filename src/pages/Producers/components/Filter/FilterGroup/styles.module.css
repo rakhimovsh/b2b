@@ -1,0 +1,48 @@
+.filter {
+    width: 728px;
+    padding: 48px 36px;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+}
+.filterName {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.iconRight {
+    transform: rotate(-90deg);
+    width: 24px;
+    height: 24px;
+}
+.filterItem {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.filterH3 {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+@media screen and (max-width: 640px) {
+    .filter {
+        width: 355px;
+    }
+}

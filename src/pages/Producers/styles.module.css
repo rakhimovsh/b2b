@@ -1,0 +1,14 @@
+.companyContainer {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.producers {
+    padding-bottom: 150px;
+}
+@media screen and (max-width: 1150px) {
+    .companyContainer {
+        gap: 20px;
+        justify-content: center;
+    }
+}

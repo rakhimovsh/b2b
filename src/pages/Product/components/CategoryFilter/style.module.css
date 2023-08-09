@@ -6,8 +6,11 @@
     margin-bottom: 20px;
 }
 .checkboxes {
-    display: none;
+    display: flex;
+    flex-direction: column;
     max-width: 252px;
+    gap: 16px;
+   
 }
 .showCheckboxes {
     display: block;
@@ -18,19 +21,19 @@
 .selectBox {
     position: relative;
     max-width: 252px;
-}
-.categoryBox {
-    width: 252px;
-}
-.overSelect {
-    position: absolute;
-    left: 0; right: 0; top: 0; bottom: 0;
-}
-.checkboxLabel {
     display: flex;
     justify-content: space-between;
     margin-bottom: 16px;
+    cursor: pointer;
 }
+.categoryBox {
+    width: 252px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 .categoryTitle {
     font-family: SF Pro Display;
     font-size: 20px;
@@ -49,6 +52,21 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 16px;
-    /* padding-right: 22px; */
     width: 252px;
+}
+.closeButton {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+}
+.clearFilter {
+    color: #F00;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+.filterName {
+    /* margin-bottom: 25px; */
 }
