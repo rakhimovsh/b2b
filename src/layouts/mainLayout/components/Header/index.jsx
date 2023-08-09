@@ -4,9 +4,15 @@ import styles from './styles.module.css';
 import { ReactComponent as Logo } from '@assets/svg/logo.svg';
 import { ReactComponent as Globe } from '@assets/svg/globe-alt.svg';
 import { ReactComponent as Menu } from '@assets/svg/menu.svg';
+import {useTranslation } from "react-i18next";
 
 const Header = () => {
   const navigate = useNavigate()
+  const {i18n} = useTranslation ()
+
+  const handleChange = (evt) =>{
+    i18n.changeLanguage(evt.target.value)
+  }
   return (
     <div className={styles.header}>
       <div className={styles.headerLeft}>
@@ -20,10 +26,10 @@ const Header = () => {
       <div className={styles.headerRight}>
         <div className={styles.languageChange}>
           <Globe />
-          <select name='' id='lang-change' className={styles.languageChange_select}>
-            <option value='En'>En</option>
-            <option value='Ru'>Ru</option>
-            <option value='Ru'>Uz</option>
+          <select onChange={handleChange} defaultValue={i18n.language} name='' id='lang-change' className={styles.languageChange_select}>
+            <option value='en'>En</option>
+            <option value='ru'>Ru</option>
+            <option value='uz'>Uz</option>
           </select>
         </div>
         {/* <button className={styles.headerFisrtButton}>Войти</button> */}

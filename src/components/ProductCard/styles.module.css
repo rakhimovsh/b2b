@@ -24,7 +24,9 @@
 
 .newProduct_img{
   width: 100% ;
+  height: 325px;
   object-fit: cover;
+  object-position: center center;
 }
 
 .productCard_name {
@@ -51,5 +53,11 @@
   .newProduct_card {
     width: 100%;
     max-width: 350px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .newProduct_img {
+    height: 205px;
   }
 }

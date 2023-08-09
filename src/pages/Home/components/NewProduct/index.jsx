@@ -7,27 +7,22 @@ import {useEffect} from "react";
 import {getNewProducts} from "@/redux/actions/product.js";
 
 
-const slides = [
-  <ProductCard/>,
-  <ProductCard/>,
-  <ProductCard/>,
-  <ProductCard/>,
-  <ProductCard/>,
-  <ProductCard/>,
-];
 const NewProduct = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const {newProducts} = useSelector(state => state.product)
-  console.log(newProducts)
   useEffect(() =>{
     dispatch(getNewProducts())
   }, [])
+
+  const renderProductCards = (products) =>{
+    return products.map(product => <ProductCard product={product} key={product.id}/>)
+  }
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Новейшие товары</h3>
-        <Carousel slides={slides} />
+        <Carousel slides={renderProductCards(newProducts.items)} />
         <button onClick={()=> navigate('/application')} className={styles.newProduct_button}>Посмотреть больше продуктов</button>
       </div>
     </div>

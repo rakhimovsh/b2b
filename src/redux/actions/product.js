@@ -9,8 +9,6 @@ export const getNewProducts = () => (dispatch) => {
     .then((res) => {
       if (Array.isArray(res?.data)) {
         dispatch(productSlice.actions.setNewProducts(res.data?.slice(0, 10)));
-      } else {
-        dispatch(productSlice.actions.setNewProducts([]));
       }
     })
     .catch((err) => {
