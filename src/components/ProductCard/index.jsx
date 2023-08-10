@@ -15,7 +15,7 @@ const ProductCard = ({product}) => {
   return (
     <div onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
-        <img className={styles.newProduct_img} src={product?.image} alt='product-img' />
+        <img className={styles.newProduct_img} src={product?.images[0]?.image} alt='product-img' />
       </div>
       <p className={styles.productCard_name}>{product?.translations[lang]?.name}</p>
       <p className={styles.productCard_category}>
