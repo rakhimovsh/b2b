@@ -4,7 +4,7 @@ import ProductImg from '@assets/images/bigCapImage.png'
 import GrayCap from '@assets/images/grayCap.png'
 import YellowCap from '@assets/images/yellowCap.png'
 import WhiteCap from '@assets/images/whiteCap.png'
-import RedCap from '@assets/images/RedCap.png'
+import RedCap from '@assets/images/redCap.png'
 import BlackCap from '@assets/images/blackCap.png'
 import GreenCap from '@assets/images/greenCap.png'
 

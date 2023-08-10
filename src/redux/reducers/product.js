@@ -29,6 +29,18 @@ export const productSlice = createSlice({
     setNewProductsLoading: (state, action) => {
       state.newProducts.loading = action.payload;
     },
+    setPopularProducts: (state, action) => {
+      state.newProducts.items = action.payload;
+    },
+    setPopularProductsLoading: (state, action) => {
+      state.newProducts.loading = action.payload;
+    },
+    setSingleProduct: (state, action) => {
+      state.singleProduct.item = action.payload
+    },
+    setSingleProductLoading: (state, action) =>{
+      state.singleProduct.loading = action.payload
+    }
   },
 });
 

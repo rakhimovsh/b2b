@@ -7,6 +7,7 @@
 .newProduct_card {
   max-width: 292px;
   text-align: center;
+  cursor: pointer;
 }
 /*   
 @media screen and (max-width: 1536px) {

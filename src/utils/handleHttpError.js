@@ -1,8 +1,6 @@
 import axios from 'axios';
-import { useToast } from '@/hooks/useToast.jsx';
-
+import {toast} from "react-toastify";
 export const handleHttpError = (error) => {
-  const showToast = useToast();
   let errMeg
   if (axios.isCancel(error)) {
     errMeg = `Request canceled: ${error.message}`
@@ -20,5 +18,5 @@ export const handleHttpError = (error) => {
   } else {
     errMeg = `Error: ${error.message}`
   }
-  showToast(errMeg, 'error', { position: 'top-center' });
+  toast.error(errMeg, { position: 'top-center' });
 };

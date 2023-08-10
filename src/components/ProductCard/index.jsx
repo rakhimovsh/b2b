@@ -2,20 +2,26 @@ import styles from './styles.module.css';
 
 import RatingStars from '../RatingStars';
 import {useTranslation} from "react-i18next";
+import {useNavigate} from "react-router-dom";
 
 const ProductCard = ({product}) => {
+  const navigate = useNavigate()
   const {i18n} = useTranslation()
   const lang = i18n.language
+
+  const handleClick = () => {
+    navigate(`/company/product-info/${product.id}`)
+  }
   return (
-    <div className={styles.newProduct_card}>
+    <div onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
         <img className={styles.newProduct_img} src={product?.image} alt='product-img' />
       </div>
       <p className={styles.productCard_name}>{product?.translations[lang]?.name}</p>
-      <a href='#product' className={styles.productCard_category}>
+      <p className={styles.productCard_category}>
         Футболки
-      </a>
-      <RatingStars />
+      </p>
+      <RatingStars ratingCount={product?.average_rating} />
     </div>
   )
 };

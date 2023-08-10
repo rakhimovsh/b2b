@@ -1,4 +1,4 @@
-import HeroForm from "@pages/Home/components/HeroForm/index.jsx";
+import HeroForm from "@components/HeroForm/index.jsx";
 import styles from './styles.module.css'
 import {ReactComponent as SearchSvg} from '@assets/svg/search.svg'
 

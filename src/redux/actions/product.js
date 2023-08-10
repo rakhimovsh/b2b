@@ -18,3 +18,40 @@ export const getNewProducts = () => (dispatch) => {
       dispatch(productSlice.actions.setNewProductsLoading(false));
     });
 };
+
+export const getPopularProducts = () => (dispatch) => {
+  dispatch(productSlice.actions.setPopularProductsLoading(true));
+  api()
+    .get('/product/products')
+    .then((res) => {
+      if (Array.isArray(res?.data)) {
+        const sortedProducts = res.data
+          .sort((a, b) => b.average_rating - a.average_rating)
+          .slice(0, 10);
+        dispatch(productSlice.actions.setPopularProducts(sortedProducts));
+      }
+    })
+    .catch((err) => {
+      handleHttpError(err);
+    })
+    .finally(() => {
+      dispatch(productSlice.actions.setPopularProductsLoading(false));
+    });
+};
+
+export const getProductById = (productId) => (dispatch) => {
+  dispatch(productSlice.actions.setSingleProductLoading(true));
+  api()
+    .get(`/product/products/${productId}`)
+    .then((res) => {
+      if (res?.data) {
+        dispatch(productSlice.actions.setSingleProduct(res.data));
+      }
+    })
+    .catch((err) => {
+      handleHttpError(err);
+    })
+    .finally(() => {
+      dispatch(productSlice.actions.setSingleProductLoading(false));
+    });
+};

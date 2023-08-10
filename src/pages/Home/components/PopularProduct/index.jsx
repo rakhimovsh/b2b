@@ -1,24 +1,27 @@
 import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {useEffect} from "react";
 import ProductCard from '@components/ProductCard/index.jsx';
-
-import styles from './styles.module.css';
 import Carousel from '@components/Carousel/index.jsx';
+import { getPopularProducts } from '@/redux/actions/product.js';
+import styles from './styles.module.css';
 
-const slides = [
-  <ProductCard />,
-  <ProductCard />,
-  <ProductCard />,
-  <ProductCard />,
-  <ProductCard />,
-  <ProductCard />,
-];
 const PopularProduct = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const { newProducts } = useSelector((state) => state.product);
+  useEffect(() => {
+    dispatch(getPopularProducts());
+  }, []);
+
+  const renderProductCards = (products) => {
+    return products.map((product) => <ProductCard product={product} key={product.id} />);
+  };
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Популярные товары</h3>
-        <Carousel slides={slides} />
+        <Carousel slides={renderProductCards(newProducts.items)} />
         <button onClick={() => navigate('/application')} className={styles.newProduct_button}>
           Посмотреть больше продуктов
         </button>
