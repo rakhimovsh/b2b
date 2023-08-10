@@ -28,6 +28,12 @@
 }
 .productName {
     margin-bottom: 15px;
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 .productDetails {
     display: flex;
@@ -56,4 +62,16 @@
     .productData {
         margin-left: 0;
     }
+    .productName {
+        max-width: 355px;
+        font-size: 32px;
+    }
+    .productDetails_conatiner {
+        max-width: 355px;
+    }
 }
+@media screen and (max-width: 740px) {
+    .productCategory {
+        flex-wrap: wrap;
+    }
+} 

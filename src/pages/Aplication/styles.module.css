@@ -88,3 +88,38 @@ input::-webkit-input-placeholder {
     font-weight: 500;
     line-height: normal;
 }
+
+@media screen and (max-width: 1150px) {
+    .application {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .applicationTitle {
+        margin-right: 0;
+        margin-bottom: 84px;
+        text-align: center;
+    }
+    .applicationForm {
+        align-items: center;
+    }
+    .applicationButton {
+        width: 470px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .applicationTitle {
+        width: 336px;
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .applicationInput {
+        width: 355px;
+    }
+    .countrySelect {
+        width: 355px;
+    }
+    .applicationButton {
+        width: 355px;
+    }
+}

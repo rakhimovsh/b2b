@@ -75,3 +75,16 @@
         width: 728px;
     }
 }
+@media screen and (max-width: 740px) {
+    .companyContact {
+        flex-direction: column;
+        max-width: 355px;
+        padding: 33px 16px;
+    }
+    .mailButton {
+        width: 323px;
+    }
+    .phoneButton {
+        width: 323px;
+    }
+} 

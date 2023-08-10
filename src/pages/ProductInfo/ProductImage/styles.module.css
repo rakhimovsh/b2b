@@ -36,4 +36,8 @@
         width: 355px;
         height: 417px;
     }
+    .productTypes {
+        max-width: 355px;
+        gap: 27px;
+    }
 }

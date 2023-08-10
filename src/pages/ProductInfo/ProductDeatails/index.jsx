@@ -7,7 +7,7 @@ import ProductDescription from '../ProductDescription'
 const ProductDetails = () => {
   return (
     <div className={styles.productData}>
-        <div>
+        <div className={styles.productDetails_conatiner}>
             <h2 className={styles.productName}>Бейсболки – оптовая цена</h2>
             <span className={styles.productRating}>
                 <FiveStar style={{marginRight: '12px'}} /> 3.6 рейтинг

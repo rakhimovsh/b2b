@@ -57,3 +57,17 @@
         left: 13%;
     }
 }
+@media screen and (max-width: 740px) {
+    .requestTitle {
+        width: 346px;
+    }
+    .requestContainer {
+        width: 360px;
+        left: 10px;
+    }
+    .requestBg {
+        padding: 69px 10px;
+        width: 360px;
+    }
+
+}
