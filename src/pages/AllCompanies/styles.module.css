@@ -5,3 +5,15 @@
     padding-top: 24px;
     padding-bottom: 250px;
 }
+@media screen and (max-width: 500px) {
+    .allCompanies {
+        justify-content: center;
+        padding-bottom: 150px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .allCompanies {
+        justify-content: center;
+        gap: 20px;
+    }
+}

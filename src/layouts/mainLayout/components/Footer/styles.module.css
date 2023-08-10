@@ -114,6 +114,9 @@
     padding-right: 97px;
     padding-left: 97px;
   }
+  .footerSocial {
+    max-width: 355px;
+  }
 }
 @media screen and (max-width: 370px) {
     .footerSocial {

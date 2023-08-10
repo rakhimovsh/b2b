@@ -14,8 +14,8 @@ const ProductImage = () => {
         <div className={styles.productImage_box}><img className={styles.productImage} src={ProductImg} alt="product image" /></div>
         <div className={styles.productTypes}>
           <img src={GrayCap} alt="gray cap" />
-          <img src={YellowCap} alt="yellow cap" />
-          <img src={WhiteCap} alt="white cap" />
+          <img src={RedCap} alt="yellow cap" />
+          <img src={GreenCap} alt="white cap" />
           <img src={RedCap} alt="red cap" />
           <img src={BlackCap} alt="black cap" />
           <img src={GreenCap} alt="green cap" />

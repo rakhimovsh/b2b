@@ -133,3 +133,19 @@
 .userCommentText {
     max-width: 554px;
 }
+@media screen and (max-width: 740px) {
+    .commentTextarea {
+        width: 355px;
+        height: 118px;
+    }
+    .contactInputs_box {
+        flex-direction: column;
+    }
+    .contactInput {
+        width: 355px;
+        gap: 20px;
+    }
+    .sendButton {
+        width: 355px;
+    }
+}

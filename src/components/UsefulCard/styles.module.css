@@ -42,6 +42,12 @@
   line-height: 20px;
   margin-bottom: 56px;
 }
+@media screen and (max-width: 1150px) {
+  .usefulCard {
+    width: 355px;
+    
+  }
+}
 @media screen and (max-width: 500px) {
   .usefulCard_more {
     margin-bottom: 32px;

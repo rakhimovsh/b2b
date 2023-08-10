@@ -66,7 +66,7 @@
     width: 728px;
   }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 740px) {
   .productSearchCard {
     display: flex;
     flex-direction: column;
@@ -84,8 +84,11 @@
   .search_boxImage {
     right: -40px;
   }
+  /* .search_boxImage {
+    width: 300;
+  } */
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 740px) {
   .search_boxImage {
     width: 300px;
     right: 0;

@@ -39,3 +39,25 @@
         width: 728px;
     }
 }
+@media screen and (max-width: 740px) {
+    .line {
+        width: 355px;
+    }
+    .ProductComment_box {
+        width: 355px;
+    }
+    .ProductComment_box {
+        margin-bottom: 111px;
+    }
+} 
+@media screen and (max-width: 340px) {
+    .line {
+        width: 310px;
+    }
+    .ProductComment_box {
+        width: 300px;
+    }
+    .ProductComment_box {
+        margin-bottom: 300px;
+    }
+}

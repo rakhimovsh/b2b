@@ -82,7 +82,7 @@
         width: 728px;
     }
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 740px) {
     .productSearch_title {
         text-align: center;
         max-width: 285px;
