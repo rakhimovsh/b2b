@@ -20,9 +20,7 @@ const SearchProduct = () => {
   }, []);
 
   const handleCategoryChange = (evt) => {
-    console.log(subcategories)
     const result = subcategories.items?.filter(subcategory => subcategory.category == evt.target.value)
-    console.log(result)
     setFilteredSubcategories(result)
   };
   return (
