@@ -7,8 +7,6 @@ import { getCompanyById } from '@/redux/actions/company';
 import { useEffect } from 'react';
 
 const CompanyInfo = () => {
-  // const {i18n} = useTranslation()
-  // const lang = i18n.language  
   const {companyId} = useParams()
   console.log(companyId);
   const dispatch = useDispatch()

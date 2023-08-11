@@ -95,6 +95,9 @@
   .productCategory_card {
     margin-bottom: 0;
   }
+  .productCategory_title {
+    width: 310px;
+  }
 }
 @media screen and (max-width: 370px) {
   .productCategory_title {

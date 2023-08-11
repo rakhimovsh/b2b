@@ -12,6 +12,7 @@ const ProductCard = ({product}) => {
   const handleClick = () => {
     navigate(`/company/product-info/${product.id}`)
   }
+  console.log(product);
   return (
     <div onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
