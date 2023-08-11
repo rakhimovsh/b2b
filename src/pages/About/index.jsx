@@ -17,7 +17,9 @@ const About = () => {
             </div>
             <LogoSvg className={styles.logo} />
         </div>
-        <img className={styles.aboutImage} src={AboutImage} alt="about image" />
+          <img  className={styles.aboutImage} src={AboutImage} alt="about image" />
+     
+        
         <div className={styles.aboutB2b}>
             <B2bBlock  />
         </div>

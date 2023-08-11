@@ -42,6 +42,9 @@
   .aboutContent {
     display: none;
   }
+  .aboutImage {
+    width: 310px;
+  }
 }
 @media screen and (max-width: 370px) {
   .aboutImage {

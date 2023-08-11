@@ -38,3 +38,15 @@
   cursor: pointer;
   z-index: 500000;
 }
+@media screen and (max-width: 500px) {
+  .customNextButton {
+    margin-right: 0;
+    width: 36px;
+    height: 36px;
+  }
+  .customPrevButton {
+    margin-left: 0;
+    width: 36px;
+    height: 36px;
+  }
+}
