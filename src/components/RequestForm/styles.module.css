@@ -66,15 +66,15 @@
 
 @media screen and (max-width: 500px) {
   .contactForm_name_input {
-    width: 355px;
+    width: 335px;
   }
 
   .contactForm_textarea {
-    width: 355px;
+    width: 335px;
   }
 
   .contactForm_btn {
-    width: 355px;
+    width: 335px;
   }
 }
 
