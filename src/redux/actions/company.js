@@ -4,7 +4,9 @@ import { handleHttpError } from '@/utils/handleHttpError.js';
 
 export const getAllCompanies = () => (dispatch) => {
     dispatch(companySlice.actions.setCompaniesLoading(true))
-    api().get('/product/company/').then(res => {
+    api()
+     .get('/product/company/')
+     .then(res => {
         if(res?.data) {
             dispatch(companySlice.actions.setCompanies(res.data))
         }
@@ -12,5 +14,18 @@ export const getAllCompanies = () => (dispatch) => {
         handleHttpError(err);
     }).finally(() => {
         dispatch(companySlice.actions.setCompaniesLoading(false))
+    })
+}
+export const getCompanyById = (companyId) => (dispatch) => {
+    api()
+    .get(`/product/company/${companyId}`)
+    .then(res => {
+        if(res?.data) {
+            dispatch(companySlice.actions.setSingleCompany(res.data))
+        }
+    }).catch(err => {
+        handleHttpError(err);
+    }).finally(() => {
+        dispatch(companySlice.actions.setSingleCompanyLoading(false))
     })
 }

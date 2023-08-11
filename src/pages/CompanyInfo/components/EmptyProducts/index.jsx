@@ -8,7 +8,7 @@ const EmptyProducts = () => {
     <div className={styles.emptyProducts}>
       <div className={styles.emptyProducts_content}>
         <h2>
-          К сожалению, товары этого продавца не найдено
+          К сожалению, товары этого продавца не найдены
         </h2>
         <p>Советуем посмотреть на другие компании</p>
       </div>
