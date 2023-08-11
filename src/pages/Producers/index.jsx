@@ -17,10 +17,9 @@ const Producers = () => {
         <div className={"container " + styles.producers}>
             <Filter />
             <div className={styles.companyContainer}>
-                <CompanyCard />
-                <CompanyCard />
-                <CompanyCard />
-                <CompanyCard />
+                {companies.items?.map(company => (
+                    <CompanyCard key={company?.id} company={company}/>   
+                ))}    
             </div>           
             <CompanyPages />
         </div>

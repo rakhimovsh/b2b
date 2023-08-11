@@ -4,22 +4,33 @@ import EmptyProducts from "../EmptyProducts";
 import Recommended from "@pages/CompanyInfo/components/Recommended/index.jsx";
 
 
-const Products = () =>{
+const Products = ({length}) =>{
   return (
     <>
-      {/*<h2 className={styles.productsTitle}>*/}
-      {/*  Все товары*/}
-      {/*</h2>*/}
-      {/*<div className={styles.productsList}>*/}
-      {/*  <ProductCard/>*/}
-      {/*  <ProductCard/>*/}
-      {/*  <ProductCard/>*/}
-      {/*  <ProductCard/>*/}
-      {/*  <ProductCard/>*/}
-      {/*  <ProductCard/>*/}
-      {/*</div>*/}
-      <EmptyProducts/>
-      <Recommended/>
+      {(length <= 0) 
+      ?
+        <div>
+          <EmptyProducts/>
+          <Recommended/>
+        </div>
+       : 
+      <div>
+        <h2 className={styles.productsTitle}>
+          Все товары
+        </h2>
+        <div className={styles.productsList}>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+          <ProductCard/>
+        </div>
+      </div> 
+      }
+      
+      
+      
     </>
   )
 }
