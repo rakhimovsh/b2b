@@ -6,3 +6,7 @@ export function api() {
     baseURL: APP_API,
   });
 }
+export function getImage(url) {
+  if(url.startsWith('http') )return url;
+  return APP_API + url
+}

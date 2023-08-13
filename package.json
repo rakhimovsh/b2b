@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src/**/*.{js,jsx,ts,tsx,json}",
@@ -21,6 +21,7 @@
     "react-alice-carousel": "^2.7.1",
     "react-dom": "^18.2.0",
     "react-i18next": "^13.0.2",
+    "react-icons": "^4.10.1",
     "react-redux": "^8.1.1",
     "react-router-dom": "^6.14.2",
     "react-toastify": "^9.1.3",

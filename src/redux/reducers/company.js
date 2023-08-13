@@ -28,7 +28,6 @@ export const companySlice = createSlice({
             state.singleCompany.loading = action.payload
         }
     } 
-
 })
 
 export default companySlice.reducer
