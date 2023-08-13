@@ -1,5 +1,7 @@
-import { Route, Routes } from 'react-router-dom';
-import ProductInfo from '../pages/ProductInfo';
+import {Route, Routes, useLocation} from 'react-router-dom';
+import {useEffect} from "react";
+
+import ProductInfo from '@pages/ProductInfo';
 import MainLayout from '@layouts/mainLayout';
 import Home from '@pages/Home';
 import Producers from '@pages/Producers';
@@ -17,6 +19,10 @@ import ReturnPolicy from '@pages/ReturnPolicy';
 import FAQ from '@pages/FAQ';
 
 const Router = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <Routes>
       <Route path='/' element={<MainLayout />}>

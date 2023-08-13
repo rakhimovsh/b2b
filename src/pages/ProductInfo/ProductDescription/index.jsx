@@ -1,21 +1,21 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-const ProductDescription = () => {
+const ProductDescription = ({ compound}) => {
   return (
     <div className={styles.productDescription}>
-        <div>
-            <p className={styles.description}>Описание</p>
-            <p className={styles.descriptionText}>Пятиклинка, Застежка на липучке, Усиленный козырек</p>
-        </div>
+        {/*<div>*/}
+        {/*    <p className={styles.description}>Описание</p>*/}
+        {/*    <p className={styles.descriptionText}>{desc}</p>*/}
+        {/*</div>*/}
         <div>
             <p className={styles.description}>Состав</p>
-            <p className={styles.descriptionText}>Хлопок 100%</p>
+            <p className={styles.descriptionText}>{compound}</p>
         </div>
-        <div>
-            <p className={styles.description}>Цвета</p>
-            <p className={styles.descriptionText}>Доступны все цвета</p>
-        </div>
+        {/*<div>*/}
+        {/*    <p className={styles.description}>Цвета</p>*/}
+        {/*    <p className={styles.descriptionText}>Доступны все цвета</p>*/}
+        {/*</div>*/}
     </div>
   )
 }

@@ -1,42 +1,41 @@
-import React from 'react'
-import styles from './styles.module.css'
-import {ReactComponent as FiveStar} from '@assets/svg/fiveStar.svg'
-import CompanyContact from '../CompanyContact'
-import ProductDescription from '../ProductDescription'
+import React from 'react';
+import { useTranslation } from 'react-i18next';
+import styles from './styles.module.css';
+import CompanyContact from '../CompanyContact';
+import ProductDescription from '../ProductDescription';
+import RatingStars from '@components/RatingStars/index.jsx';
 
-const ProductDetails = () => {
+const ProductDetails = ({ details }) => {
+  const { i18n } = useTranslation();
+  const lang = i18n.language;
   return (
     <div className={styles.productData}>
-        <div className={styles.productDetails_conatiner}>
-            <h2 className={styles.productName}>Бейсболки – оптовая цена</h2>
-            <span className={styles.productRating}>
-                <FiveStar style={{marginRight: '12px'}} /> 3.6 рейтинг
-            </span>
-            <div className={styles.productDetails}>
-                <ProductDescription />
-                <div>
-                    <p className={styles.description}>Категории</p>
-                    <div className={styles.productCategory}>
-                        <button className={styles.productCategory_button}>Трикотажные изделия</button>
-                        <button className={styles.productCategory_button}>Кепки</button>
-                        <button className={styles.productCategory_button}>Женские кепки</button>
-                        <button className={styles.productCategory_button}>Мужские кепки</button>
-                    </div>
-                </div>
-                <div>
-                    <p className={styles.description}>Метки</p>
-                    <div className={styles.productCategory}>
-                        <button className={styles.productCategory_button}>Бейсболки</button>
-                        <button className={styles.productCategory_button}>Кепки</button>
-                    </div>
-                </div>
+      <div className={styles.productDetails_conatiner}>
+        <h2 className={styles.productName}>{details?.translations[lang].name}</h2>
+        {details?.average_rating ? (
+          <span className={styles.productRating}>
+            <RatingStars ratingCount={details?.average_rating} /> {details?.average_rating} рейтинг
+          </span>
+        ) : null}
+        <div className={styles.productDetails}>
+          <ProductDescription compound={details?.translations[lang].compound} />
+          <div>
+            <p className={styles.description}>Категории</p>
+            <div className={styles.productCategory}>
+              <button className={styles.productCategory_button}>{details?.category?.translations[lang]?.name}</button>
             </div>
+          </div>
+          <div>
+            <p className={styles.description}>Метки</p>
+            <div className={styles.productCategory}>
+              <button className={styles.productCategory_button}>{details?.translations[lang]?.tag}</button>
+            </div>
+          </div>
         </div>
-        <CompanyContact />
-        
-
+      </div>
+      <CompanyContact companyId={details?.campany}/>
     </div>
-  )
-}
+  );
+};
 
-export default ProductDetails
+export default ProductDetails;

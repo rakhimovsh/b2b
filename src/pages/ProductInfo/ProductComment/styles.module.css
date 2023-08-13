@@ -6,12 +6,11 @@
 .productScripts {
     display: flex;
     max-width: 493px;
-    justify-content: space-between;
     margin-bottom: 47px;
+    gap: 56px;
 }
 .active {
     color: #1876F2;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -23,7 +22,6 @@
 }
 .notActive {
     color: #000;
-    font-family: SF Pro Display;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

@@ -19,10 +19,10 @@ const ProductInfo = () => {
   return (
     <div className={'container ' + styles.ProductInfoContainer}>
         <div className={styles.productInfo_box}>
-          <ProductImage />
-          <ProductDetails />
+          <ProductImage images={singleProduct.item?.images || []}/>
+          <ProductDetails  details={singleProduct.item}/>
         </div>
-        <ProductComment />
+        <ProductComment product={singleProduct.item}/>
     </div>
   )
 }

@@ -1,6 +1,7 @@
 import { productSlice } from '@/redux/reducers/product.js';
 import { api } from '@/utils/api.js';
 import { handleHttpError } from '@/utils/handleHttpError.js';
+import { batch } from 'react-redux';
 
 export const getNewProducts = () => (dispatch) => {
   dispatch(productSlice.actions.setNewProductsLoading(true));
@@ -40,7 +41,6 @@ export const getPopularProducts = () => (dispatch) => {
 };
 
 export const getProductById = (productId) => (dispatch) => {
-  dispatch(productSlice.actions.setSingleProductLoading(true));
   api()
     .get(`/product/products/${productId}`)
     .then((res) => {
@@ -53,5 +53,25 @@ export const getProductById = (productId) => (dispatch) => {
     })
     .finally(() => {
       dispatch(productSlice.actions.setSingleProductLoading(false));
+    });
+};
+
+export const createProductComment = (request) => (dispatch) => {
+  dispatch(productSlice.actions.setProductCommentLoading(true));
+  api()
+    .post('/product/product-ratings/', request)
+    .then((res) => {
+      if (res?.data) {
+        dispatch(productSlice.actions.setProductCommentResponse(res.data));
+      }
+    })
+    .catch((err) => {
+      handleHttpError(err);
+    })
+    .finally(() => {
+      batch(() => {
+        dispatch(productSlice.actions.setProductCommentLoading(false));
+        dispatch(productSlice.actions.setProductCommentResponse(null));
+      });
     });
 };

@@ -1,29 +1,20 @@
 .commentsTitle {
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
-    line-height: normal;
     margin-bottom: 11px;
 }
 .commentNote {
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     opacity: 0.6;
     margin-bottom: 25px;
 }
 .clientNote {
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
     margin-bottom: 6px;
 }
 .stars {
@@ -45,7 +36,6 @@
     margin-bottom: 26px;
     padding: 20px;
     color: #000;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -64,7 +54,6 @@
     padding: 12px 20px;
     width: 298px;
     color: #000;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -83,9 +72,7 @@
 }
 .checkboxText {
     color: #000;
-    font-family: SF Pro Display;
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.12px;
@@ -95,12 +82,14 @@
     background: #1876F2;
     padding: 20px 73px;
     color: #FFF;
-    font-family: SF Pro Display;
     font-size: 18px;
-    font-style: normal;
     font-weight: 500;
     line-height: 20px;
     margin-bottom: 54px;
+}
+
+.sendButton:disabled {
+    opacity: 0.6;
 }
 .userImage {
     display: flex;

@@ -3,7 +3,7 @@ import styles from './styles.module.css';
 import RatingStars from '../RatingStars';
 import {useTranslation} from "react-i18next";
 import {useNavigate} from "react-router-dom";
-import { getImage } from '../../utils/api';
+import { getImage } from '@/utils/api.js';
 
 const ProductCard = ({product}) => {
   const navigate = useNavigate()
@@ -24,7 +24,7 @@ const ProductCard = ({product}) => {
       <p className={styles.productCard_category}>
         Футболки
       </p>
-      <RatingStars ratingCount={product?.average_rating} />
+      <RatingStars rating={product?.average_rating} setRating={()=> {}} isEditable={false} />
     </div>
   )
 };

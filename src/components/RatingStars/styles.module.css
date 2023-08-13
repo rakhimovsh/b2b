@@ -1,11 +1,11 @@
-.ratingStar {
-    margin-top: 14px;
-    background: none;
-    transition: 1s;
-  }
-  
-  .ratingStar:hover {
-    width: 20px;
-    height: 20px;
-    cursor: pointer;
-  }
+.fill svg{
+  fill: #F1BD25;
+}
+
+.star svg{
+  margin-right: 5px;
+}
+
+.editable{
+  cursor: pointer;
+}

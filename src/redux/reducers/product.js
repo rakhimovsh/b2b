@@ -15,9 +15,13 @@ const initialState = {
   },
   singleProduct: {
     item: null,
-    loading: false,
+    loading: true,
   },
-  selectedCompanyProducts: []
+  selectedCompanyProducts: [],
+  productComment: {
+    response: null,
+    loading: false
+  }
 };
 
 export const productSlice = createSlice({
@@ -44,6 +48,12 @@ export const productSlice = createSlice({
     },
     setSelectedCompanyProducts: (state, action) =>{
       state.selectedCompanyProducts = action.payload
+    },
+    setProductCommentResponse: (state, action) =>{
+      state.productComment.response = action.payload
+    },
+    setProductCommentLoading: (state, action) =>{
+      state.productComment.loading = action.payload
     }
   },
 });
