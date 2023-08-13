@@ -47,6 +47,11 @@
     margin-bottom: 45px;
     cursor: pointer;
 }
+.selectCategory_box select{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 @media screen and (max-width: 1536px) {
     .productSearch_button {
       margin-bottom: 65px;

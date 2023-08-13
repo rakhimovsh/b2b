@@ -12,7 +12,7 @@ const Producers = () => {
     const dispatch = useDispatch()
     const {companies} = useSelector(state => state.company)
     useEffect(() => {dispatch(getAllCompanies())}, [])
-    console.log(companies);
+
     return (
         <div className={"container " + styles.producers}>
             <Filter />

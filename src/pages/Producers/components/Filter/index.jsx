@@ -35,7 +35,7 @@ const Filter = () => {
                     <p className={styles.filterName}>Направление компании</p><IconDown />
                 </div>
                 {openMajor && 
-                <div className={styles.checkboxes}>
+                <div  className={styles.checkboxes}>
                     <MajorFilter />
                 </div>}
                 
@@ -55,7 +55,7 @@ const Filter = () => {
                     <p  className={styles.filterName}>Рейтинг компании</p><IconDown />
                 </div>
                 {openRating && 
-                    <div className={styles.ratingCheckboxes}>
+                    <div  className={styles.ratingCheckboxes}>
                         <RatingFilter />  
                     </div>
                 }
