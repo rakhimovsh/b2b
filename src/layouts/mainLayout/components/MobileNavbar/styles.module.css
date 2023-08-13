@@ -1,0 +1,31 @@
+.wrapper {
+  position: relative;
+}
+.content {
+  padding: 50px 0 115px 40px;
+  position: fixed;
+  background-color: #FFFFFF;
+  width: 100%;
+  z-index: 50;
+  left: 0;
+  top: -100%;
+  transition: top ease 0.5s;
+}
+
+.open {
+  top: 120px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.list li {
+  font-size: 28px;
+  font-weight: 500;
+}
+.list li a{
+  color: #121212;
+}
