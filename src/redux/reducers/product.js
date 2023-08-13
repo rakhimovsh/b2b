@@ -17,6 +17,7 @@ const initialState = {
     item: null,
     loading: false,
   },
+  selectedCompanyProducts: []
 };
 
 export const productSlice = createSlice({
@@ -40,6 +41,9 @@ export const productSlice = createSlice({
     },
     setSingleProductLoading: (state, action) =>{
       state.singleProduct.loading = action.payload
+    },
+    setSelectedCompanyProducts: (state, action) =>{
+      state.selectedCompanyProducts = action.payload
     }
   },
 });

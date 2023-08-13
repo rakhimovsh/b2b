@@ -1,6 +1,7 @@
 import { companySlice } from "../reducers/company"
 import { api } from '@/utils/api.js';
 import { handleHttpError } from '@/utils/handleHttpError.js';
+import { productSlice } from "../reducers/product";
 
 export const getAllCompanies = () => (dispatch) => {
     dispatch(companySlice.actions.setCompaniesLoading(true))
@@ -22,6 +23,7 @@ export const getCompanyById = (companyId) => (dispatch) => {
     .then(res => {
         if(res?.data) {
             dispatch(companySlice.actions.setSingleCompany(res.data))
+            dispatch(productSlice.actions.setSelectedCompanyProducts(res.data?.products))
         }
     }).catch(err => {
         handleHttpError(err);

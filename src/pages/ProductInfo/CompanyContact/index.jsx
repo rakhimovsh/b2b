@@ -19,6 +19,7 @@ const CompanyContact = () => {
     }
 
   return (
+    <>
     <div className={styles.companyContact}>
         <div className={styles.companyInfo}>
             <div>
@@ -37,13 +38,14 @@ const CompanyContact = () => {
             <button onClick={toggleMail} className={styles.mailButton}><img style={{marginRight: '6px'}} src={MailSvg} alt="mail icon" />Узнать оптовую цену</button>
             <button onClick={togglePhone} className={styles.phoneButton}><img style={{marginRight: '6px'}} src={PhoneIcon} alt="phone icon" />Связаться с продавцом</button>
         </div>
+    </div>
         <div >
             {openMail && ( <RequestPopUp closeMailModal={setOpenMail} /> )}
         </div>
         <div>
             {openPhone && ( <CallPopUp closePhoneModal={setOpenPhone}/> )} 
         </div>
-    </div>
+    </>
   )
 }
 
