@@ -8,14 +8,11 @@ import { getAllCompanies } from '@/redux/actions/company';
 const Recommended = () =>{
   const {companies, singleCompany} = useSelector(state => state.company)
   useEffect(()=>{
-
+    
   },[])
   const dispatch = useDispatch()
   useEffect(() => {dispatch(getAllCompanies())}, [])
-  console.log(companies.items);
-  console.log(singleCompany);
   const filteredCompanies = companies.items.filter((companyId) => companyId?.id !== singleCompany?.item?.id)
-  console.log(filteredCompanies);
   return (
     <>
       <h2 className={styles.recommendedTitle}>

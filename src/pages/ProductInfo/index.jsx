@@ -16,7 +16,6 @@ const ProductInfo = () => {
   useEffect(() => {
     dispatch(getProductById(productId))
   }, [productId])
-  console.log(singleProduct)
   return (
     <div className={'container ' + styles.ProductInfoContainer}>
         <div className={styles.productInfo_box}>

@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 const CompanyInfo = () => {
   const {companyId} = useParams()
-  console.log(companyId);
+
   const dispatch = useDispatch()
   const {singleCompany} = useSelector(state => state.company)
   useEffect(() => {dispatch(getCompanyById(companyId))}, [companyId])

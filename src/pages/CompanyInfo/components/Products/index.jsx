@@ -7,7 +7,8 @@ import { useSelector } from 'react-redux';
 
 const Products = ({length}) =>{
   const {selectedCompanyProducts} = useSelector(state => state.product)
-  console.log(selectedCompanyProducts);
+  
+
   return (
     <>
       {!selectedCompanyProducts?.length

@@ -14,10 +14,7 @@ import { useNavigate } from 'react-router-dom';
 const CompanyCard = ({company}) => {
   const {i18n} = useTranslation()
   const lang = i18n.language  
-  console.log(company);
   const navigate = useNavigate()
-  console.log(company?.type_product?.translations[lang]?.name);
-  // const img1=typeof(company?.images)=='object' ? company?.images[0].image : company?.image;
   return (
     <div onClick={()=> navigate(`/company/info/${company?.id}`)} className={styles.companyCard}>
       <div className={styles.companyTitle}>
