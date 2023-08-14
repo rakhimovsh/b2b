@@ -1,9 +1,10 @@
 import React from 'react'
 import styles from './styles.module.css'
+import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 
 const CountrySelect = ({ name }) => {
   return (
-    <div>
+    <div className={styles.countrySelect_box}>
       <select id='country' name={name} className={styles.countrySelect}>
         <option value='Afghanistan'>Afghanistan</option>
         <option value='Åland Islands'>Åland Islands</option>
@@ -260,6 +261,7 @@ const CountrySelect = ({ name }) => {
         <option value='Zambia'>Zambia</option>
         <option value='Zimbabwe'>Zimbabwe</option>
       </select>
+      <IconDown className={styles.selectIcon} />
     </div>
   );
 };

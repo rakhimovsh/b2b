@@ -30,7 +30,7 @@ const Header = () => {
         <div className={styles.headerRight}>
           <div className={styles.languageChange}>
             <Globe />
-            <select
+            <select 
               onChange={handleChange}
               defaultValue={i18n.language}
               name=''
