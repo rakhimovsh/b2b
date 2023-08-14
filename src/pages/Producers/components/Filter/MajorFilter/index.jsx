@@ -14,7 +14,6 @@ const MajorFilter = () => {
   return (
     <>
         {categories.items.map((category) => {
-            console.log(category?.subcategories);
             return (
                 <div className={styles.checkbox}>
                     <input style={{width: '13px', height: '16px'}} type="radio" name='firstCheckbox' />
