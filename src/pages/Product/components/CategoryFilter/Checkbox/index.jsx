@@ -1,37 +1,26 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useTranslation } from 'react-i18next'
 
-const Checkbox = () => {
+const Checkbox = ({subcategories}) => {
+  const {i18n} = useTranslation()
+  const lang = i18n.language
+  
   return (
     <>
-        <div className={styles.checkboxLabel}>
-            <div className={styles.checkboxItem}>
-              <input type="checkbox" name='productOne'/>
-              <label htmlFor="productOne">Ткани</label> 
+        {subcategories.map((subcategory) => {
+          return (
+            <div className={styles.checkboxLabel}>
+              <div className={styles.checkboxItem}>
+                <input type="checkbox" name='productOne'/>
+                <label htmlFor="productOne">{subcategory?.translations[lang]?.name}</label> 
+              </div>
+              <p className={styles.productNumber}>{subcategory?.length}</p>
             </div>
-            <p className={styles.productNumber}>12</p>
-        </div>
-        <div className={styles.checkboxLabel}>
-            <div className={styles.checkboxItem}>
-              <input type="checkbox" name='productOne'/>
-              <label htmlFor="productOne">Военные ткани</label> 
-            </div>
-            <p className={styles.productNumber}>12</p>
-        </div>
-        <div className={styles.checkboxLabel}>
-            <div className={styles.checkboxItem}>
-              <input type="checkbox" name='productOne'/>
-              <label htmlFor="productOne">Банные полотенца</label> 
-            </div>
-            <p>12</p>
-        </div>
-        <div className={styles.checkboxLabel}>
-            <div className={styles.checkboxItem}>
-              <input  type="checkbox" name='productOne'/>
-              <label htmlFor="productOne">Тканевые полотенца</label> 
-            </div>
-            <p>12</p>
-        </div>
+          )
+        })}
+        
+        
     </>
   )
 }
