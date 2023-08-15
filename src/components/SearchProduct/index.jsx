@@ -39,7 +39,7 @@ const SearchProduct = () => {
               Категория продукта
             </option>
             {categories.items?.map((category) => (
-              <option key={category?.id} value={category?.id}>
+              <option key={category?.id}  style={{width:'100px',height:"200px"}} value={category?.id}>
                 {category?.translations[lang]?.name}
               </option>
             ))}

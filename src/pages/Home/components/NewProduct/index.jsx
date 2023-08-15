@@ -11,9 +11,7 @@ const NewProduct = () => {
   const navigate = useNavigate()
   const dispatch = useDispatch()
   const {newProducts} = useSelector(state => state.product)
-  useEffect(() =>{
-    dispatch(getNewProducts())
-  }, [])
+  useEffect(() => { dispatch(getNewProducts())}, [])
 
   const renderProductCards = (products) =>{
     return products.map(product => <ProductCard product={product} key={product.id}/>)

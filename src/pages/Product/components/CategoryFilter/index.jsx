@@ -22,11 +22,11 @@ const CategoryFilter = () => {
         <h3 className={styles.categoryTitle}>
           Категории
         </h3>
-        <div className={styles.categoryBox}>
+        <div  className={styles.categoryBox}>
           {categories?.items.map((category) => {
             console.log(category?.subcategories);
             return (
-              <div className={styles.filterName}>
+              <div key={category?.id} className={styles.filterName}>
                 <div className={styles.selectBox} onClick={() => {setOpenSelect(prev => category?.id === prev ? null : category?.id)}}>
                   <h4>{category?.translations[lang]?.name}</h4><ArrowDown />
                 </div>

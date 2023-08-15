@@ -10,7 +10,7 @@ const Checkbox = ({subcategories}) => {
     <>
         {subcategories.map((subcategory) => {
           return (
-            <div className={styles.checkboxLabel}>
+            <div key={subcategory?.id} className={styles.checkboxLabel}>
               <div className={styles.checkboxItem}>
                 <input type="checkbox" name='productOne'/>
                 <label htmlFor="productOne">{subcategory?.translations[lang]?.name}</label> 

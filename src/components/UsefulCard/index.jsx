@@ -1,8 +1,10 @@
 import styles from './styles.module.css';
 
 import UsefulImage1 from '@assets/images/usefulImg1.png';
-import UsefulImage2 from '@assets/images/usefulImg2.png';
-import UsefulImage3 from '@assets/images/usefulImg3.png';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getNews } from '../../redux/actions/news';
+import { useTranslation } from 'react-i18next';
 
 const usefulCardData = [
   {
@@ -11,18 +13,25 @@ const usefulCardData = [
 ];
 
 const UsefulCard = () => {
+  const {i18n} = useTranslation();
+  const lang = i18n.language;
+  const dispatch = useDispatch();
+  const { news } = useSelector((state) => state.newsInfo) 
+  useEffect(() => {dispatch(getNews())}, [])
+ 
   return (
     <>
-      {usefulCardData.map((usefulCardInfo) => {
+      {news?.items.map((newsCard) => {
+        console.log(newsCard?.translations);
         return (
-          <div className={styles.usefulCard}>
-            <img className={styles.usefulImage} src={usefulCardInfo.image} alt='ship' />
+          <div key={newsCard?.id} className={styles.usefulCard}>
+            <img className={styles.usefulImage} src={newsCard?.image} alt='ship' />
             <p className={styles.usefulDate}>2.06.2023</p>
             <p className={styles.usefulCard_name}>
-              Kokand: how the country manages its exports in times
+              {newsCard?.translations[lang]?.content}
             </p>
             <p className={styles.usefulCard_text}>
-              Freight rates on Asian routes have been in a downwa...
+              {newsCard?.translations[lang]?.description}
             </p>
             <p className={styles.usefulCard_more}>Подробно</p>
           </div>
