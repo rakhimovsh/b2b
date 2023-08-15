@@ -1,7 +1,7 @@
 import { companySlice } from "../reducers/company"
 import { api } from '@/utils/api.js';
 import { handleHttpError } from '@/utils/handleHttpError.js';
-import { productSlice } from "../reducers/product";
+import { productSlice } from "../reducers/product"; 
 
 export const getAllCompanies = () => (dispatch) => {
     dispatch(companySlice.actions.setCompaniesLoading(true))

@@ -74,13 +74,22 @@
     font-weight: 500;
     line-height: normal;
 }
+.selectCategory option {
+    padding: 20px;
+}
 .selectCategory_box {
+    position: relative;
     border-radius: 6px;
     border: 1px solid #DDD;
     background: #FFF;
     padding-right: 22px;
     width: 446px;
     margin-bottom: 8px;
+}
+.selectIcon {
+    position: absolute;
+    right: 10px;
+    top: 22px;
 }
 @media screen and (max-width: 820px) {
     .productSearchCard {

@@ -5,6 +5,7 @@ import styles from './styles.module.css';
 import BoxImage from '@assets/images/box-image.png';
 import { getAllCategories } from '@/redux/actions/category.js';
 import { getAllSubcategories } from '@/redux/actions/subcategory.js';
+import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 
 const SearchProduct = () => {
   const dispatch = useDispatch();
@@ -38,11 +39,12 @@ const SearchProduct = () => {
               Категория продукта
             </option>
             {categories.items?.map((category) => (
-              <option key={category?.id} value={category?.id}>
+              <option key={category?.id}  style={{width:'100px',height:"200px"}} value={category?.id}>
                 {category?.translations[lang]?.name}
               </option>
             ))}
           </select>
+          <IconDown className={styles.selectIcon}/>
         </div>
         <div className={styles.selectCategory_box}>
           <select disabled={!filteredSubcategories.length} className={styles.selectCategory} name='selectCategory' id=''>
@@ -55,6 +57,7 @@ const SearchProduct = () => {
               ))
             }
           </select>
+          <IconDown className={styles.selectIcon}/>
         </div>
         <input
           type='text'
