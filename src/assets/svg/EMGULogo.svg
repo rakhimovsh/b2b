@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="817" height="168" viewBox="0 0 817 168">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 66.667px;
+        fill: #333;
+        font-weight: 300;
+      }
+
+      .cls-1, .cls-3 {
+        font-family: "Open Sans";
+      }
+
+      .cls-2 {
+        fill: #364fff;
+      }
+
+      .cls-3 {
+        font-size: 100px;
+        fill: #fff;
+        font-weight: 700;
+      }
+    </style>
+  </defs>
+  <text id="Export_Management_Group_of_Uzbekistan" data-name="Export Management Group of Uzbekistan" class="cls-1" x="191.153" y="66.185">Export Management<tspan x="191.153" dy="80">Group of Uzbekistan</tspan></text>
+  <rect class="cls-2" x="4" y="5" width="76.063" height="76.063"/>
+  <rect class="cls-2" x="87.563" y="5" width="76.063" height="76.063"/>
+  <rect class="cls-2" x="4" y="87.969" width="76.063" height="76.062"/>
+  <rect class="cls-2" x="87.563" y="87.969" width="76.063" height="76.062"/>
+  <text id="E" class="cls-3" transform="translate(24.924 65.389) scale(0.576)">E</text>
+  <text id="M" class="cls-3" transform="translate(99.315 65.474) scale(0.576)">M</text>
+  <text id="G" class="cls-3" transform="translate(21.888 146.832) scale(0.576)">G</text>
+  <text id="U" class="cls-3" transform="translate(104.936 147.174) scale(0.576)">U</text>
+</svg>

@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './styles.module.css'
-import {ReactComponent as LogoSvg} from '@assets/svg/logo.svg'
+import {ReactComponent as LogoSvg} from '@assets/svg/EMGULogo.svg'
 import AboutImage from '@assets/images/aboutImage.png'
 import B2bBlock from '@components/B2bBlock'
 import SearchProduct from '@components/SearchProduct'
