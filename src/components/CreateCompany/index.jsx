@@ -5,7 +5,7 @@ import GraphChartImage from '@assets/images/graphChartImage.png'
 const CreateCompany = () => {
   const navigate = useNavigate()
   return (
-        <div className={styles.productSearchCard}>
+        <div data-aos="fade-left" className={styles.productSearchCard}>
             <h3 className={styles.addCompany_title}>Станьте поставщиком на рынке B2B, и продавайте свои продукты</h3>
             <p className={styles.addCompany_text}>Станьте поставщиком на рынке B2B</p>
             <button onClick={()=> navigate('/application')} className={styles.productSearch_button}>+ Добавить свою компанию</button>

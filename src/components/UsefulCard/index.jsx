@@ -1,16 +1,10 @@
 import styles from './styles.module.css';
 
-import UsefulImage1 from '@assets/images/usefulImg1.png';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getNews } from '../../redux/actions/news';
+import { getNews } from '@/redux/actions/news.js';
 import { useTranslation } from 'react-i18next';
 
-const usefulCardData = [
-  {
-    image: UsefulImage1,
-  }
-];
 
 const UsefulCard = () => {
   const {i18n} = useTranslation();
@@ -22,7 +16,6 @@ const UsefulCard = () => {
   return (
     <>
       {news?.items.map((newsCard) => {
-        console.log(newsCard);
         return (
           <div key={newsCard?.id} className={styles.usefulCard}>
             <img className={styles.usefulImage} src={newsCard?.image} alt='news image' />

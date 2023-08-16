@@ -4,10 +4,13 @@
 }
 .productImage {
     margin-bottom: 17px;
+    max-width: 292px;
+    height: 325px;
+    object-fit: cover;
+    object-position: center center;
 }
 .productName {
     color: #000;
-    font-family: SF Pro Display;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
@@ -42,6 +45,7 @@
     }
     .productImage {
         width: 174px;
+        height: 205px;
     }
     .productsContainer {
         gap: 8px;

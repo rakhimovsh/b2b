@@ -14,7 +14,7 @@ const ProductDetails = ({ details }) => {
         <h2 className={styles.productName}>{details?.translations[lang].name}</h2>
         {details?.average_rating ? (
           <span className={styles.productRating}>
-            <RatingStars ratingCount={details?.average_rating} /> {details?.average_rating} рейтинг
+            <RatingStars rating={details?.average_rating} isEditable={false}/> {details?.average_rating} рейтинг
           </span>
         ) : null}
         <div className={styles.productDetails}>

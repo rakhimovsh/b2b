@@ -12,12 +12,12 @@ const Trust = () => {
     <div className={'container ' + styles.trustContainer}>
       <h2 className={styles.trustTitle}>Нам доверяют</h2>
       <div className={styles.aboutImages}>
-        <img src={B2bDiscountSVG} alt='b2bDiscount' />
-        <img src={EuroPagesSVG} alt='b2bDiscount' />
-        <img src={EvernoteSVG} alt='b2bDiscount' />
-        <img src={AlibabaSVG} alt='b2bDiscount' />
-        <img src={UzumSVG} alt='b2bDiscount' />
-        <img src={HokimligSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={B2bDiscountSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={EuroPagesSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={EvernoteSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={AlibabaSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={UzumSVG} alt='b2bDiscount' />
+        <img data-aos="flip-left" src={HokimligSVG} alt='b2bDiscount' />
       </div>
     </div>
   );

@@ -7,7 +7,7 @@ import { getAllCategories } from '@/redux/actions/category.js';
 import { getAllSubcategories } from '@/redux/actions/subcategory.js';
 import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 
-const SearchProduct = () => {
+const  SearchProduct = () => {
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
   const [filteredSubcategories, setFilteredSubcategories] = useState([]);
@@ -25,7 +25,7 @@ const SearchProduct = () => {
     setFilteredSubcategories(result)
   };
   return (
-    <div className={styles.productSearchCard}>
+    <div data-aos="fade-right" className={styles.productSearchCard}>
       <h3 className={styles.productSearch_title}>Пользуйтесь B2B чтобы найти продукт</h3>
       <div className={styles.productSearch_inputs}>
         <div className={styles.selectCategory_box}>

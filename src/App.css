@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "aos/dist/aos.css";
 
 :root {
   --font-family: 'SF Pro Display', 'Roboto', sans-serif;
