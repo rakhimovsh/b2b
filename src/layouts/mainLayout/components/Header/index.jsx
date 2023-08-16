@@ -4,7 +4,7 @@ import {useState} from "react";
 import Navbar from '../Navbar';
 import MobileNavbar from '@layouts/mainLayout/components/MobileNavbar/index.jsx';
 import styles from './styles.module.css';
-import { ReactComponent as Logo } from '@assets/svg/logo.svg';
+import { ReactComponent as Logo } from '@assets/svg/EMGULogo.svg';
 import { ReactComponent as Globe } from '@assets/svg/globe-alt.svg';
 import { ReactComponent as Menu } from '@assets/svg/menu.svg';
 
@@ -21,7 +21,7 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <Link to='/'>
-            <Logo />
+            <Logo style={{width: '200px', height: '110px'}} />
           </Link>
           <nav className={styles.navbar}>
             <Navbar />
