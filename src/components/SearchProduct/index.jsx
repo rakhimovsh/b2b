@@ -46,6 +46,16 @@ const SearchProduct = () => {
           </select>
           <IconDown className={styles.selectIcon}/>
         </div>
+        {/* <div>
+          <div className={styles.selectCategory_box1}><p>Категория продукта custom</p> <IconDown className={styles.selectIcon}/></div>
+          <div className={styles.custom1}>
+            {categories.items?.map((category) => (
+              <div className={styles.custom2} key={category?.id}  value={category?.id}>
+                {category?.translations[lang]?.name}
+              </div>
+            ))}
+          </div>
+        </div> */}
         <div className={styles.selectCategory_box}>
           <select disabled={!filteredSubcategories.length} className={styles.selectCategory} name='selectCategory' id=''>
             <option value='category-first' hidden>
