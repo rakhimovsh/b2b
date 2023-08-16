@@ -24,7 +24,7 @@ const NewProduct = () => {
           <Carousel slides={renderProductCards(newProducts.items)} />
         </div>
 
-        <button onClick={()=> navigate('/application')} className={styles.newProduct_button}>Посмотреть больше продуктов</button>
+        <button onClick={()=> navigate('/product')} className={styles.newProduct_button}>Посмотреть больше продуктов</button>
       </div>
     </div>
   );

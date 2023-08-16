@@ -44,7 +44,7 @@ const RequestForm = () => {
           placeholder='Ваше имя'
         />
       </div>
-      <div style={{ textAlign: 'start' }}>
+      <div style={{ textAlign: 'start', maxWidth: '400px' }}>
         <p className={styles.contactForm_p}>Страна</p>
         <CountrySelect name='lacation' />
       </div>
@@ -54,7 +54,7 @@ const RequestForm = () => {
           name='phone_number'
           className={styles.contactForm_name_input}
           type='text'
-          placeholder='(998)'
+          placeholder='(+998)'
         />
       </div>
       <div style={{ textAlign: 'start' }}>

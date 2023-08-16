@@ -1,9 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import styles from './styles.module.css'
 
 import PhoneImg from '@assets/images/phone.png'
 
 
 const ContactUs = () =>{
+  const navigate = useNavigate()
   return (
     <div className={styles.wrapper}>
       <div className={styles.left}>
@@ -14,7 +16,7 @@ const ContactUs = () =>{
           Если вы ищете товары оптом, не стесняйтесь обращаться к нам для запроса продукта, мы здесь, чтобы помочь
         </p>
         <img className={styles.img2} src={PhoneImg} alt='phone'/>
-        <button className={styles.btn}>
+        <button onClick={() => navigate('/contact-us')} className={styles.btn}>
           Связаться с нами
         </button>
       </div>

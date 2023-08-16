@@ -86,6 +86,11 @@
     padding-right: 0;
   }
 }
+@media screen and (max-width: 600px) {
+  .contactMap {
+    width: 355px;
+  }
+}
 @media screen and (max-width: 500px) {
   .contactTitle {
     max-width: 346px;

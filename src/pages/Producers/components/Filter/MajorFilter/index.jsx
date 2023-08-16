@@ -15,7 +15,7 @@ const MajorFilter = () => {
     <>
         {categories.items.map((category) => {
             return (
-                <div className={styles.checkbox}>
+                <div key={category.id} className={styles.checkbox}>
                     <input style={{width: '13px', height: '16px'}} type="radio" name='firstCheckbox' />
                     <label className={styles.checkboxLabel}  htmlFor="firstCheckbox">{category?.translations[lang]?.name} ({category?.subcategories?.length})</label>
                 </div>

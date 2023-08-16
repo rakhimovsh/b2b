@@ -86,6 +86,7 @@
     font-weight: 500;
     line-height: 20px;
     margin-bottom: 54px;
+    cursor: pointer;
 }
 
 .sendButton:disabled {

@@ -28,6 +28,7 @@
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 64px;
+  cursor: pointer;
 }
 @media screen and (max-width: 500px) {
   .usefulTitle {

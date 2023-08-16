@@ -45,20 +45,20 @@ const Footer = () => {
           </Link>
         </div>
         <div className={styles.footerSocial}>
-          <button className={styles.footerSocial_icon} href='#facebook'>
-            <FacebookIcon />
+          <button className={styles.footerSocial_icon} >
+            <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><FacebookIcon /></a>
             <span className={styles.footerSocial_text}>Facebook</span>
           </button>
-          <button className={styles.footerSocial_icon} href='#instagram'>
-            <InstagramIcon />
+          <button className={styles.footerSocial_icon} >
+            <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><InstagramIcon /></a>
             <span className={styles.footerSocial_text}>Instagram</span>
           </button>
-          <button className={styles.footerSocial_icon} href='#instagram'>
-            <TelegramIcon />
+          <button className={styles.footerSocial_icon} >
+            <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><TelegramIcon /></a>
             <span className={styles.footerSocial_text}>Telegram</span>
           </button>
-          <button className={styles.footerSocial_icon} href='#instagram'>
-            <YoutubeIcon />
+          <button className={styles.footerSocial_icon} >
+            <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><YoutubeIcon /></a>
             <span className={styles.footerSocial_text}>Youtube</span>
           </button>
         </div>

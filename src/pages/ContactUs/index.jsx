@@ -33,10 +33,10 @@ const ContactUs = () => {
           info@madeinkokand.uz
         </a>
         <div className={styles.contactSocial}>
-          <FacebookIcon />
-          <InstagramIcon />
-          <TelegramIconIcon />
-          <YoutubeIcon />
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><FacebookIcon /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><InstagramIcon /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><TelegramIconIcon /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'><YoutubeIcon /></a>
         </div>
         <img className={styles.contactMap} src={Map} alt='map' />
       </div>
