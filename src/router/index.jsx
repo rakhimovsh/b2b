@@ -11,7 +11,7 @@ import NotFound from '@pages/404';
 import ContactUs from '@pages/ContactUs';
 import HowToBuyProduct from "@pages/HowToBuyProduct";
 import Application from '@pages/Aplication';
-import AllCompanies from '@pages/AllCompanies';
+import News from '@pages/News';
 import About from '@pages/About';
 import ForCompanies from '@pages/ForCompanies';
 import Payment from '@pages/Payment';
@@ -38,7 +38,7 @@ const Router = () => {
         <Route path='/return-policy' element={<ReturnPolicy />} />
         <Route path='/faq' element={<FAQ />} />
         <Route path='/application' element={<Application />} />
-        <Route path='/news' element={<AllCompanies />} />
+        <Route path='/news' element={<News />} />
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
       </Route>

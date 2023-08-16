@@ -5,8 +5,11 @@ import Navbar from '../Navbar';
 import MobileNavbar from '@layouts/mainLayout/components/MobileNavbar/index.jsx';
 import styles from './styles.module.css';
 import { ReactComponent as Logo } from '@assets/svg/EMGULogo.svg';
+import MiniLogo  from '@assets/svg/EMGUMiniLogo.png';
 import { ReactComponent as Globe } from '@assets/svg/globe-alt.svg';
 import { ReactComponent as Menu } from '@assets/svg/menu.svg';
+import { ReactComponent as IconDown } from '@assets/svg/arrowDown.svg';
+
 
 const Header = () => {
   const navigate = useNavigate();
@@ -21,7 +24,8 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <Link to='/'>
-            <Logo style={{width: '200px', height: '110px'}} />
+             <Logo className={styles.headerLogo} style={{width: '200px', height: '110px'}} />
+             <img className={styles.headerMiniLogo} src={MiniLogo} alt="mini logo" />
           </Link>
           <nav className={styles.navbar}>
             <Navbar />
@@ -41,6 +45,7 @@ const Header = () => {
               <option value='ru'>Ru</option>
               <option value='uz'>Uz</option>
             </select>
+            {/* <IconDown /> */}
           </div>
           {/* <button className={styles.headerFisrtButton}>Войти</button> */}
           <button onClick={() => navigate('/application')} className={styles.headerSecondButton}>

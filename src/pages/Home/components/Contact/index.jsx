@@ -5,7 +5,7 @@ import { ReactComponent as PhoneIcon } from '@assets/svg/u_phone-alt.svg';
 import { ReactComponent as MailIcon } from '@assets/svg/mail.svg';
 import { ReactComponent as FacebookIcon } from '@assets/svg/akar-icons_facebook-fill.svg';
 import { ReactComponent as InstagramIcon } from '@assets/svg/ant-design_instagram-filled.svg';
-import { ReactComponent as TelegramIconIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
+import { ReactComponent as TelegramIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
 import { ReactComponent as YoutubeIcon } from '@assets/svg/akar-icons_youtube-fill.svg';
 import Map from '@assets/images/map1.jpg';
 import RequestForm from '@components/RequestForm';
@@ -30,11 +30,11 @@ const Contact = () => {
           info@madeinkokand.uz
         </a>
         <div className={styles.contactSocial}>
-          <FacebookIcon />
-          <InstagramIcon />
-          <TelegramIconIcon />
-          <YoutubeIcon />
-        </div>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'> <FacebookIcon  /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'> <InstagramIcon  /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'> <TelegramIcon  /></a>
+          <a href="https://instagram.com/madeinkokand?igshid=MzRlODBiNWFlZA==" target='_blank'> <YoutubeIcon  /></a>
+          </div>
         {/* <Social /> */}
         <img className={styles.contactMap} src={Map} alt='map' />
       </div>

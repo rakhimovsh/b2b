@@ -14,6 +14,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    cursor: pointer;
 }
 .pagesBtn2 {
     border: 1px solid #E1E1E1;
@@ -25,6 +26,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal; 
+    cursor: pointer;
 }
 .pagesbtn_next {
     display: flex;
@@ -32,6 +34,7 @@
     background: #FFF;
     padding: 9px 15px 10px 15px;
     align-items: center;
+    cursor: pointer;
 }
 @media screen and (max-width: 1150px) {
     .pagesButtons {

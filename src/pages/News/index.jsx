@@ -2,7 +2,7 @@ import React from 'react'
 import styles from './styles.module.css'
 import UsefulCard from '@components/UsefulCard'
 
-const AllCompanies = () => {
+const News = () => {
   return (
     <div className={'container ' + styles.allCompanies} >
         <UsefulCard />
@@ -17,4 +17,4 @@ const AllCompanies = () => {
   )
 }
 
-export default AllCompanies
+export default News

@@ -22,18 +22,18 @@ const UsefulCard = () => {
   return (
     <>
       {news?.items.map((newsCard) => {
-        console.log(newsCard?.translations);
+        console.log(newsCard);
         return (
           <div key={newsCard?.id} className={styles.usefulCard}>
-            <img className={styles.usefulImage} src={newsCard?.image} alt='ship' />
-            <p className={styles.usefulDate}>2.06.2023</p>
+            <img className={styles.usefulImage} src={newsCard?.image} alt='news image' />
+            <p className={styles.usefulDate}>{newsCard?.created_at}</p>
             <p className={styles.usefulCard_name}>
               {newsCard?.translations[lang]?.content}
             </p>
             <p className={styles.usefulCard_text}>
               {newsCard?.translations[lang]?.description}
             </p>
-            <p className={styles.usefulCard_more}>Подробно</p>
+            {/* <p className={styles.usefulCard_more}>Подробно</p> */}
           </div>
         );
       })}
