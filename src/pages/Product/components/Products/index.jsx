@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useTranslation } from 'react-i18next';
+import {useSearchParams} from "react-router-dom";
 import styles from './styles.module.css';
 import RatingStars from '@components/RatingStars';
 import { getProducts } from '@/redux/actions/product.js';
@@ -10,10 +11,12 @@ const Products = () => {
   const { i18n } = useTranslation();
   const { products } = useSelector((state) => state.product);
   const lang = i18n.language;
+  const [searchParams, setSearchParams] = useSearchParams()
 
+  const search = searchParams.get('search') || ''
   useEffect(() => {
-    dispatch(getProducts());
-  }, []);
+    dispatch(getProducts(search));
+  }, [search]);
   return (
     <div className={styles.productsContainer}>
       {products.items?.map((product) => (
