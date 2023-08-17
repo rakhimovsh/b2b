@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "aos/dist/aos.css";
 
 :root {
   --font-family: 'SF Pro Display', 'Roboto', sans-serif;
@@ -28,6 +29,10 @@ body {
   font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  overflow-x: hidden;
 }
 
 h1,

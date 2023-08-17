@@ -75,3 +75,24 @@ export const createProductComment = (request) => (dispatch) => {
       });
     });
 };
+
+export const getProducts = (search = '', subcategoryIds = []) => (dispatch) => {
+    dispatch(productSlice.actions.setProductsLoading(true));
+    api()
+      .get(`/product/products/?search=${search}`)
+      .then((res) => {
+        if (res?.data) {
+          dispatch(productSlice.actions.setProducts(subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : res.data));
+        }
+      })
+      .catch((err) => {
+        handleHttpError(err);
+      })
+      .finally(() => {
+        dispatch(productSlice.actions.setProductsLoading(false));
+      });
+  };
+
+const filterProductsBySubcategories = (products, subcategories) => {
+  return products.filter((product) => subcategories.includes(product.category?.id));
+};

@@ -11,6 +11,7 @@ const HeroForm = () => {
   const toast = useToast();
   const { applicationForPlacement } = useSelector((state) => state.application);
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
+  const [phoneCode, setPhoneCode] = useState("+998")
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -44,11 +45,11 @@ const HeroForm = () => {
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Страна</p>
-          <CountrySelect name="lacation" />
+          <CountrySelect name="lacation" setPhoneNumber={setPhoneCode}/>
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Номер телефона</p>
-          <input name="phone_number" type="text" placeholder='(+998)' className={styles.formClient_name} />
+          <input name="phone_number" type="text" placeholder={phoneCode} className={styles.formClient_name} />
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Название компании</p>

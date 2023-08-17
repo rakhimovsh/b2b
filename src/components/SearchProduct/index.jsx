@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { createSearchParams, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import styles from './styles.module.css';
 import BoxImage from '@assets/images/box-image.png';
 import { getAllCategories } from '@/redux/actions/category.js';
 import { getAllSubcategories } from '@/redux/actions/subcategory.js';
-import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
+import { ReactComponent as IconDown } from '@assets/svg/chevron-down.svg';
 
 const SearchProduct = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,9 @@ const SearchProduct = () => {
   const [openFilter, setOpenFilter] = useState(false)
   const [selectedOption, setSelectedOption] = useState('Категория продукта custom')
   const onOptionClicked = value => () => {    setSelectedOption(value);    setOpenFilter(false);    console.log(selectedOption);};
+  const [searchText, setSearchText] = useState('');
+  const [subcategoryId, setSubcategoryId] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -24,11 +28,22 @@ const SearchProduct = () => {
   }, []);
 
   const handleCategoryChange = (evt) => {
-    const result = subcategories.items?.filter(subcategory => subcategory.category == evt.target.value)
-    setFilteredSubcategories(result)
+    const result = subcategories.items?.filter(
+      (subcategory) => subcategory.category == evt.target.value,
+    );
+    setFilteredSubcategories(result);
+  };
+
+  const handleSearchBtn = () => {
+    if (searchText) {
+      navigate({
+        pathname: '/product',
+        search: `?${createSearchParams({ search: searchText, subcategoryId })}`,
+      });
+    }
   };
   return (
-    <div className={styles.productSearchCard}>
+    <div data-aos='fade-right' className={styles.productSearchCard}>
       <h3 className={styles.productSearch_title}>Пользуйтесь B2B чтобы найти продукт</h3>
       <div className={styles.productSearch_inputs}>
         <div className={styles.selectCategory_box}>
@@ -42,12 +57,16 @@ const SearchProduct = () => {
               Категория продукта
             </option>
             {categories.items?.map((category) => (
-              <option key={category?.id}   value={category?.id}>
+              <option
+                key={category?.id}
+                style={{ width: '100px', height: '200px' }}
+                value={category?.id}
+              >
                 {category?.translations[lang]?.name}
               </option>
             ))}
           </select>
-          <IconDown className={styles.selectIcon}/>
+          <IconDown className={styles.selectIcon} />
         </div>
         {/* <div>
           <div className={styles.selectCategory_box1} onClick={() => setOpenFilter(!openFilter)}>
@@ -65,25 +84,34 @@ const SearchProduct = () => {
             </div>} 
         </div> */}
         <div className={styles.selectCategory_box}>
-          <select disabled={!filteredSubcategories.length} className={styles.selectCategory} name='selectCategory' id=''>
+          <select
+            onChange={(evt) => setSubcategoryId(evt.target.value)}
+            disabled={!filteredSubcategories.length}
+            className={styles.selectCategory}
+            name='selectCategory'
+            id=''
+          >
             <option value='category-first' hidden>
               Подкатегория продукта
             </option>
-            {
-              filteredSubcategories?.map(subcategory => (
-                <option key={subcategory?.id} value='category-first'>{subcategory.translations[lang]?.name}</option>
-              ))
-            }
+            {filteredSubcategories?.map((subcategory) => (
+              <option key={subcategory?.id} value={subcategory.id}>
+                {subcategory.translations[lang]?.name}
+              </option>
+            ))}
           </select>
-          <IconDown className={styles.selectIcon}/>
+          <IconDown className={styles.selectIcon} />
         </div>
         <input
+          onChange={(evt) => setSearchText(evt.target.value)}
           type='text'
           placeholder='Введите название продукта'
           className={styles.productName_input}
         />
       </div>
-      <button className={styles.productSearch_button}>Посмотреть все продукты</button>
+      <button onClick={handleSearchBtn} className={styles.productSearch_button}>
+        Посмотреть все продукты
+      </button>
       <img className={styles.search_boxImage} src={BoxImage} alt='box' />
     </div>
   );

@@ -13,7 +13,7 @@ import RequestForm from '@components/RequestForm';
 const Contact = () => {
   return (
     <div className={'container ' + styles.contactContainer}>
-      <div className={styles.contactDetails_box}>
+      <div data-aos="fade-right" className={styles.contactDetails_box}>
         <h2 className={styles.contactTitle}>
           Остались вопросы? Позвоните нам, и мы вас проконсультируем
         </h2>
@@ -38,7 +38,7 @@ const Contact = () => {
         {/* <Social /> */}
         <img className={styles.contactMap} src={Map} alt='map' />
       </div>
-      <div className={styles.contactForm}>
+      <div data-aos="fade-left" className={styles.contactForm}>
         <h2 className={styles.contactForm_title}>Заполните форму запроса продукта</h2>
         <RequestForm />
       </div>

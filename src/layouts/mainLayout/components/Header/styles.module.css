@@ -3,7 +3,6 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 32px 0 34px 0;
   position: relative;
   z-index: 1000;
   background-color: #FFFFFF;
@@ -33,9 +32,6 @@
   align-items: center;
   justify-content: flex-end;
   width: 100%;
-}
-.headerMiniLogo {
-
 }
 .languageChange {
   display: flex;
@@ -97,12 +93,11 @@
   background-color: transparent;
 }
 .headerMiniLogo {
-  width: 110px;
-  height: 80px;
+  width: 60px;
 }
 @media screen and (max-width: 1270px){
   .header {
-    padding: 30px 20px;
+    padding: 20px 20px;
   }
 }
 

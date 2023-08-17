@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.aboutContainer}>
-        <div className={styles.aboutContent}>
+        <div data-aos="fade-right" className={styles.aboutContent}>
           <h2 className={styles.aboutTitle}>Made in Kokand</h2>
           <p className={styles.aboutText}>
             Made in Kokand — это платформа, на которой производители, поставщики и покупатели могут
@@ -15,7 +15,7 @@ const About = () => {
             свяжитесь с ними бесплатно.
           </p>
         </div>
-        <img className={styles.aboutImage} src={AboutImg} alt='curier-img' />
+        <img data-aos="fade-left" className={styles.aboutImage} src={AboutImg} alt='curier-img' />
       </div>
     </div>
   );

@@ -10,6 +10,7 @@ const RequestForm = () => {
   const toast = useToast();
   const { createProduct } = useSelector((state) => state.application);
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
+  const [phoneCode, setPhoneCode] = useState("+998")
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const formElements = evt.target.elements;
@@ -46,15 +47,15 @@ const RequestForm = () => {
       </div>
       <div style={{ textAlign: 'start', maxWidth: '400px' }}>
         <p className={styles.contactForm_p}>Страна</p>
-        <CountrySelect name='lacation' />
+        <CountrySelect name='lacation' setPhoneNumber={setPhoneCode}/>
       </div>
       <div style={{ textAlign: 'start' }}>
-        <p className={styles.contactForm_p}>Tel.</p>
+        <p className={styles.contactForm_p}>Тел.</p>
         <input
           name='phone_number'
           className={styles.contactForm_name_input}
           type='text'
-          placeholder='(+998)'
+          placeholder={phoneCode}
         />
       </div>
       <div style={{ textAlign: 'start' }}>
