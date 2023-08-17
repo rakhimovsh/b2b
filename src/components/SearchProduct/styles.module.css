@@ -91,6 +91,14 @@
     right: 10px;
     top: 22px;
 }
+.filterTitle {
+    color: #121212;
+    font-family: SF Pro Display;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 @media screen and (max-width: 820px) {
     .productSearchCard {
         width: 728px;
@@ -109,20 +117,20 @@
         padding: 71px 8px 117px 8px;
     }
     .selectCategory_box {
-        width: 339px;
+        width: 330px;
     }
     .selectCategory {
-        width: 339px;
+        width: 325px;
     }
     .productSearch_inputs {
         align-items: center;
         justify-content: center;
     }
     .productName_input {
-        width: 339px;
+        width: 330px;
     }
     .productSearch_button {
-        width: 339px;
+        width: 300px;
     }
 }
 @media screen and (max-width: 370px) {
@@ -157,25 +165,24 @@
     padding: 22px 26px;
 }
 .custom1 {
-    position: relative;
+    position: absolute;
+    z-index: 2;
     border-radius: 6px;
     border: 1px solid #DDD;
     background: #FFF;
-    /* padding-right: 22px; */
     width: 446px;
     margin-bottom: 8px;
-    /* padding: 22px 26px; */
     display: flex;
     flex-direction: column;
-    /* gap: 20px; */
 }
 .custom2 {
     cursor: pointer;
     padding: 20px 26px;
-    border-radius: 6px;
+    /* border-radius: 6px; */
+    border-bottom: 1px #DDD solid;
 }
 .custom2:hover {
     background-color: #1876F2;
     color: #FFF;
-    
+    border-bottom: none;
 }

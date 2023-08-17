@@ -14,6 +14,9 @@ const SearchProduct = () => {
   const lang = i18n.language;
   const { categories } = useSelector((state) => state.category);
   const { subcategories } = useSelector((state) => state.subcategory);
+  const [openFilter, setOpenFilter] = useState(false)
+  const [selectedOption, setSelectedOption] = useState('Категория продукта custom')
+  const onOptionClicked = value => () => {    setSelectedOption(value);    setOpenFilter(false);    console.log(selectedOption);};
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -39,7 +42,7 @@ const SearchProduct = () => {
               Категория продукта
             </option>
             {categories.items?.map((category) => (
-              <option key={category?.id}  style={{width:'100px',height:"200px"}} value={category?.id}>
+              <option key={category?.id}   value={category?.id}>
                 {category?.translations[lang]?.name}
               </option>
             ))}
@@ -47,14 +50,19 @@ const SearchProduct = () => {
           <IconDown className={styles.selectIcon}/>
         </div>
         {/* <div>
-          <div className={styles.selectCategory_box1}><p>Категория продукта custom</p> <IconDown className={styles.selectIcon}/></div>
-          <div className={styles.custom1}>
-            {categories.items?.map((category) => (
-              <div className={styles.custom2} key={category?.id}  value={category?.id}>
-                {category?.translations[lang]?.name}
-              </div>
-            ))}
+          <div className={styles.selectCategory_box1} onClick={() => setOpenFilter(!openFilter)}>
+            <p className={styles.filterTitle}>{selectedOption}</p> 
+            <IconDown className={styles.selectIcon}/>
           </div>
+          {openFilter && 
+            <div className={styles.custom1}>
+              {categories.items?.map((category) => (
+                <div onClick={(e) => {setSelectedOption(e.target.value), console.log(e.target.value)}} className={styles.custom2} key={category?.id}  value={category?.translations[lang]?.name}>
+                  
+                  {category?.translations[lang]?.name}
+                </div>
+              ))}
+            </div>} 
         </div> */}
         <div className={styles.selectCategory_box}>
           <select disabled={!filteredSubcategories.length} className={styles.selectCategory} name='selectCategory' id=''>
