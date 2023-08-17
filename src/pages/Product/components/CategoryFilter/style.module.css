@@ -1,88 +1,140 @@
 .categoryFilter_box {
-    padding: 35px 20px;
-    border-radius: 4px;
-    border: 1px solid #EEE;
-    width: 292px;
-    margin-bottom: 20px;
+  padding: 35px 20px;
+  border-radius: 4px;
+  border: 1px solid #EEE;
+  width: 292px;
+  margin-bottom: 20px;
 }
+
 .checkboxes {
-    display: flex;
-    flex-direction: column;
-    max-width: 252px;
-    gap: 16px;
-   
+  display: flex;
+  flex-direction: column;
+  max-width: 252px;
+  gap: 16px;
+
 }
+
 .showCheckboxes {
-    display: block;
+  display: block;
 }
+
 .checkboxes label {
-    display: block;
+  display: block;
 }
+
 .selectBox {
-    position: relative;
-    max-width: 252px;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 16px;
-    cursor: pointer;
+  position: relative;
+  max-width: 252px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  cursor: pointer;
 }
+
 .categoryBox {
-    width: 252px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 252px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 
 .categoryTitle {
-    font-family: SF Pro Display;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    color: #1F1914;
-    margin-bottom: 35px;
+  font-family: SF Pro Display;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  color: #1F1914;
+  margin-bottom: 35px;
 }
 
 .categoryName {
-    color: #0F2E4A;
-    font-family: SF Pro Display;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    margin-bottom: 16px;
-    width: 252px;
+  color: #0F2E4A;
+  font-family: SF Pro Display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 16px;
+  width: 252px;
 }
+
 .closeButton {
-    display: flex;
-    gap: 5px;
-    cursor: pointer;
+  display: flex;
+  gap: 5px;
+  cursor: pointer;
 }
+
 .clearFilter {
-    color: #F00;
-    font-family: SF Pro Display;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 20px;
+  color: #F00;
+  font-family: SF Pro Display;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
 }
+
+.categoryItemTitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.categoryItemTitle:hover {
+  color: #1876F2;
+}
+
+.categoryItemTitle::after {
+  content: " ";
+  width: 20px;
+  height: 20px;
+  background-image: url("@assets/svg/arrowDown.svg");
+}
+
+.categoryItemTitle:hover::after {
+  background-image: url("@assets/svg/arrowDownBlue.svg");
+}
+
+.subcategoryList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.subcategoryItem {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.subcategoryItem input {
+  margin-right: 8px;
+}
+
 @media screen and (max-width: 1150px) {
-   .categoryBox {
+  .categoryBox {
     display: none;
-   } 
-   .categoryFilter_box {
+  }
+
+  .categoryFilter_box {
     width: 355px;
     padding: 20px;
     text-align: center;
     margin-bottom: 0;
-   }
-   .categoryTitle {
+  }
+
+  .categoryTitle {
     margin-bottom: 0;
-   }
+  }
 }
+
 @media screen and (max-width: 370px) {
-    .categoryFilter_box {
-        width: 310px;
-    }
+  .categoryFilter_box {
+    width: 310px;
+  }
 }
