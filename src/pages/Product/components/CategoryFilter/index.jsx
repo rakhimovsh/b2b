@@ -12,12 +12,13 @@ const CategoryFilter = () => {
   const lang = i18n.language;
   const { categories } = useSelector((state) => state.category);
   const dispatch = useDispatch();
+  const [openSecond, setOpenSecond] = useState(false);
+  const [openSelect, setOpenSelect] = useState(null);
+  const [checkedSubcategories, setCheckedSubcategories] = useState([])
   useEffect(() => {
     dispatch(getAllCategories());
   }, []);
-  const [openSelect, setOpenSelect] = useState(null);
-  const [openSecond, setOpenSecond] = useState(false);
-
+  console.log(checkedSubcategories)
   return (
     <div className={styles.categoryFilter_box}>
       <h3 className={styles.categoryTitle}>Категории</h3>
@@ -36,7 +37,7 @@ const CategoryFilter = () => {
               </div>
               {openSelect === category?.id && (
                 <div className={styles.checkboxes} id='checkboxes'>
-                  <Checkbox subcategories={category?.subcategories} />
+                  <Checkbox setChecked={setCheckedSubcategories} subcategories={category?.subcategories} />
                 </div>
               )}
             </div>

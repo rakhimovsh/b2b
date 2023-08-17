@@ -94,5 +94,5 @@ export const getProducts = (search = '', subcategoryIds = []) => (dispatch) => {
   };
 
 const filterProductsBySubcategories = (products, subcategories) => {
-  return products.filter((product) => subcategories.includes(product.categoryId));
+  return products.filter((product) => subcategories.includes(product.category?.id));
 };
