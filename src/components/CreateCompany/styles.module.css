@@ -72,6 +72,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    align-items: center;
     max-width: 355px;
     padding: 71px 8px 117px 8px;
   }
@@ -87,10 +88,15 @@
   /* .search_boxImage {
     width: 300;
   } */
-}
-@media screen and (max-width: 740px) {
   .search_boxImage {
     width: 300px;
     right: 0;
   }
+  .productSearch_button {
+    width: 300px;
+    
+  }
+}
+@media screen and (max-width: 740px) {
+  
 } 
