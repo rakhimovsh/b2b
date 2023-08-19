@@ -15,6 +15,8 @@ const Header = () => {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
+  const [isLangSelectOpen, setIsLangSelectOpen] = useState(false)
+  const [language, setLanguage] = useState('En')
 
   const handleChange = (evt) => {
     i18n.changeLanguage(evt.target.value);
@@ -24,17 +26,31 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <Link to='/'>
-             <Logo className={styles.headerLogo} style={{width: '200px', height: '110px'}} />
+             <Logo className={styles.headerLogo} style={{width: '250px', height: '110px'}} />
              <img className={styles.headerMiniLogo} src={MiniLogo} alt="mini logo" />
           </Link>
           <nav className={styles.navbar}>
             <Navbar />
           </nav>
         </div>
-        <div className={styles.headerRight}>
+        <div onClick={() => setIsLangSelectOpen(!isLangSelectOpen)} className={styles.headerRight}>
           <div className={styles.languageChange}>
             <Globe />
-            <select 
+            <div >
+              <div  className={styles.languageChange_select1}>
+                <p onChange={handleChange} >{language}</p>
+                <IconDown/>
+              </div>
+              {isLangSelectOpen && 
+                <div  className={styles.langDropdown}>
+                  <p onClick={(e) => {setLanguage(e.target.textContent)}} className={styles.langItem}>En</p>
+                  <p onClick={(e) => {setLanguage(e.target.textContent)}} className={styles.langItem}>Ru</p>
+                  <p onClick={(e) => {setLanguage(e.target.textContent)}} className={styles.langItem}>Uz</p>
+                </div>
+              }
+            </div>
+            
+            {/* <select 
               onChange={handleChange}
               defaultValue={i18n.language}
               name=''
@@ -44,7 +60,7 @@ const Header = () => {
               <option value='en'>En</option>
               <option value='ru'>Ru</option>
               <option value='uz'>Uz</option>
-            </select>
+            </select> */}
             {/* <IconDown /> */}
           </div>
           {/* <button className={styles.headerFisrtButton}>Войти</button> */}

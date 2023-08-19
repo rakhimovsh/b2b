@@ -18,14 +18,14 @@ const Home = () => {
       <B2bSolution />
       <About />
       <Trust />
-      <NewProduct />
+      {/* <NewProduct /> */}
       <PopularProduct />
       <ProductCategory />
       <WhyMadeInKokand />
       <ProductSearch />
-      <FAQHome />
-      <Useful />
-      <Contact/>
+      {/* <FAQHome /> */}
+      {/* <Useful /> */}
+      {/* <Contact/> */}
     </>
   );
 };
