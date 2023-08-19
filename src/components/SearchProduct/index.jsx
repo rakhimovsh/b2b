@@ -16,8 +16,9 @@ const SearchProduct = () => {
   const { categories } = useSelector((state) => state.category);
   const { subcategories } = useSelector((state) => state.subcategory);
   const [openFilter, setOpenFilter] = useState(false)
-  const [selectedOption, setSelectedOption] = useState('Категория продукта custom')
-  const onOptionClicked = value => () => {    setSelectedOption(value);    setOpenFilter(false);    console.log(selectedOption);};
+  const [openSubFilter, setOpenSubFilter] = useState(false)
+  const [selectedCategory, setSelectedCategory] = useState('Категория продукта custom')
+  const [selectedSubcategory, setSelectedSubcategory] = useState('Субкатегория продукта custom')
   const [searchText, setSearchText] = useState('');
   const [subcategoryId, setSubcategoryId] = useState('');
   const navigate = useNavigate();
@@ -68,21 +69,46 @@ const SearchProduct = () => {
           </select>
           <IconDown className={styles.selectIcon} />
         </div>
-        {/* <div>
+        <div>
           <div className={styles.selectCategory_box1} onClick={() => setOpenFilter(!openFilter)}>
-            <p className={styles.filterTitle}>{selectedOption}</p> 
+            <p  className={styles.filterTitle}>{selectedCategory}</p> 
             <IconDown className={styles.selectIcon}/>
           </div>
           {openFilter && 
             <div className={styles.custom1}>
               {categories.items?.map((category) => (
-                <div onClick={(e) => {setSelectedOption(e.target.value), console.log(e.target.value)}} className={styles.custom2} key={category?.id}  value={category?.translations[lang]?.name}>
-                  
+                <div 
+                  onClick={(e) => {setSelectedCategory(e.target.textContent), setOpenFilter(!openFilter)}} 
+                  className={styles.custom2} 
+                  key={category?.id}  
+                  value={category?.id}
+                >  
                   {category?.translations[lang]?.name}
                 </div>
               ))}
-            </div>} 
-        </div> */}
+            </div>
+          } 
+        </div>
+        <div>
+          <div className={styles.selectCategory_box1} onClick={() => setOpenSubFilter(!openSubFilter)}>
+            <p  className={styles.filterTitle}>{selectedSubcategory}</p> 
+            <IconDown className={styles.selectIcon}/>
+          </div>
+          {openSubFilter && 
+            <div className={styles.custom1}>
+              {categories.items?.map((category) => (
+                <div 
+                  onClick={(e) => {setSelectedSubcategory(e.target.textContent), setOpenSubFilter(!openSubFilter)}} 
+                  className={styles.custom2} 
+                  key={category?.id}  
+                  value={category?.id}
+                >  
+                  {category?.translations[lang]?.name}
+                </div>
+              ))}
+            </div>
+          } 
+        </div>
         <div className={styles.selectCategory_box}>
           <select
             onChange={(evt) => setSubcategoryId(evt.target.value)}
