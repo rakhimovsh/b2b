@@ -15,7 +15,7 @@ const ProductComment = ({product}) => {
         <p className={ commentBlock === 1 ? styles.active : styles.notActive }
            onClick={ () => setCommentblock(1) }>Описание</p>
         <p className={ commentBlock === 2 ? styles.active : styles.notActive }
-           onClick={ () => setCommentblock(2) }>Отзывы ({product?.product_reviews.length})</p>
+           onClick={ () => setCommentblock(2) }>Отзывы ({product?.product_reviews?.length})</p>
         {/*<p className={ commentBlock === 3 ? styles.active : styles.notActive }*/}
         {/*   onClick={ () => setCommentblock(3) }>Информация о продавце</p>*/}
       </div>

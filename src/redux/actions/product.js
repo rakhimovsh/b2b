@@ -6,7 +6,7 @@ import { batch } from 'react-redux';
 export const getNewProducts = () => (dispatch) => {
   dispatch(productSlice.actions.setNewProductsLoading(true));
   api()
-    .get('/product/products')
+    .get('/product/products/')
     .then((res) => {
       if (Array.isArray(res?.data)) {
         dispatch(productSlice.actions.setNewProducts(res.data?.slice(0, 10)));
@@ -23,7 +23,7 @@ export const getNewProducts = () => (dispatch) => {
 export const getPopularProducts = () => (dispatch) => {
   dispatch(productSlice.actions.setPopularProductsLoading(true));
   api()
-    .get('/product/products')
+    .get('/product/products/')
     .then((res) => {
       if (Array.isArray(res?.data)) {
         const sortedProducts = res.data
@@ -42,7 +42,7 @@ export const getPopularProducts = () => (dispatch) => {
 
 export const getProductById = (productId) => (dispatch) => {
   api()
-    .get(`/product/products/${productId}`)
+    .get(`/product/products/${productId}/`)
     .then((res) => {
       if (res?.data) {
         dispatch(productSlice.actions.setSingleProduct(res.data));
@@ -79,7 +79,7 @@ export const createProductComment = (request) => (dispatch) => {
 export const getProducts = (search = '', subcategoryIds = []) => (dispatch) => {
     dispatch(productSlice.actions.setProductsLoading(true));
     api()
-      .get(`/product/products/?search=${search}`)
+      .get(`/product/products/?search=${search}/`)
       .then((res) => {
         if (res?.data) {
           dispatch(productSlice.actions.setProducts(subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : res.data));
