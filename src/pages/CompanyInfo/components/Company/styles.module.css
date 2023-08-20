@@ -2,7 +2,8 @@
   display: flex;
   gap: 15px;
   padding: 36px 24px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+  margin-top: 50px;
   border-radius: 4px;
   border: 1px solid #E1E1E1;
 }

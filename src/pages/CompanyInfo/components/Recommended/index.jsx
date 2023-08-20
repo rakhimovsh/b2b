@@ -21,7 +21,7 @@ const Recommended = () =>{
       </h2>
       <div className={styles.recommendedList}>
         {filteredCompanies.map(company => {
-          return <CompanyCard company={company}/>
+          return <CompanyCard key={company?.id} company={company}/>
         })}
         
         

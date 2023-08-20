@@ -4,6 +4,7 @@ import CountrySelect from '@components/CountrySelect';
 import { useDispatch, useSelector } from 'react-redux';
 import { useToast } from '@/hooks/useToast.jsx';
 import { createProductRequest } from '@/redux/actions/application.js';
+import InputMask from 'react-input-mask';
 
 const RequestForm = () => {
   const dispatch = useDispatch();
@@ -51,11 +52,12 @@ const RequestForm = () => {
       </div>
       <div style={{ textAlign: 'start' }}>
         <p className={styles.contactForm_p}>Тел.</p>
-        <input
+        <InputMask
           name='phone_number'
           className={styles.contactForm_name_input}
           type='text'
           placeholder={phoneCode}
+          mask={"+123 999-99-99"}
         />
       </div>
       <div style={{ textAlign: 'start' }}>

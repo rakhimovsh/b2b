@@ -19,14 +19,14 @@ const Products = ({length}) =>{
         </div>
        : 
       <div>
-        <h2 className={styles.productsTitle}>
+        {/* <h2 className={styles.productsTitle}>
           Все товары
-        </h2>
+        </h2> */}
 
         <div className={styles.productsList}>
           {selectedCompanyProducts.map((product) => {
             return (
-              <ProductCard product={product}/>
+              <ProductCard key={product?.id} product={product}/>
             )
             
           })}

@@ -4,6 +4,8 @@ import {createApplicationForPlacement} from "@/redux/actions/application.js";
 import {useDispatch, useSelector} from "react-redux";
 import {useToast} from "@/hooks/useToast.jsx";
 import {useEffect, useState} from "react";
+import InputMask from 'react-input-mask';
+import PhoneMasks from './PhoneMasks';
 
 
 const HeroForm = () => {
@@ -12,6 +14,7 @@ const HeroForm = () => {
   const { applicationForPlacement } = useSelector((state) => state.application);
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
   const [phoneCode, setPhoneCode] = useState("+998")
+  const [countryCode, setCountryCode] = useState('UZ')
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -45,11 +48,11 @@ const HeroForm = () => {
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Страна</p>
-          <CountrySelect name="lacation" setPhoneNumber={setPhoneCode}/>
+          <CountrySelect name="lacation" setPhoneNumber={setPhoneCode} setCountryCode={setCountryCode}/>
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Номер телефона</p>
-          <input name="phone_number" type="text" placeholder={phoneCode} className={styles.formClient_name} />
+          <InputMask name="phone_number" type="text" placeholder={PhoneMasks[countryCode].replace(/#/gmi, "_")} className={styles.formClient_name} mask={`${PhoneMasks[countryCode].replace(/9/gmi, "\\9").replace(/#/gmi, "9")} `} />
         </div>
         <div style={{textAlign: 'start'}}>
           <p className={styles.formInput_name}>Название компании</p>

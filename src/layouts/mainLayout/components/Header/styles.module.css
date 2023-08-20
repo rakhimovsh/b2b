@@ -54,6 +54,12 @@
   gap: 10px;
   cursor: pointer;
   user-select: none;
+  position: relative;
+}
+.languageChange_select1 p {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 .languageChange_select:active, :focus {
   outline: none;
@@ -65,14 +71,21 @@
 }
 .langDropdown {
   position: absolute;
-  width: 47px;
+  width: 60px;
   background-color: #fff;
   border: 1px solid #000;
   margin-top: 10px;
+  border-radius: 5px;
 }
 .langItem {
   padding: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.langItem svg {
+  flex-shrink: 0;
+  margin-right: 3px;
 }
 .langItem:hover {
   background-color: #1876f2;
