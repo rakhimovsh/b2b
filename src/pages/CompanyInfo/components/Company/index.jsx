@@ -22,9 +22,9 @@ const CompanyInfo = ({ name, category}) => {
     <>
       <h3 className={styles.companyTitle}>{name}</h3>
       <h4 className={styles.companyDesc}>{category}</h4>
-      <span className={styles.companyGrade}>
+      {/* <span className={styles.companyGrade}>
           <StarIcon className={styles.companyStarIcon} /> 3.6 рейтинг
-        </span>
+      </span> */}
     </>
   )
 };
@@ -54,7 +54,7 @@ const Company = () => {
         <div className={styles.companyInfo}>
           <CompanyInfo name={singleCompany?.item?.name} category={singleCompany?.item?.type_product?.translations[lang]?.name}/>
         </div>
-        <ul className={styles.socialNetworks}>
+        {/* <ul className={styles.socialNetworks}>
           <li>
             <a target='_blank' href={singleCompany?.item?.facebook}>
               <FaceBookIcon />
@@ -75,7 +75,7 @@ const Company = () => {
               <YouTubeIcon href={singleCompany?.item?.youtube}/>
             </a>
           </li>
-        </ul>
+        </ul> */}
         <ul className={styles.companyDetails}>
           <li>
             <PhoneIcon /> {singleCompany?.item?.phone_number}

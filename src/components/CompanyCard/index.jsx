@@ -43,11 +43,11 @@ const CompanyCard = ({company}) => {
           <img src={BoxIcon} alt='box' />
           <p>{company?.products?.length} товаров</p>
         </div>
-        <div className={styles.companyInfo}>
+        {/* <div className={styles.companyInfo}>
           <img src={starIcon} alt='box' />
           <p className={styles.companyRating}>{'3.6 рейтинг'}</p>
-        </div>
-        <Social />
+        </div> */}
+        {/* <Social /> */}
       </div>
       <div className={styles.moreInfo}>
         <a href=''>подробнее</a>

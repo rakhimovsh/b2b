@@ -29,9 +29,9 @@
     padding: 36px 37px 43px 24px;
     cursor: pointer;
 }
-.companyCard:hover{
+/* .companyCard:hover{
     box-shadow: 24px 0px 74px 0px rgba(137, 137, 161, 0.17);
-}
+} */
 .companyAddress {
     display: flex;
     max-width: 241px;

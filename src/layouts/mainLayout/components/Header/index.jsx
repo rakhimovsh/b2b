@@ -33,8 +33,8 @@ const Header = () => {
             <Navbar />
           </nav>
         </div>
-        <div onClick={() => setIsLangSelectOpen(!isLangSelectOpen)} className={styles.headerRight}>
-          <div className={styles.languageChange}>
+        <div  className={styles.headerRight}>
+          <div onClick={() => setIsLangSelectOpen(!isLangSelectOpen)} className={styles.languageChange}>
             <Globe />
             <div >
               <div  className={styles.languageChange_select1}>
