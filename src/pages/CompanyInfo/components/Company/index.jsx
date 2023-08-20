@@ -9,11 +9,13 @@ import { ReactComponent as YouTubeIcon } from '@assets/svg/akar-icons_youtube-fi
 import { ReactComponent as PhoneIcon } from '@assets/svg/u_phone-alt.svg';
 import { ReactComponent as LocationIcon } from '@assets/svg/u_location-point.svg';
 import { ReactComponent as BoxIcon } from '@assets/svg/box-icon.svg';
+import { ReactComponent as VerifiedIcon } from '@assets/svg/verified.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCompanyById } from '@/redux/actions/company';
 import { useTranslation } from 'react-i18next';
+
 
 
 const CompanyInfo = ({ name, category}) => {
@@ -85,8 +87,16 @@ const Company = () => {
             {singleCompany?.item?.location}
           </li>
           <li>
+            <LocationIcon />
+            <p>Tashkent, uchtepa 15</p>
+          </li>
+          <li>
             <BoxIcon />
             {singleCompany?.item?.products?.length} товаров
+          </li>
+          <li>
+            <VerifiedIcon style={{width: '20px'}}/>
+            Verified
           </li>
         </ul>
       </div>
