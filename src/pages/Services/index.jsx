@@ -1,9 +1,5 @@
 import React from 'react'
 import styles from './styles.module.css'
-import ServiceImage1 from '@assets/images/services-1.jpg'
-import ServiceImage2 from '@assets/images/services-2.jpg'
-import ServiceImage3 from '@assets/images/services-3.png'
-
 
 const Services = () => {
   return (
