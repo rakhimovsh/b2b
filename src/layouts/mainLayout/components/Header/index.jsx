@@ -9,32 +9,55 @@ import MiniLogo  from '@assets/svg/EMGUMiniLogo.png';
 import { ReactComponent as Globe } from '@assets/svg/globe-alt.svg';
 import { ReactComponent as Menu } from '@assets/svg/menu.svg';
 import { ReactComponent as IconDown } from '@assets/svg/arrowDown.svg';
+import { ReactComponent as UzFlag } from '@assets/svg/uzbFlag.svg';
+import { ReactComponent as RuFlag } from '@assets/svg/ruFlag.svg';
+import { ReactComponent as EnFlag } from '@assets/svg/enFlag.svg';
 
+const langSelect = {
+  uz: <><UzFlag/> Uz</>,
+  ru: <><RuFlag />Ru</>,
+  en: <><EnFlag /> En</>
+}
 
 const Header = () => {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const [isNavbarOpen, setIsNavbarOpen] = useState(false)
-
-  const handleChange = (evt) => {
-    i18n.changeLanguage(evt.target.value);
+  const [isLangSelectOpen, setIsLangSelectOpen] = useState(false)
+  const handleChange = (lang) => {
+    i18n.changeLanguage(lang);
   };
   return (
     <div className={isNavbarOpen ? styles.headerWrapper : ""}>
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <Link to='/'>
-             <Logo className={styles.headerLogo} style={{width: '200px', height: '110px'}} />
+             <Logo className={styles.headerLogo} style={{width: '250px', height: '110px'}} />
              <img className={styles.headerMiniLogo} src={MiniLogo} alt="mini logo" />
+             
           </Link>
           <nav className={styles.navbar}>
             <Navbar />
           </nav>
         </div>
-        <div className={styles.headerRight}>
-          <div className={styles.languageChange}>
-            <Globe />
-            <select 
+        <div  className={styles.headerRight}>
+          <div onClick={() => setIsLangSelectOpen(!isLangSelectOpen)} className={styles.languageChange}>
+            {/* <Globe /> */}
+            <div style={{position: 'relative'}}>
+              <div  className={styles.languageChange_select1}>
+                <p>{langSelect[i18n.language]}</p>
+                <IconDown/>
+              </div>
+              {isLangSelectOpen && 
+                <div  className={styles.langDropdown}>
+                  <p onClick={(e) => handleChange('en')} className={styles.langItem}> <EnFlag /> En</p>
+                  <p onClick={(e) => handleChange('ru')} className={styles.langItem}> <RuFlag />Ru</p>
+                  <p onClick={(e) => handleChange('uz')} className={styles.langItem}> <UzFlag/> Uz</p>
+                </div>
+              }
+            </div>
+            
+            {/* <select 
               onChange={handleChange}
               defaultValue={i18n.language}
               name=''
@@ -44,7 +67,7 @@ const Header = () => {
               <option value='en'>En</option>
               <option value='ru'>Ru</option>
               <option value='uz'>Uz</option>
-            </select>
+            </select> */}
             {/* <IconDown /> */}
           </div>
           {/* <button className={styles.headerFisrtButton}>Войти</button> */}

@@ -1,13 +1,22 @@
 import React from 'react'
 import styles from './style.module.css'
-import ArrowRight from '../../../../assets/svg/arrowIcon-right.svg'
+import ArrowRight from '@assets/svg/arrowIcon-right.svg'
 
-const CompanyPages = () => {
+const CompanyPages = ({page, setPage, allPages}) => {
+  const arrPages = new Array(allPages).fill(<></>)
+  const hanldeClick = () => {
+    setPage(prev => {
+      if(prev < allPages) return prev++
+    })
+  }
   return (
     <div className={styles.pagesButtons}>
-        <button className={styles.pagesBtn1}>1</button>
-        <button className={styles.pagesBtn2}>2</button>
-        <button className={styles.pagesbtn_next}>следующий <img src={ArrowRight} alt="" /></button>
+        {
+          arrPages?.map((el, index) =>(
+            <button key={index} onClick={() => setPage(index + 1)} className={index + 1 === page ? styles.pagesBtn1 : styles.pagesBtn2}>{index + 1}</button>
+          ))
+        }
+        <button disabled={page >= allPages} onClick={hanldeClick} className={styles.pagesbtn_next}>следующий <img src={ArrowRight} alt="" /></button>
     </div>
   )
 }

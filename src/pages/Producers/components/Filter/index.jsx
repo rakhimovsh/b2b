@@ -6,14 +6,18 @@ import Placefilter from './PlaceFilter'
 import MajorFilter from './MajorFilter'
 import RatingFilter from './RatingFilter'
 import FilterGroup from './FilterGroup'
+import { useTranslation } from 'react-i18next'
+import { truncateString } from '@/utils/truncateString'
 
 const Filter = () => {
+    const {i18n} = useTranslation()
+    const lang = i18n.language  
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
     const [openRating, setOpenRating] = useState(false)
     const [openFiltergroup, setOpenFiltergroup] = useState(false)
-
-
+    const [major, setMajor] = useState('Направление компании')
+    const [place, setPlace] = useState('Расположение  компании')
     return (
         <div className={styles.filterContainer}>
             <div className={styles.filterGroup_container}>
@@ -32,11 +36,11 @@ const Filter = () => {
             </div>
             <div className={styles.checkbox_box}>
                 <div onClick={() => {setOpenMajor(!openMajor)}} className={styles.companyMajor_box}>
-                    <p className={styles.filterName}>Направление компании</p><IconDown />
+                    <p className={styles.filterName}>{typeof major === "string" ? major : truncateString(major.translations[lang].name) }</p><IconDown />
                 </div>
                 {openMajor && 
                 <div  className={styles.checkboxes}>
-                    <MajorFilter />
+                    <MajorFilter setMajor={setMajor} setOpenMajor={setOpenMajor} major={major}/>
                 </div>}
                 
             </div>
@@ -46,11 +50,11 @@ const Filter = () => {
                 </div>
                 { openPlace && 
                     <div className={styles.placeCheckboxes}>
-                        <Placefilter />
+                        <Placefilter setPlace={setPlace}/>
                     </div>
                 }     
             </div>
-            <div className={styles.companyRating_box}>
+            {/* <div className={styles.companyRating_box}>
                 <div onClick={() => {setOpenRating(!openRating)}} className={styles.ratingFilter}>
                     <p  className={styles.filterName}>Рейтинг компании</p><IconDown />
                 </div>
@@ -60,7 +64,7 @@ const Filter = () => {
                     </div>
                 }
                 
-            </div>
+            </div> */}
             <button className={styles.filterButton}>Применить фильтр</button>
         </div>
     )

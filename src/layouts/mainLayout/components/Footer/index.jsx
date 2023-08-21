@@ -10,13 +10,13 @@ const Footer = () => {
   return (
     <div className='container'>
       <div className={styles.footerContent}>
-        <div className={styles.footerList}>
+        {/* <div className={styles.footerList}>
           <h4 className={styles.footerTitle}>Категории</h4>
           <p className={styles.footerText}>Хлопковая пряжа</p>
           <p className={styles.footerText}>Ткани</p>
           <p className={styles.footerText}>Аксессуары</p>
           <p className={styles.footerText}>Другие продукты</p>
-        </div>
+        </div> */}
         <div className={styles.footerList}>
           <h4 className={styles.footerTitle}>Служба поддержки</h4>
           <Link to='/how-to-buy-product ' className={styles.footerText}>

@@ -1,0 +1,37 @@
+.companyDetails {
+    display: flex;
+    margin-bottom: 40px;
+}
+.active {
+    padding: 20px;
+    cursor: pointer;
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    border-bottom: 2px solid #accf5d;
+    user-select: none;
+}
+.notActive {
+    padding: 20px;
+    cursor: pointer;
+    color: #000;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; 
+    user-select: none;
+}
+.active:hover  {
+    background-color: #e5e8eb;
+}
+.notActive:hover {
+    background-color: #e5e8eb;
+}
+.infoText {
+    max-width: 1000px;
+    margin-bottom: 100px;
+}

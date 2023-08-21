@@ -6,7 +6,8 @@ const Navbar = () => {
     <div className={styles.navbar}>
       <Link to='/company'>Производители</Link>
       <Link to='/product'>Каталог продуктов</Link>
-      <Link to='/about'>О Компании</Link>
+      <Link to='/services'>Сервисы</Link>
+      {/* <Link to='/about'>О Компании</Link> */}
       <Link to='/contact-us'>Свяжитесь С Нами</Link>
     </div>
   );

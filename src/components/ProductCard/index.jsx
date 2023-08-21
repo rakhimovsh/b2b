@@ -15,7 +15,7 @@ const ProductCard = ({product}) => {
   }
 
   return (
-    <div onClick={handleClick} className={styles.newProduct_card}>
+    <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
 
           <img className={styles.newProduct_img} src={getImage(product?.images[0]?.image)} alt='product-img' />

@@ -125,7 +125,7 @@ const Comments = ({ comments }) => {
       </button>
       <div>
         {comments?.map((comment) => (
-          <div className={styles.userComment}>
+          <div key={comment?.id} className={styles.userComment}>
             <div className={styles.userBox}>
               <div className={styles.userImage}>
                 <UserIcon />

@@ -17,8 +17,8 @@ const SearchProduct = () => {
   const { subcategories } = useSelector((state) => state.subcategory);
   const [openFilter, setOpenFilter] = useState(false)
   const [openSubFilter, setOpenSubFilter] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState('Категория продукта custom')
-  const [selectedSubcategory, setSelectedSubcategory] = useState('Субкатегория продукта custom')
+  const [selectedCategory, setSelectedCategory] = useState('Категория продукта ')
+  const [selectedSubcategory, setSelectedSubcategory] = useState('Субкатегория продукта ')
   const [searchText, setSearchText] = useState('');
   const [subcategoryId, setSubcategoryId] = useState('');
   const navigate = useNavigate();
@@ -28,15 +28,15 @@ const SearchProduct = () => {
     dispatch(getAllSubcategories());
   }, []);
 
-  const handleCategoryChange = (evt) => {
-    const result = subcategories.items?.filter(
-      (subcategory) => subcategory.category == evt.target.value,
-    );
-    setFilteredSubcategories(result);
+  const handleCategoryChange = (category) => {
+    setOpenFilter(prev => !prev)
+    setFilteredSubcategories(category?.subcategories)
+    setSelectedCategory(category?.translations[lang]?.name)
+    setSelectedSubcategory('Субкатегория продукта')
   };
-
   const handleSearchBtn = () => {
-    if (searchText) {
+    if (searchText || subcategoryId) {
+      
       navigate({
         pathname: '/product',
         search: `?${createSearchParams({ search: searchText, subcategoryId })}`,
@@ -47,7 +47,7 @@ const SearchProduct = () => {
     <div data-aos='fade-right' className={styles.productSearchCard}>
       <h3 className={styles.productSearch_title}>Пользуйтесь B2B чтобы найти продукт</h3>
       <div className={styles.productSearch_inputs}>
-        <div className={styles.selectCategory_box}>
+        {/* <div className={styles.selectCategory_box}>
           <select
             onChange={handleCategoryChange}
             className={styles.selectCategory}
@@ -68,7 +68,7 @@ const SearchProduct = () => {
             ))}
           </select>
           <IconDown className={styles.selectIcon} />
-        </div>
+        </div> */}
         <div>
           <div className={styles.selectCategory_box1} onClick={() => setOpenFilter(!openFilter)}>
             <p  className={styles.filterTitle}>{selectedCategory}</p> 
@@ -78,7 +78,7 @@ const SearchProduct = () => {
             <div className={styles.custom1}>
               {categories.items?.map((category) => (
                 <div 
-                  onClick={(e) => {setSelectedCategory(e.target.textContent), setOpenFilter(!openFilter)}} 
+                  onClick={() => handleCategoryChange(category)} 
                   className={styles.custom2} 
                   key={category?.id}  
                   value={category?.id}
@@ -90,26 +90,26 @@ const SearchProduct = () => {
           } 
         </div>
         <div>
-          <div className={styles.selectCategory_box1} onClick={() => setOpenSubFilter(!openSubFilter)}>
-            <p  className={styles.filterTitle}>{selectedSubcategory}</p> 
+          <div style={{opacity: filteredSubcategories?.length ? 1 : 0.6}} className={styles.selectCategory_box1} onClick={() => filteredSubcategories?.length ? setOpenSubFilter(!openSubFilter) : null}>
+            <p  className={styles.filterTitle} >{selectedSubcategory}</p> 
             <IconDown className={styles.selectIcon}/>
           </div>
           {openSubFilter && 
             <div className={styles.custom1}>
-              {categories.items?.map((category) => (
+              {filteredSubcategories.map((sub) => (
                 <div 
-                  onClick={(e) => {setSelectedSubcategory(e.target.textContent), setOpenSubFilter(!openSubFilter)}} 
+                  onClick={(e) => {setSelectedSubcategory(e.target.textContent); setOpenSubFilter(!openSubFilter); setSubcategoryId(sub?.id)}} 
                   className={styles.custom2} 
-                  key={category?.id}  
-                  value={category?.id}
+                  key={sub?.id}  
+                  value={sub?.id}
                 >  
-                  {category?.translations[lang]?.name}
+                  {sub?.translations[lang]?.name}
                 </div>
               ))}
             </div>
           } 
         </div>
-        <div className={styles.selectCategory_box}>
+        {/* <div className={styles.selectCategory_box}>
           <select
             onChange={(evt) => setSubcategoryId(evt.target.value)}
             disabled={!filteredSubcategories.length}
@@ -127,7 +127,7 @@ const SearchProduct = () => {
             ))}
           </select>
           <IconDown className={styles.selectIcon} />
-        </div>
+        </div> */}
         <input
           onChange={(evt) => setSearchText(evt.target.value)}
           type='text'

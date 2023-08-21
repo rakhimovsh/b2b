@@ -3,11 +3,12 @@ import Countries from './data.js'
 import styles from './styles.module.css'
 import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 
-const CountrySelect = ({ name, setPhoneNumber }) => {
+const CountrySelect = ({ name, setPhoneNumber, setCountryCode }) => {
   const handleChange = (evt) => {
     if(setPhoneNumber) {
       const res = Countries.find(country => country.name === evt.target.value)
       setPhoneNumber(res.dial_code)
+      setCountryCode(res.code)
     }
   }
   return (

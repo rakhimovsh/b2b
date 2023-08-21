@@ -3,25 +3,28 @@ import CompanyCard from "@components/CompanyCard"
 import CompanyPages from "./components/CompanyPages"
 import Filter from "./components/Filter"
 import { useDispatch, useSelector } from 'react-redux'
-import { useEffect } from 'react'
-import { getAllCompanies } from '../../redux/actions/company'
+import { useEffect, useState } from 'react'
+import { getAllCompanies } from '@/redux/actions/company'
+import { usePagination } from '@/hooks/usePagination'
 
 
 
 const Producers = () => {
     const dispatch = useDispatch()
     const {companies} = useSelector(state => state.company)
+    const [page, setPage] = useState(1)
+    const [sortedCompanies, allPages] = usePagination(companies.items, page, 9)
     useEffect(() => {dispatch(getAllCompanies())}, [])
 
     return (
         <div className={"container " + styles.producers}>
             <Filter />
             <div className={styles.companyContainer}>
-                {companies.items?.map(company => (
+                {sortedCompanies?.map(company => (
                     <CompanyCard key={company?.id} company={company}/>   
                 ))}    
             </div>           
-            <CompanyPages />
+            <CompanyPages  allPages={allPages} page={page} setPage={setPage}/>
         </div>
     )
 }

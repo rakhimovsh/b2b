@@ -36,6 +36,7 @@
 .languageChange {
   display: flex;
   align-items: center;
+  /* position: relative; */
 }
 
 .languageChange_select {
@@ -47,6 +48,19 @@
   -moz-appearance: none;
   appearance: none;
 }
+.languageChange_select1 {
+  display: flex;
+  margin-right: 20px;
+  gap: 10px;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+.languageChange_select1 p {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
 .languageChange_select:active, :focus {
   outline: none;
   box-shadow: none;
@@ -54,6 +68,28 @@
 .languageChange_select option {
   font: 16px Cursive;
   height: 50px 
+}
+.langDropdown {
+  position: absolute;
+  width: 60px;
+  background-color: #fff;
+  border: 1px solid #000;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+.langItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.langItem svg {
+  flex-shrink: 0;
+  margin-right: 3px;
+}
+.langItem:hover {
+  background-color: #1876f2;
+  color: #fff;
 }
 .headerFisrtButton {
   background: #f5f5f5;
@@ -72,10 +108,10 @@
 .headerSecondButton {
   flex-shrink: 0;
   background-color: #1876f2;
-  padding: 20px 36px;
+  padding: 15px 26px;
   border-radius: 6px;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 16px;
   color: #fff;
   cursor: pointer;
 }
@@ -95,6 +131,7 @@
 .headerMiniLogo {
   width: 60px;
 }
+
 @media screen and (max-width: 1270px){
   .header {
     padding: 20px 20px;

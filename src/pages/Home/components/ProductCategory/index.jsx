@@ -22,18 +22,22 @@ const ProductCategory = () => {
         {categories.items?.map((category) => (
           <div key={category?.id} className={styles.productCategory_card}>
             <div className={styles.productImage2_bg}>
-              <img src={category?.image} style={{ borderRadius: '50%' }} alt='thread' />
+              <img src={category?.image}  alt='thread' />
             </div>
-            <p className={styles.productCategory_name}>{category.translations[lang]?.name}</p>
-            {category?.subcategories.map((subcategory) => (
-              <p
-                onClick={() => handleClick(subcategory?.id)}
-                key={subcategory?.id}
-                className={styles.productCategory_text}
-              >
-                {subcategory.translations[lang]?.name}
-              </p>
-            ))}
+            <div className={styles.categoryContent}>
+              <p className={styles.productCategory_name}>{category.translations[lang]?.name}</p>
+            </div>
+              {category?.subcategories.map((subcategory) => (
+                <p
+                  onClick={() => handleClick(subcategory?.id)}
+                  key={subcategory?.id}
+                  className={styles.productCategory_text}
+                >
+                  {subcategory.translations[lang]?.name}
+                </p>
+              ))}
+            
+            
           </div>
         ))}
       </div>
