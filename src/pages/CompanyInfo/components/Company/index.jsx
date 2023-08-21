@@ -80,15 +80,15 @@ const Company = () => {
         </ul> */}
         <ul className={styles.companyDetails}>
           <li>
-            <PhoneIcon /> {singleCompany?.item?.phone_number}
-          </li>
-          <li>
             <LocationIcon />
             {singleCompany?.item?.location}
           </li>
           <li>
             <LocationIcon />
             <p>Tashkent, uchtepa 15</p>
+          </li>
+          <li>
+            <PhoneIcon /> {singleCompany?.item?.phone_number}
           </li>
           <li>
             <BoxIcon />

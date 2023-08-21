@@ -7,6 +7,7 @@
 }
 .serviceBox {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .serviceCard {
@@ -38,4 +39,30 @@
     cursor: pointer;
     border-radius: 0 0 8px 8px;
     font-size: 16px;
+}
+@media screen and (max-width: 1150px) {
+    .serviceBox {
+        row-gap: 50px;
+    }
+    .serviceTitle {
+        margin-left: 80px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .serviceBox {
+        justify-content: center;
+        gap: 50px;
+    }
+}
+@media screen and (max-width: 980px) {
+    .serviceTitle {
+        text-align: center;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 440px) {
+    .serviceTitle {
+        text-align: center;
+        margin-left: 0;
+    }
 }

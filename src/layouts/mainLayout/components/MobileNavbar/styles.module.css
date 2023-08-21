@@ -29,3 +29,8 @@
 .list li a{
   color: #121212;
 }
+@media screen and (max-width: 950px) {
+  .list li {
+    font-size: 20px;
+  }
+}

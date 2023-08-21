@@ -32,7 +32,7 @@ const Header = () => {
       <div className={styles.header}>
         <div className={styles.headerLeft}>
           <Link to='/'>
-             <Logo className={styles.headerLogo} style={{width: '250px', height: '110px'}} />
+             <Logo className={styles.headerLogo} style={{width: '250px', height: '100px'}} />
              <img className={styles.headerMiniLogo} src={MiniLogo} alt="mini logo" />
              
           </Link>

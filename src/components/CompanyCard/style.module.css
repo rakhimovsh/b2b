@@ -83,3 +83,8 @@
         width: 354px;
     }
 }
+@media screen and (max-width: 360px) {
+    .companyCard {
+        width: 290px;
+    }
+}
