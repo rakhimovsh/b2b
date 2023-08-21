@@ -5,7 +5,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {useToast} from "@/hooks/useToast.jsx";
 import {useEffect, useState} from "react";
 import InputMask from 'react-input-mask';
-import PhoneMasks from './PhoneMasks';
+import PhoneMasks from './PhoneMasks.js';
 
 
 const HeroForm = () => {
