@@ -6,7 +6,7 @@ const CompanyPages = ({page, setPage, allPages}) => {
   const arrPages = new Array(allPages).fill(<></>)
   const hanldeClick = () => {
     setPage(prev => {
-      if(prev < allPages) return prev++
+      if(prev < allPages) return ++prev
     })
   }
   return (

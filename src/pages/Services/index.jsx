@@ -12,7 +12,7 @@ const Services = () => {
             <h3 className={styles.serviceName}>International Premium</h3>
             <h4 className={styles.servicePrice}>3800 евро / год</h4>
             <p>
-              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s language. International Premium enables 100% effective use of EUROPAGES tools at an attractive price. The price is quoted without VAT.
+              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s .
             </p>
           </div>
           <button className={styles.serviceButton}>Interested to get</button>
@@ -23,7 +23,7 @@ const Services = () => {
             <h3 className={styles.serviceName}>International Plus Premium</h3>
             <h4 className={styles.servicePrice}>3800 евро / год</h4>
             <p>
-              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s language. International Premium enables 100% effective use of EUROPAGES tools at an attractive price. The price is quoted without VAT.
+              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s .
             </p>
           </div>
           <button className={styles.serviceButton}>Interested to get</button>
@@ -34,7 +34,7 @@ const Services = () => {
             <h3 className={styles.serviceName}>International Plus Entry</h3>
             <h4 className={styles.servicePrice}>3800 евро / год</h4>
             <p>
-              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s language. International Premium enables 100% effective use of EUROPAGES tools at an attractive price. The price is quoted without VAT.
+              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s .
             </p>
           </div>
           <button className={styles.serviceButton}>Interested to get</button>
@@ -45,7 +45,7 @@ const Services = () => {
             <h3 className={styles.serviceName}>International Premium</h3>
             <h4 className={styles.servicePrice}>3800 евро / год</h4>
             <p>
-              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s language. International Premium enables 100% effective use of EUROPAGES tools at an attractive price. The price is quoted without VAT.
+              The information about your company and products will be available in 15 languages – the 12 most common European languages along with Turkish, Arabic and Chinese. Your company will be presented in all major global markets. 30 keywords in every language. Up to 200 products can be placed. Your company will be at the top of Google SER in the buyer’s .
             </p>
           </div>
           <button className={styles.serviceButton}>Interested to get</button>

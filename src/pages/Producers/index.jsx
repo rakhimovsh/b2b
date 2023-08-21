@@ -10,12 +10,10 @@ import { usePagination } from '@/hooks/usePagination'
 
 
 const Producers = () => {
-    const dispatch = useDispatch()
     const {companies} = useSelector(state => state.company)
     const [page, setPage] = useState(1)
     const [sortedCompanies, allPages] = usePagination(companies.items, page, 9)
-    useEffect(() => {dispatch(getAllCompanies())}, [])
-
+    
     return (
         <div className={"container " + styles.producers}>
             <Filter />

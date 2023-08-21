@@ -12,11 +12,14 @@ const MobileNavbar = ({isMenuOpen, setIsMenuOpen}) => {
             <Link to="/company">Производители</Link>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>
-            <Link to="/product">Маркетинг</Link>
+            <Link to="/product">Каталог продуктов</Link>
           </li>
           <li onClick={() => setIsMenuOpen(false)}>
-            <Link to="/about">О Компании</Link>
+            <Link to="/services">Сервисы</Link>
           </li>
+          {/* <li onClick={() => setIsMenuOpen(false)}>
+            <Link to="/about">О Компании</Link>
+          </li> */}
           <li onClick={() => setIsMenuOpen(false)}>
             <Link to="/contact-us">Свяжитесь С Нами</Link>
           </li>
