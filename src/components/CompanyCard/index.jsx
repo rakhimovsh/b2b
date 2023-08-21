@@ -8,6 +8,7 @@ import Social from '../Social/index.jsx';
 import ArrowRight from '@assets/svg/chevron-right.svg';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
+import { ReactComponent as VerifiedIcon } from '@assets/svg/verified.svg';
 
 
 
@@ -35,6 +36,10 @@ const CompanyCard = ({company}) => {
           <img src={LocationIcon} alt='location' />
           <p className={styles.companyAddress_text}>{company?.location}</p>
         </div>
+        <div className={styles.companyAddress}>
+          <img src={LocationIcon} alt='location' />
+          <p className={styles.companyAddress_text}>Tashkent, Uchtepa 15</p>
+        </div>
         <div className={styles.companyInfo}>
           <img src={PhoneIcon} alt='phone' />
           <p>{company?.phone_number}</p>
@@ -42,6 +47,10 @@ const CompanyCard = ({company}) => {
         <div className={styles.companyInfo}>
           <img src={BoxIcon} alt='box' />
           <p>{company?.products?.length} товаров</p>
+        </div>
+        <div className={styles.companyInfo}>
+          <VerifiedIcon style={{width: '18px', marginRight: '8px'}} />
+          <p>Verified</p>
         </div>
         {/* <div className={styles.companyInfo}>
           <img src={starIcon} alt='box' />

@@ -95,7 +95,7 @@ const Company = () => {
             {singleCompany?.item?.products?.length} товаров
           </li>
           <li>
-            <VerifiedIcon style={{width: '20px'}}/>
+            <VerifiedIcon style={{width: '18px'}}/>
             Verified
           </li>
         </ul>
