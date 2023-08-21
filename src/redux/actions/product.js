@@ -79,7 +79,7 @@ export const createProductComment = (request) => (dispatch) => {
 export const getProducts = (search = '', subcategoryIds = []) => (dispatch) => {
     dispatch(productSlice.actions.setProductsLoading(true));
     api()
-      .get(`/product/products/?search=${search}/`)
+      .get(`/product/products/?search=${search}`)
       .then((res) => {
         if (res?.data) {
           dispatch(productSlice.actions.setProducts(subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : res.data));
