@@ -35,7 +35,7 @@
 .companyAddress {
     display: flex;
     max-width: 241px;
-    align-items: start; 
+    align-items: center;
     margin-bottom: 24px;
 }
 .companyAddress img {

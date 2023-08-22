@@ -4,12 +4,11 @@ import SearchIcon from '@assets/svg/searchIcon.svg'
 import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 import Placefilter from './PlaceFilter'
 import MajorFilter from './MajorFilter'
-import RatingFilter from './RatingFilter'
 import FilterGroup from './FilterGroup'
 import { useTranslation } from 'react-i18next'
 import { truncateString } from '@/utils/truncateString'
 import { useDispatch } from 'react-redux'
-import { getAllCompanies } from '../../../../redux/actions/company'
+import { getAllCompanies } from '@/redux/actions/company.js'
 
 const Filter = () => {
     const dispatch = useDispatch()
@@ -17,12 +16,13 @@ const Filter = () => {
     const lang = i18n.language  
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
-    const [openRating, setOpenRating] = useState(false)
     const [openFiltergroup, setOpenFiltergroup] = useState(false)
     const [major, setMajor] = useState('Направление компании')
     const [place, setPlace] = useState('Расположение  компании')
     const [search, setSearch] = useState('')
-    useEffect(() => {dispatch(getAllCompanies(search, major?.id))}, [search, major?.id])
+    useEffect(() => {
+      dispatch(getAllCompanies(search, major?.id, place?.code))
+    }, [search, major, place])
     
     return (
         <div className={styles.filterContainer}>
@@ -52,11 +52,11 @@ const Filter = () => {
             </div>
             <div className={styles.companyPlace_box}>
                 <div  onClick={() => {setOpenPlace(!openPlace)}} className={styles.placeFilter}>
-                    <p className={styles.filterName}>Расположение  компании</p><IconDown />
+                    <p className={styles.filterName}>{typeof place === "string" ? place : place.name}</p><IconDown />
                 </div>
                 { openPlace && 
                     <div className={styles.placeCheckboxes}>
-                        <Placefilter setPlace={setPlace}/>
+                        <Placefilter setPlace={setPlace} place={place}/>
                     </div>
                 }     
             </div>
