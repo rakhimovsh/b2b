@@ -27,7 +27,7 @@ const ProductCategory = () => {
             <div className={styles.categoryContent}>
               <p className={styles.productCategory_name}>{category.translations[lang]?.name}</p>
             </div>
-              {category?.subcategories.map((subcategory) => (
+              {category?.subcategories.slice(0, 4).map((subcategory) => (
                 <p
                   onClick={() => handleClick(subcategory?.id)}
                   key={subcategory?.id}

@@ -32,7 +32,7 @@
 }
 .productImage2_bg img {
   width: 270px;
-  height: 75px;
+  height: 100px;
   object-fit: cover;
   object-position: center center;
   border-top-left-radius: 8px;
@@ -45,7 +45,8 @@
 .productCategory_box {
   display: flex;
   flex-wrap: wrap;  
-  column-gap: 50px;
+  justify-content: space-between;
+  /* column-gap: 50px; */
 }
 .productCategory_name {
   color: #121212;
@@ -77,7 +78,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   width: 272px;
-  height: 400px;
+  height: 388px;
 }
 
 @media screen and (max-width: 870px) {
