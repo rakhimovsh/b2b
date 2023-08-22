@@ -22,14 +22,6 @@
   position: absolute;
   bottom: 0;
 }
-.productImage2_bg {
-  /* width: 70px;
-  height: 70px;
-  background-image: url(@assets/images/tshirtsmallRound.png);
-  border-radius: 50%;
-  margin-bottom: 18px; */
-  
-}
 .productImage2_bg img {
   width: 270px;
   height: 100px;
