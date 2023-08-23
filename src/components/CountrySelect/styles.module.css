@@ -13,16 +13,7 @@
     -moz-appearance: none;
     appearance: none;
   }
-  @media screen and (max-width: 500px) {
-    .countrySelect {
-      width: 335px;
-    }
-  }
-  @media screen and (max-width: 340px) {
-    .countrySelect {
-      width: 290px;
-    }
-  }
+
 .countrySelect_box {
   position: relative;
   
@@ -33,3 +24,24 @@
   right: 10px;
 }
 
+@media screen and (max-width: 500px) {
+  .countrySelect {
+    width: 335px;
+  }
+  /* .selectIcon {
+    right: 80px;
+  } */
+}
+@media screen and (max-width: 400px) {
+  /* .selectIcon {
+    right: 40px;
+  } */
+}
+@media screen and (max-width: 340px) {
+  .countrySelect {
+    width: 290px;
+  }
+  .selectIcon {
+    right: 23px;
+  }
+}

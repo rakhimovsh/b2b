@@ -168,3 +168,16 @@
     font-size: 16px;
   }
 }
+@media screen and (max-width: 500px) {
+  .contactUsForm {
+    width: 340px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .contactUsForm {
+    width: 300px;
+  }
+  .contactUsLeft {
+    text-align: center;
+  }
+}

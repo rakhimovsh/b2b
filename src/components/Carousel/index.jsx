@@ -33,7 +33,7 @@ const Carousel = ({ slides }) => {
     <div className={styles.carouselContainer}>
       <AliceCarousel
         mouseTracking
-        infinite
+        // infinite
         responsive={responsive}
         items={slides}
         disableDotsControls

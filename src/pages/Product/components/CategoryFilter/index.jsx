@@ -61,6 +61,7 @@ const CategoryFilter = () => {
   const search = searchParams.get('search') || '';
   const [checkedSubcategories, setCheckedSubcategories] = useState([+subcategoryId]);
   const [openedCategoryIds, setOpenedCategoryIds] = useState([]);
+  const [openFilter, setOpenFilter] = useState(false)
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -79,8 +80,8 @@ const CategoryFilter = () => {
   };
   return (
     <div className={styles.categoryFilter_box}>
-      <h3 className={styles.categoryTitle}>Категории</h3>
-      <div className={styles.categoryBox}>
+      <h3 onClick={() => {setOpenFilter(!openFilter)}} className={styles.categoryTitle}>Категории</h3>
+      <div className={!openFilter ? styles.categoryBox : styles.filterDisplay} >
         {categories.items?.map((category) => (
           <div key={category?.id}>
             <h4

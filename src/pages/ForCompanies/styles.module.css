@@ -47,11 +47,17 @@
   }
   .wrapper {
     flex-direction: column-reverse;
+    align-items: center;
   }
   .title, .desc {
     text-align: center;
   }
   .title {
     font-size: 32px;
+  }
+}
+@media screen and (max-width: 340px) {
+  .left {
+    max-width: 300px;
   }
 }
