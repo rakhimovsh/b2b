@@ -27,7 +27,7 @@ const Products = () => {
           <div onClick={() => navigate(`/company/product-info/${product?.id}`)} key={product?.id} className={styles.productsCard}>
             <img className={styles.productImage} src={product.images[0]?.image} alt='product' />
             <p className={styles.productName}>{product.translations[lang]?.name}</p>
-            <p>{product.translations[lang]?.compound}</p>
+            <p style={{marginBottom: '10px', color: '#1876F2'}}>{product.translations[lang]?.compound}</p>
             <RatingStars rating={product?.average_rating || 0} />
           </div>
         ))

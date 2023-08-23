@@ -17,6 +17,7 @@
     font-weight: 500;
     line-height: normal;
     margin-bottom: 5px;
+    max-width: 250px;
 }
 .productsContainer {
     display: flex;

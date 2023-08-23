@@ -93,6 +93,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 
   .wrapper {
@@ -143,8 +144,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-top: 30px;
   }
   .wrapper {
+    display: flex;
     /* margin-top: 97px; */
+    align-items: center;
+    justify-content: center;
   }
 }

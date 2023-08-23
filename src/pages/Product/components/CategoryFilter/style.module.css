@@ -81,6 +81,9 @@
   justify-content: space-between;
   font-size: 18px;
   font-weight: 500;
+  text-align: start;
+  cursor: pointer;
+  user-select: none;
 }
 
 .categoryItemTitle:hover {
@@ -119,8 +122,31 @@
 @media screen and (max-width: 1150px) {
   .categoryBox {
     display: none;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    position: absolute;
+    margin-top: 30px;
+    width: 728px;
+    padding: 48px 36px;
+    margin-left: -20px;
+    margin-bottom: 100px;
   }
-
+  .filterDisplay {
+    display: flex;
+    border-radius: 4px;
+    border: 1px solid #DDD;
+    background: #FFF;
+    position: absolute;
+    margin-top: 30px;
+    width: 728px;
+    padding: 48px 36px;
+    margin-left: -20px;
+    margin-bottom: 100px;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 2;
+  }
   .categoryFilter_box {
     width: 355px;
     padding: 20px;
@@ -131,10 +157,26 @@
   .categoryTitle {
     margin-bottom: 0;
   }
+  .closeButton {
+    display: none;
+  }
 }
-
+@media screen and (max-width: 750px) {
+  .filterDisplay {
+    width: 650px;
+  }
+}
+@media screen and (max-width: 670px) {
+  .filterDisplay {
+    width: 355px;
+  }
+}
 @media screen and (max-width: 370px) {
   .categoryFilter_box {
-    width: 310px;
+    width: 290px;
   }
+  .filterDisplay {
+    width: 290px;
+  }
+  
 }

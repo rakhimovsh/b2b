@@ -40,6 +40,9 @@
 @media screen and (max-width: 550px) {
   .container {
     padding: 56px 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .content {
     flex-direction: column-reverse;
@@ -53,5 +56,8 @@
   .img {
     margin: 0;
     margin-bottom: 50px;
+  }
+  .list {
+    margin-bottom: 60px;
   }
 }

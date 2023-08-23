@@ -58,7 +58,7 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-
+        padding-top: 0;
     }
     .logo {
         margin-left: 0;
@@ -68,16 +68,7 @@
         width: 728px;
         gap: 20px;
     }
-    .aboutContent {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 66px;
-        width: 355px;
-    }
-    .aboutImage {
-        width: 355px;
-    }
+    
 }
 @media screen and (max-width: 740px) {
     .aboutTitle {
@@ -87,5 +78,23 @@
     .productSearch {
         align-items: center;
     }
-    
+    .aboutB2b {
+        margin-bottom: 90px;
+    }
+    .logo {
+        margin-top: 0;
+    }
+    .aboutContent {
+        margin-top: 0;
+    }
+    .aboutContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* margin-top: 66px; */
+        width: 355px;
+    }
+    .aboutImage {
+        width: 355px;
+    }
 }
