@@ -71,16 +71,16 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   width: 272px;
-  height: 388px;
+  min-height: 388px;
 }
 
 @media screen and (max-width: 870px) {
   .productCategoryContainer {
-    text-align: center;
+    /* text-align: center; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
   }
   .productCategory_card {
     display: flex;
@@ -108,7 +108,8 @@
     margin-bottom: 0;
   }
   .productCategory_title {
-    width: 310px;
+    /* width: 310px; */
+    text-align: center;
   }
 }
 @media screen and (max-width: 370px) {

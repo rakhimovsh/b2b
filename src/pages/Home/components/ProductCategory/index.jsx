@@ -19,11 +19,10 @@ const ProductCategory = () => {
 
   return (
     <div className={'container ' + styles.productCategoryContainer}>
-      <h3 className={styles.productCategory_title}>Просмотрите товары по категориям</h3>
-      
+      <div style={{display: 'flex', alignItems: 'center'}}>
+        <h3 className={styles.productCategory_title}>Просмотрите товары по категориям</h3>
+      </div>
       <Carousel slides=
-     
-        
           {categories.items?.map((category) => (
             <div className={styles.productCategory_box}>
               <div key={category?.id} className={styles.productCategory_card}>
