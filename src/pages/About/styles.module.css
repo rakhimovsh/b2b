@@ -98,3 +98,18 @@
         width: 355px;
     }
 }
+@media screen and (max-width: 400px) {
+    .aboutTitle {
+        width: 300px;
+        font-size: 26px;
+    }
+    .aboutMain {
+        width: 300px;
+    }
+    .aboutText {
+        width: 300px;
+    }
+    .aboutImage {
+        width: 300px;
+    }
+}

@@ -48,14 +48,16 @@
         margin-bottom: 111px;
     }
 } 
-@media screen and (max-width: 340px) {
+
+@media screen and (max-width: 500px) {
     .line {
-        width: 310px;
-    }
-    .ProductComment_box {
         width: 300px;
     }
     .ProductComment_box {
+        width: 300px;
         margin-bottom: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 }

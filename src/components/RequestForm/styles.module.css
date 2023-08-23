@@ -79,6 +79,20 @@
   }
 }
 
+
+@media screen and (max-width: 440px) {
+  .contactForm_name_input {
+    width: 335px;
+  }
+
+  .contactForm_textarea {
+    width: 335px;
+  }
+
+  .contactForm_btn {
+    width: 335px;
+  }
+} 
 @media screen and (max-width: 340px) {
   .contactForm_name_input {
     width: 290px;

@@ -80,7 +80,8 @@ const Company = () => {
         </ul> */}
         <ul className={styles.companyDetails}>
           <li>
-            <LocationIcon />
+            
+          <img width={25} src={`https://flagsapi.com/${singleCompany?.item?.country}/flat/64.png`} alt='location' />
             {singleCompany?.item?.location}
           </li>
           <li>

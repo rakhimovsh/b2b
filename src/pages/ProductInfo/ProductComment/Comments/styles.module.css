@@ -44,6 +44,7 @@
 
 .contactInputs_box {
     display: flex;
+    flex-direction: column;
     margin-bottom: 21px;
     max-width: 608px;
     justify-content: space-between;
@@ -58,6 +59,7 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-bottom: 5px;
 }
 .saveData_checkbox {
     display: flex;
@@ -138,4 +140,22 @@
     .sendButton {
         width: 355px;
     }
+}
+@media screen and (max-width: 400px) {
+    .commentTextarea {
+        width: 290px;
+    }
+    .contactInput {
+        width: 290px;
+    }
+    .sendButton {
+        width: 290px;
+        margin-left: 5px;
+    }
+    .contactInputs_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
 }

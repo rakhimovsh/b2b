@@ -10,7 +10,7 @@ const Sort = () => {
     <div className={styles.sortBox}>
         <h3 onClick={() => {setShowFilter(!showFilter)}} className={styles.sortTitle}>Сортировка</h3>
        
-        <div className={showFilter ? styles.checkboxes : styles.showFilter}>
+        <div className={!showFilter ? styles.checkboxes : styles.showFilter}>
           <Checkbox />
         </div>
         <div className={styles.closeButton} onClick={() => {setOpenSecond(false), setOpenSelect(false)}}>

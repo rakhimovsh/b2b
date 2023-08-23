@@ -32,9 +32,13 @@
     .productImage {
         width: 728px;
         height: 506px;
+        
     }
     .productImage_box {
+        width: 728px;
+        height: 506px;
         max-width: fit-content;
+        margin-bottom: 130px;
     }
     .productTypes {
         max-width: 740px;
@@ -50,5 +54,19 @@
     .productTypes {
         max-width: 355px;
         gap: 27px;
+    }
+    .productImage_box {
+        margin-bottom: 39px;
+    }
+}
+@media screen and (max-width: 400px) {
+    .productImage_box {
+        width: 300px;
+    }
+    .productImage {
+        width: 300px;
+    }
+    .productTypes {
+        max-width: 310px;
     }
 }
