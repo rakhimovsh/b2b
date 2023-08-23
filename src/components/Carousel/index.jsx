@@ -7,6 +7,9 @@ import  { ReactComponent as ArrowIconRight} from '@assets/svg/arrowIcon-right.sv
 
 const responsive = {
   0: {
+    items: 1,
+  },
+  500: {
     items: 2,
   },
   840: {
