@@ -115,3 +115,14 @@
         width: 323px;
     }
 } 
+@media screen and (max-width: 400px) {
+    .companyContact {
+        max-width: 300px;
+    }
+    .mailButton {
+        width: 270px;
+    }
+    .phoneButton {
+        width: 270px;
+    }
+}

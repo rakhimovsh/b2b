@@ -24,3 +24,8 @@
         width: 355px;
     }
 }
+@media screen and (max-width: 400px) {
+    .productInfo_box {
+        width: 300px;
+    }
+}

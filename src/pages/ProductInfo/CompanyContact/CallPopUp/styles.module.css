@@ -65,3 +65,8 @@
         margin-left: 0;
     }
 }
+@media screen and (max-width: 400px) {
+    .popUpContainer {
+        width: 290px;
+    }
+}

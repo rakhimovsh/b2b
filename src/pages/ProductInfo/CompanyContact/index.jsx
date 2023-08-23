@@ -37,10 +37,10 @@ const CompanyContact = ({ companyId }) => {
           <div style={{ marginLeft: '15px', marginTop: '15px' }}>
             <h3 className={styles.companyName}>{singleCompany.item?.name}</h3>
             <p className={styles.companyProduct}>{singleCompany.item?.type_product?.translations[lang]?.name}</p>
-            <span className={styles.companyRating}>
+            {/* <span className={styles.companyRating}>
               <StarIcon className={styles.companyStarIcon} /> 3.6 рейтинг
             </span>
-            <Social company={singleCompany.item}/>
+            <Social company={singleCompany.item}/> */}
           </div>
         </div>
         <div>
@@ -54,7 +54,7 @@ const CompanyContact = ({ companyId }) => {
           </button>
         </div>
       </div>
-      <div>{openMail && <RequestPopUp closeMailModal={setOpenMail} />}</div>
+      <div >{openMail && <RequestPopUp closeMailModal={setOpenMail} />}</div>
       <div>{openPhone && <CallPopUp closePhoneModal={setOpenPhone} />}</div>
     </>
   );

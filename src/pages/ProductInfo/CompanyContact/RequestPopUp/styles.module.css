@@ -57,7 +57,7 @@
         left: 13%;
     }
 }
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 500px) {
     .requestTitle {
         width: 346px;
     }
@@ -68,6 +68,21 @@
     .requestBg {
         padding: 69px 10px;
         width: 360px;
+    }
+
+}
+
+
+@media screen and (max-width: 340px) {
+    .requestContainer {
+        width: 300px;
+    }
+    .requestTitle {
+        width: 290px;
+        font-size: 20px;
+    }
+    .requestBg {
+        width: 300px;
     }
 
 }

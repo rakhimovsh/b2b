@@ -5,13 +5,17 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useToast } from '@/hooks/useToast.jsx';
 import { createProductRequest } from '@/redux/actions/application.js';
 import InputMask from 'react-input-mask';
+import phoneMasks from '../HeroForm/phoneMasks';
+
 
 const RequestForm = () => {
   const dispatch = useDispatch();
   const toast = useToast();
   const { createProduct } = useSelector((state) => state.application);
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
-  const [phoneCode, setPhoneCode] = useState("+998")
+  
+  const [phoneCode, setPhoneCode] = useState('+998');
+const [countryCode, setCountryCode] = useState('UZ');
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const formElements = evt.target.elements;
@@ -48,7 +52,7 @@ const RequestForm = () => {
       </div>
       <div style={{ textAlign: 'start', maxWidth: '400px' }}>
         <p className={styles.contactForm_p}>Страна</p>
-        <CountrySelect name='lacation' setPhoneNumber={setPhoneCode}/>
+        <CountrySelect name='lacation' setPhoneNumber={setPhoneCode} setCountryCode={setCountryCode}/>
       </div>
       <div style={{ textAlign: 'start' }}>
         <p className={styles.contactForm_p}>Тел.</p>
@@ -56,8 +60,8 @@ const RequestForm = () => {
           name='phone_number'
           className={styles.contactForm_name_input}
           type='text'
-          placeholder={phoneCode}
-          mask={"+123 999-99-99"}
+          placeholder={phoneMasks[countryCode].replace(/#/gim, '_')}
+          mask={`${phoneMasks[countryCode].replace(/9/gim, '\\9').replace(/#/gim, '9')} `}
         />
       </div>
       <div style={{ textAlign: 'start' }}>

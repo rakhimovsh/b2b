@@ -63,7 +63,7 @@ const Comments = ({ comments }) => {
     setRating(0);
   };
   return (
-    <div>
+    <div >
       {!comments?.length && (
         <>
           <h3 className={styles.commentsTitle}>
@@ -78,17 +78,21 @@ const Comments = ({ comments }) => {
       <div className={styles.productMark}>
         <RatingStars rating={rating} setRating={setRating} isEditable />
       </div>
-
-      <p className={styles.clientNote}>Ваш отзыв *</p>
-      <textarea
-        onChange={handleChange}
-        value={formValues.review_comment}
-        className={styles.commentTextarea}
-        name='review_comment'
-        cols='30'
-        rows='10'
-      ></textarea>
-      <div className={styles.contactInputs_box}>
+       
+      
+      <div className={styles.contactInputs_box} >
+        <div>
+          <p className={styles.clientNote}>Ваш отзыв *</p>
+          <textarea
+            onChange={handleChange}
+            value={formValues.review_comment}
+            className={styles.commentTextarea}
+            name='review_comment'
+            cols='30'
+            rows='10'
+          ></textarea>
+        </div>
+        <div>
         <div>
           <p className={styles.clientNote}>Имя *</p>
           <input
@@ -109,6 +113,8 @@ const Comments = ({ comments }) => {
             type='email'
           />
         </div>
+        </div>
+        
       </div>
       {/*<div className={styles.saveData_checkbox}>*/}
       {/*  <input className={styles.checkbox} type='checkbox' name='saveMyData' />*/}
