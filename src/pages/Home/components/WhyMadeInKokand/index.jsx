@@ -12,7 +12,7 @@ const WhyMadeInKokand = () => {
   }, [])
   return (
     <div className={'container ' + styles.whyContainer}>
-      <h2 className={styles.whyTitle}>Почему Made in Kokand</h2>
+      <h2 className={styles.whyTitle}>Почему EMGU </h2>
       <div className={styles.whyContent}>
         <div data-aos="flip-left" className={styles.whyCard}>
           <WhyIcon1 />

@@ -12,7 +12,7 @@ const About = () => {
     <div className={'container ' + styles.about}>
         <div className={styles.aboutMain}>
             <div className={styles.aboutContent}>
-                <h2 className={styles.aboutTitle}>Made In Kodand- Крупнейшая международная B2B площадка в городе Коканд.</h2>
+                <h2 className={styles.aboutTitle}>Export Management Group of Uzbekistan - Крупнейшая международная B2B площадка в городе Коканд.</h2>
                 <p className={styles.aboutText}>Найдите продукцию более 1000 компаний во всех секторах B2B в Ферганской области. Выбирайте и связывайтесь с лучшими поставщиками бесплатно, и мы отправляем по всему миру.</p>
             </div>
             <LogoSvg className={styles.logo} />

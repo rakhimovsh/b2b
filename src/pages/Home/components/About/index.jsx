@@ -7,9 +7,9 @@ const About = () => {
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.aboutContainer}>
         <div data-aos="fade-right" className={styles.aboutContent}>
-          <h2 className={styles.aboutTitle}>Made in Kokand</h2>
+          <h2 className={styles.aboutTitle}>EMGU</h2>
           <p className={styles.aboutText}>
-            Made in Kokand — это платформа, на которой производители, поставщики и покупатели могут
+            Export Management Group of Uzbekistan — это платформа, на которой производители, поставщики и покупатели могут
             найти друг друга. Используйте платформу для расширения экспорта ваших компаний и
             привлечения зарубежных покупателей. Или найдите поставщиков и продукты по всему миру и
             свяжитесь с ними бесплатно.
