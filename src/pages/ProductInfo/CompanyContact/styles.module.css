@@ -115,7 +115,7 @@
         width: 323px;
     }
 } 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     .companyContact {
         max-width: 300px;
     }
@@ -124,5 +124,11 @@
     }
     .phoneButton {
         width: 270px;
+    }
+    .requestPopUp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
 }

@@ -76,6 +76,10 @@
 @media screen and (max-width: 340px) {
     .requestContainer {
         width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: auto;
     }
     .requestTitle {
         width: 290px;
