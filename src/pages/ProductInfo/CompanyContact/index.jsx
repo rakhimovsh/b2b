@@ -53,9 +53,10 @@ const CompanyContact = ({ companyId }) => {
             Связаться с продавцом
           </button>
         </div>
-      </div>
-      <div >{openMail && <RequestPopUp closeMailModal={setOpenMail} />}</div>
+        <div className={styles.requestPopUp}>{openMail && <RequestPopUp closeMailModal={setOpenMail} />}</div>
       <div>{openPhone && <CallPopUp closePhoneModal={setOpenPhone} />}</div>
+      </div>
+     
     </>
   );
 };

@@ -141,7 +141,7 @@
         width: 355px;
     }
 }
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 440px) {
     .commentTextarea {
         width: 290px;
     }

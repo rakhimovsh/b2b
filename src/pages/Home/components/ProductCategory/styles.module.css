@@ -71,7 +71,7 @@
   border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   width: 272px;
-  min-height: 388px;
+  min-height: 408px;
 }
 
 @media screen and (max-width: 870px) {
@@ -88,7 +88,7 @@
     align-items: center;
     text-align: center;
     margin-bottom: 0;
-    height: 393px;
+    min-height: 393px;
   }
   .productCategory_box {
     align-items: center;
