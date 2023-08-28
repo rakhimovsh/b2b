@@ -59,7 +59,7 @@
     .popUpContainer {
         flex-direction: column;
         max-width: 355px;
-        left: 10px;
+        left: 25px;
     }
     .popUpImage {
         margin-left: 0;
@@ -68,5 +68,11 @@
 @media screen and (max-width: 400px) {
     .popUpContainer {
         width: 290px;
+        left: 45px;
+    }
+}
+@media screen and (max-width: 340px) {
+    .popUpContainer {
+        left: 15px;
     }
 }
