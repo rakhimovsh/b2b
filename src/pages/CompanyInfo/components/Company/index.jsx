@@ -86,7 +86,7 @@ const Company = () => {
           </li>
           <li>
             <LocationIcon />
-            <p>Tashkent, uchtepa 15</p>
+            <p>{singleCompany.item?.location}</p>
           </li>
           <li>
             <PhoneIcon /> {singleCompany?.item?.phone_number}
