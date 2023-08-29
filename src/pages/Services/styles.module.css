@@ -12,11 +12,13 @@
 }
 .serviceCard {
     max-width: 280px;
-    box-shadow: 0 10px 20px 0 rgba(60, 60, 59, .08);
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    border-radius: 8px;
+    /* box-shadow: 0 10px 20px 0 rgba(60, 60, 59, .08); */
    
 }
 .serviceImage {
-    width: 280px;
+    width: 278px;
     height: 137px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -35,7 +37,7 @@
     height: 266px;
 }
 .serviceButton {
-    width: 280px;
+    width: 279px;
     padding: 10px;
     background: #1876f2;
     color: #fff;
