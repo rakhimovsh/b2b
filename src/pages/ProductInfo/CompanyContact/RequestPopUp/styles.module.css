@@ -1,11 +1,10 @@
 .requestContainer {
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 60%;
     display: flex;
     background: #FFF;
-    box-shadow: 8px 22px 144px 0px rgba(51, 56, 63, 0.13);
+    box-shadow: 8px 22px 144px 0 rgba(51, 56, 63, 0.13);
+    overflow-y: auto;
 }
 .requestBg {
     position: relative;
@@ -18,7 +17,6 @@
 .requestTitle {
     max-width: 406px;
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
@@ -38,6 +36,18 @@
     right: 42px;
     cursor: pointer;
 }
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 @media screen and (max-width: 1150px) {
     .requestImage {
         display: none;
@@ -51,10 +61,10 @@
         display: flex;
         flex-direction: column;
         width: 580px;
+        height: 80vh;
         justify-content: center;
         align-items: center;
         padding-bottom: 42px;
-        left: 13%;
     }
 }
 @media screen and (max-width: 500px) {

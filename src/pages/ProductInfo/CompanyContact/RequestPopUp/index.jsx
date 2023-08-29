@@ -6,15 +6,17 @@ import {ReactComponent as CloseIcon} from '@assets/svg/closeIcon.svg'
 
 const RequestPopUp = ({closeMailModal}) => {
   return (
-    <div className={styles.requestContainer}>
+    <div className={styles.wrapper}>
+      <div className={styles.requestContainer}>
         <div className={styles.requestBg}>
-            <h3 className={styles.requestTitle}>Заполните форму запроса продукта</h3>
-            <img className={styles.requestImage} src={BoxImage} alt="box" />
+          <h3 className={styles.requestTitle}>Заполните форму запроса продукта</h3>
+          <img className={styles.requestImage} src={BoxImage} alt="box" />
         </div>
         <div className={styles.requestForm}>
-            <RequestForm />
+          <RequestForm />
         </div>
         <CloseIcon onClick={() => closeMailModal(false )} className={styles.closeIcon} />
+      </div>
     </div>
   )
 }
