@@ -1,11 +1,4 @@
 import styles from './styles.module.css';
-
-import MockCompany from '@assets/images/mock-company.png';
-import { ReactComponent as StarIcon } from '@assets/svg/StarSVG.svg';
-import { ReactComponent as FaceBookIcon } from '@assets/svg/akar-icons_facebook-fill.svg';
-import { ReactComponent as InstagramIcon } from '@assets/svg/ant-design_instagram-filled.svg';
-import { ReactComponent as TelegramIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
-import { ReactComponent as YouTubeIcon } from '@assets/svg/akar-icons_youtube-fill.svg';
 import { ReactComponent as PhoneIcon } from '@assets/svg/u_phone-alt.svg';
 import { ReactComponent as LocationIcon } from '@assets/svg/u_location-point.svg';
 import { ReactComponent as BoxIcon } from '@assets/svg/box-icon.svg';
@@ -15,6 +8,7 @@ import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCompanyById } from '@/redux/actions/company';
 import { useTranslation } from 'react-i18next';
+import countries from '@components/CountrySelect/data.js'
 
 
 
@@ -38,6 +32,7 @@ const Company = () => {
   const dispatch = useDispatch()
   const {singleCompany} = useSelector(state => state.company)
   useEffect(() => {dispatch(getCompanyById(companyId))}, [companyId])
+  console.log(singleCompany);
   return (
     <div className={styles.company}>
       <div className={styles.companyTop}>
@@ -82,7 +77,7 @@ const Company = () => {
           <li>
             
           <img width={25} src={`https://flagsapi.com/${singleCompany?.item?.country}/flat/64.png`} alt='location' />
-            {singleCompany?.item?.location}
+            {countries.find(c => c.code.toLowerCase() === singleCompany.item?.country.toLowerCase())?.name}
           </li>
           <li>
             <LocationIcon />
