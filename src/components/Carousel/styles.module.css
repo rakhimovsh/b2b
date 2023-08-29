@@ -6,11 +6,11 @@
 
 .customPrevButton {
   position: absolute;
-  top: 155px;
+  top: 195px;
   left: 0;
   margin-left: -33px;
-  width: 66px;
-  height: 66px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,11 +24,11 @@
 
 .customNextButton {
   position: absolute;
-  top: 155px;
+  top: 195px;
   right: 0;
   margin-right: -20px;
-  width: 66px;
-  height: 66px;
+  width: 46px;
+  height: 46px;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -10,7 +10,6 @@ import { useEffect, useState } from 'react';
 const CompanyInfo = () => {
   const [openInfo, setOpenInfo] = useState(1)
   const {companyId} = useParams()
-
   const dispatch = useDispatch()
   const {singleCompany} = useSelector(state => state.company)
   useEffect(() => {dispatch(getCompanyById(companyId))}, [companyId])

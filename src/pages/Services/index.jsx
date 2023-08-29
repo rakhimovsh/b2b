@@ -1,13 +1,19 @@
 import React from 'react'
 import styles from './styles.module.css'
+import { useNavigate } from 'react-router-dom'
+import InternationalImage from '@assets/images/International-Emgu.png'
+import EuropeImage from '@assets/images/Europe-Emgu.png'
+
+
 
 const Services = () => {
+  const navigate = useNavigate();
   return (
     <div className={'container ' + styles.serviceContainer}>
       <h2 className={styles.serviceTitle}>Сервисы-EMGU</h2>
       <div className={styles.serviceBox}>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src='https://picsum.photos/200/300' alt="service image" />
+          <img className={styles.serviceImage} src={InternationalImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Международный</h3>
             <h4 className={styles.servicePrice}>14 млн 800 тыс. сум/г</h4>
@@ -23,10 +29,10 @@ const Services = () => {
                 НДС.
             </p>
           </div>
-          <button className={styles.serviceButton}>Interested to get</button>
+          <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src='https://picsum.photos/200/300' alt="service image" />
+          <img className={styles.serviceImage} src={EuropeImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Европейские страны.</h3>
             <h4 className={styles.servicePrice}>5 млн 500 тыс. сум/год</h4>
@@ -39,10 +45,10 @@ const Services = () => {
               Kokand. Можно разместить 50 товаров. Разумная цена. Цена указана без НДС. 
             </p>
           </div>
-          <button className={styles.serviceButton}>Interested to get</button>
+          <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src='https://picsum.photos/200/300' alt="service image" />
+          <img className={styles.serviceImage} src={InternationalImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Азиатские страны.</h3>
             <h4 className={styles.servicePrice}>4 млн 800 тыс. сум/год</h4>
@@ -55,10 +61,10 @@ const Services = () => {
               Kokand, например. Можно разместить 50 товаров. Разумная цена. Цена указана без НДС.
             </p>
           </div >
-          <button className={styles.serviceButton}>Interested to get</button>
+          <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src='https://picsum.photos/200/300' alt="service image" />
+          <img className={styles.serviceImage} src={EuropeImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Узбекистан</h3>
             <h4 className={styles.servicePrice}>3 млн 900 тыс</h4>
@@ -69,7 +75,7 @@ const Services = () => {
               НДС.
             </p>
           </div>
-          <button className={styles.serviceButton}>Interested to get</button>
+          <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
       </div>
     </div>

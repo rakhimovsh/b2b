@@ -22,7 +22,7 @@ const ProductCard = ({product}) => {
       </div>
       <p className={styles.productCard_name}>{product?.translations[lang]?.name}</p>
       <p className={styles.productCard_category}>
-        Футболки
+        Футболки 
       </p>
       <RatingStars rating={product?.average_rating} setRating={()=> {}} isEditable={false} />
     </div>

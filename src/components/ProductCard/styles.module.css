@@ -2,12 +2,17 @@
   display: flex;
   justify-content: space-between;
   position: relative;
+
 }
 
 .newProduct_card {
   max-width: 292px;
+  min-height: 498px;
   text-align: center;
   cursor: pointer;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
 }
 /*   
 @media screen and (max-width: 1536px) {
@@ -18,10 +23,11 @@
 
 .newProduct_image {
   /*padding: 51px 46px;*/
-  border: 1px solid #E1E1E1;
+  /* border: 1px solid #E1E1E1; */
   background-color: #fff;
   margin-bottom: 17px;
   max-height: 327px;
+
 }
 
 .newProduct_img{
