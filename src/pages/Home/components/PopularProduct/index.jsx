@@ -21,7 +21,10 @@ const PopularProduct = () => {
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Популярные товары</h3>
-        <Carousel slides={renderProductCards(newProducts.items)} />
+        <div>
+          <Carousel slides={renderProductCards(newProducts.items)} />
+        </div>
+        
         <button onClick={() => navigate('/product')} className={styles.newProduct_button}>
           Посмотреть больше продуктов
         </button>

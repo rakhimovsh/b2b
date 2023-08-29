@@ -97,6 +97,15 @@
     
   }
 }
+@media screen and (max-width: 500px) {
+  .productSearchCard {
+    max-width: 310px;
+  }
+  .productSearch_button{
+    width: 280px;
+    padding: 15px 25px;
+  }
+}
 @media screen and (max-width: 340px) {
     .productSearchCard {
       width: 300px;
