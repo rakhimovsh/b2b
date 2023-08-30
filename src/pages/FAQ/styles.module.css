@@ -14,10 +14,11 @@
   font-weight: 500;
 }
 
-.img {
-
+@media screen and (max-width: 1150px) {
+  .header {
+    justify-content: center;
+  }
 }
-
 @media screen and (max-width: 550px) {
   .container {
     padding-top: 30px;
@@ -25,10 +26,17 @@
     flex-direction: column;
     align-items: center;
   }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
   .header {
     flex-direction: column-reverse;
     margin: 0;
     max-width: 400px;
+    justify-content: center;
   }
   .title {
     text-align: center;
