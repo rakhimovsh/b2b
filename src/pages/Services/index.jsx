@@ -2,7 +2,9 @@ import React from 'react'
 import styles from './styles.module.css'
 import { useNavigate } from 'react-router-dom'
 import InternationalImage from '@assets/images/International-Emgu.png'
-import EuropeImage from '@assets/images/Europe-Emgu.png'
+import EuropeImage from '@assets/images/Europe-EMGU.png'
+import AsiaImage from '@assets/images/Asia-EMGU.png'
+import UzbImage from '@assets/images/Uzbekistan-EMGU.png'
 
 
 
@@ -48,7 +50,7 @@ const Services = () => {
           <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src={InternationalImage} alt="service image" />
+          <img className={styles.serviceImage} src={AsiaImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Азиатские страны.</h3>
             <h4 className={styles.servicePrice}>4 млн 800 тыс. сум/год</h4>
@@ -64,7 +66,7 @@ const Services = () => {
           <button onClick={() => navigate('/application')} className={styles.serviceButton}>Получить услугу</button>
         </div>
         <div className={styles.serviceCard}>
-          <img className={styles.serviceImage} src={EuropeImage} alt="service image" />
+          <img className={styles.serviceImage} src={UzbImage} alt="service image" />
           <div className={styles.serviceContent}>
             <h3 className={styles.serviceName}>Узбекистан</h3>
             <h4 className={styles.servicePrice}>3 млн 900 тыс</h4>
