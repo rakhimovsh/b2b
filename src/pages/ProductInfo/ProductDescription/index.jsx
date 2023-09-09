@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './styles.module.css'
 
-const ProductDescription = ({ compound}) => {
+const ProductDescription = ({ desc }) => {
   return (
     <div className={styles.productDescription}>
         {/*<div>*/}
@@ -9,8 +9,8 @@ const ProductDescription = ({ compound}) => {
         {/*    <p className={styles.descriptionText}>{desc}</p>*/}
         {/*</div>*/}
         <div>
-            <p className={styles.description}>Состав</p>
-            <p className={styles.descriptionText}>{compound}</p>
+            {/*<p className={styles.description}>Состав</p>*/}
+            <p className={styles.descriptionText}>{desc}</p>
         </div>
         {/*<div>*/}
         {/*    <p className={styles.description}>Цвета</p>*/}

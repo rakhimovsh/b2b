@@ -1,9 +1,9 @@
 .productImage_box {
+    position: relative;
     /* padding: 67px 125px; */
     margin-bottom: 29px;
     max-width: 503px;
     border-radius: 4px;
-    border: 1px solid #E1E1E1;
     max-height: 392px;
 }
 .productImage {
@@ -27,6 +27,34 @@
     border-radius: 100px;
     border: 1px solid #E1E1E1;
     cursor: pointer;
+}
+
+.blackBorder {
+    border: 1px solid #000 !important;
+}
+.icon path{
+    fill: white;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.2);
+    cursor: pointer;
+}
+
+.btnLeft {
+    left: 15px;
+}
+
+.btnRight {
+    right: 15px;
 }
 @media screen and (max-width: 1150px) {
     .productImage {

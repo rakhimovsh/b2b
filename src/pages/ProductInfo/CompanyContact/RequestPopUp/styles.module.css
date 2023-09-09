@@ -1,6 +1,7 @@
 .requestContainer {
     position: absolute;
     width: 60%;
+    height: 80vh;
     display: flex;
     background: #FFF;
     box-shadow: 8px 22px 144px 0 rgba(51, 56, 63, 0.13);
@@ -29,6 +30,7 @@
 }
 .requestForm {
     margin-top: 69px;
+    padding-right: 50px;
 }
 .closeIcon {
     position: absolute;
@@ -54,16 +56,17 @@
     }
     .requestBg {
         background-color: #FFF;
-        height: 76px;
+        padding-bottom: 0;
         margin-right: 0;
     }
+    .requestForm {
+         padding: 0;
+    }
     .requestContainer {
-        display: flex;
         flex-direction: column;
+        align-items: center;
         width: 580px;
         height: 80vh;
-        justify-content: center;
-        align-items: center;
         padding-bottom: 42px;
     }
 }
@@ -73,10 +76,8 @@
     }
     .requestContainer {
         width: 360px;
-        left: 10px;
     }
     .requestBg {
-        padding: 69px 10px;
         width: 360px;
     }
 

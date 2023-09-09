@@ -32,7 +32,6 @@ const Company = () => {
   const dispatch = useDispatch()
   const {singleCompany} = useSelector(state => state.company)
   useEffect(() => {dispatch(getCompanyById(companyId))}, [companyId])
-  console.log(singleCompany);
   return (
     <div className={styles.company}>
       <div className={styles.companyTop}>

@@ -45,3 +45,13 @@ export const getCompanyById = (companyId) => (dispatch) => {
       dispatch(companySlice.actions.setSingleCompanyLoading(false));
     });
 };
+
+export const getCompaniesById = (companyId) => (dispatch) => {
+  api()
+    .get(`/product/company/${companyId}/`)
+    .then(res => {
+      if(res?.data){
+        dispatch(companySlice.actions.setSortedCompanies([companyId, res.data]))
+      }
+    })
+}
