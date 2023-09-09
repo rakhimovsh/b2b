@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Navbar from '../Navbar';
 import MobileNavbar from '@layouts/mainLayout/components/MobileNavbar/index.jsx';
 import styles from './styles.module.css';
@@ -27,6 +27,19 @@ const Header = () => {
   const handleChange = (lang) => {
     i18n.changeLanguage(lang);
   };
+  useEffect(() => {
+    const handlewindowClick = (e) => {
+      if(isLangSelectOpen && e.target === document.body) {
+        setIsLangSelectOpen(flase)
+      };
+      if(isLangSelectOpen) {
+        window.addEventListener('click', handlewindowClick);
+      }
+      return () => {
+        window.removeEventListener('click', handlewindowClick);
+      };
+    } 
+  }, [isLangSelectOpen])
   return (
     <div className={isNavbarOpen ? styles.headerWrapper : ""}>
       <div className={styles.header}>
