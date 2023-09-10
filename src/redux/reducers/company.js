@@ -8,7 +8,8 @@ const initialState = {
     singleCompany: {
         item: null,
         loading: true,
-    }
+    },
+    sortedCompanies: {}
 }
 
 export const companySlice = createSlice({
@@ -26,8 +27,12 @@ export const companySlice = createSlice({
         },
         setSingleCompanyLoading: (state, action) => {
             state.singleCompany.loading = action.payload
+        },
+        setSortedCompanies: (state, action) => {
+            const res = action.payload;
+            state.sortedCompanies[String(res[0])] = res[1];
         }
-    } 
+    }
 })
 
 export default companySlice.reducer

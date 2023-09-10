@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles.module.css';
-import { ReactComponent as StarIcon } from '@assets/svg/StarSVG.svg';
-import Social from '@components/Social';
 import MailSvg from '@assets/svg/mailSvg.svg';
 import PhoneIcon from '@assets/svg/phoneIcon.svg';
 import RequestPopUp from './RequestPopUp';
@@ -43,12 +41,12 @@ const CompanyContact = ({ companyId }) => {
             <Social company={singleCompany.item}/> */}
           </div>
         </div>
-        <div>
-          <button onClick={toggleMail} className={styles.mailButton}>
+        <div className={styles.btnWrapper}>
+          <button onClick={toggleMail} className={styles.btn + " " + styles.primary}>
             <img style={{ marginRight: '6px' }} src={MailSvg} alt='mail icon' />
             Узнать оптовую цену
           </button>
-          <button onClick={togglePhone} className={styles.phoneButton}>
+          <button onClick={togglePhone} className={styles.btn}>
             <img style={{ marginRight: '6px' }} src={PhoneIcon} alt='phone icon' />
             Связаться с продавцом
           </button>

@@ -1,11 +1,11 @@
 .requestContainer {
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 60%;
+    height: 80vh;
     display: flex;
     background: #FFF;
-    box-shadow: 8px 22px 144px 0px rgba(51, 56, 63, 0.13);
+    box-shadow: 8px 22px 144px 0 rgba(51, 56, 63, 0.13);
+    overflow-y: auto;
 }
 .requestBg {
     position: relative;
@@ -18,7 +18,6 @@
 .requestTitle {
     max-width: 406px;
     color: #121212;
-    font-family: SF Pro Display;
     font-size: 32px;
     font-style: normal;
     font-weight: 500;
@@ -31,6 +30,7 @@
 }
 .requestForm {
     margin-top: 69px;
+    padding-right: 50px;
 }
 .closeIcon {
     position: absolute;
@@ -38,23 +38,36 @@
     right: 42px;
     cursor: pointer;
 }
+
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
 @media screen and (max-width: 1150px) {
     .requestImage {
         display: none;
     }
     .requestBg {
         background-color: #FFF;
-        height: 76px;
+        padding-bottom: 0;
         margin-right: 0;
     }
+    .requestForm {
+         padding: 0;
+    }
     .requestContainer {
-        display: flex;
         flex-direction: column;
-        width: 580px;
-        justify-content: center;
         align-items: center;
+        width: 580px;
+        height: 80vh;
         padding-bottom: 42px;
-        left: 13%;
     }
 }
 @media screen and (max-width: 500px) {
@@ -63,10 +76,8 @@
     }
     .requestContainer {
         width: 360px;
-        left: 10px;
     }
     .requestBg {
-        padding: 69px 10px;
         width: 360px;
     }
 

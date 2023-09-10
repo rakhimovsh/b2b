@@ -2,7 +2,6 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import styles from './styles.module.css';
 import CompanyContact from '../CompanyContact';
-import ProductDescription from '../ProductDescription';
 import RatingStars from '@components/RatingStars/index.jsx';
 
 const ProductDetails = ({ details }) => {
@@ -18,7 +17,7 @@ const ProductDetails = ({ details }) => {
           </span>
         ) : null}
         <div className={styles.productDetails}>
-          <ProductDescription compound={details?.translations[lang]?.compound} />
+          {/*<ProductDescription compound={details?.translations[lang]?.compound} />*/}
           <div>
             <p className={styles.description}>Категории</p>
             <div className={styles.productCategory}>
