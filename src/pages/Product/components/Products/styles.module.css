@@ -3,6 +3,9 @@
     margin-bottom: 18px;
     cursor: pointer;
     max-width: 292px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
 }
 .productImage {
     margin-bottom: 17px;
