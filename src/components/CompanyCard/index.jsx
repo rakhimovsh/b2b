@@ -50,10 +50,10 @@ const CompanyCard = ({company}) => {
           <img src={BoxIcon} alt='box' />
           <p>{company?.products?.length} товаров</p>
         </div>
-        <div className={styles.companyInfo}>
+        {/* <div className={styles.companyInfo}>
           <VerifiedIcon style={{width: '18px', marginRight: '8px'}} />
           <p>Verified</p>
-        </div>
+        </div> */}
         {/* <div className={styles.companyInfo}>
           <img src={starIcon} alt='box' />
           <p className={styles.companyRating}>{'3.6 рейтинг'}</p>

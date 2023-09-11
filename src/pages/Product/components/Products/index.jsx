@@ -5,6 +5,7 @@ import {useNavigate, useSearchParams} from 'react-router-dom';
 import styles from './styles.module.css';
 import RatingStars from '@components/RatingStars';
 import { getProducts } from '@/redux/actions/product.js';
+import ProductCard from '../../../../components/ProductCard';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -31,6 +32,7 @@ const Products = () => {
             <RatingStars rating={product?.average_rating || 0} />
           </div>
         ))
+        // <ProductCard product={products}/>
       ) : (
         <h3>Ничего не найдено</h3>
       )}
