@@ -19,7 +19,7 @@ const ProductCategory = () => {
 
   return (
     <div className={'container ' + styles.productCategoryContainer}>
-      <div style={{display: 'flex', alignItems: 'center'}}>
+      <div style={{display: 'flex', alignItems: 'center'}} className={styles.categoryTitle}>
         <h3 className={styles.productCategory_title}>Просмотрите товары по категориям</h3>
       </div>
       <Carousel slides=

@@ -34,8 +34,8 @@ const ProductCard = ({product}) => {
   return (
     <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
-          <img className={styles.newProduct_img} src={getImage(product?.images[0]?.image)} alt='product-img' />
-          {/* <img className={styles.newProduct_img} src={CapImg} alt='product-img' /> */}
+          {/* <img className={styles.newProduct_img} src={getImage(product?.images[0]?.image)} alt='product-img' /> */}
+          <img className={styles.newProduct_img} src={JarTwist2} alt='product-img' />
       </div>
       <p className={styles.productCard_name}>
         {truncateString(product?.translations[lang]?.name, 40)}
@@ -48,7 +48,7 @@ const ProductCard = ({product}) => {
         {truncateString(sortedCompanies[product?.campany]?.name, 25)}
       </p>
       <p className={styles.country}>
-        <img width={20} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
+        <img width={16} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
         {findCountry?.name}
       </p>
       <p className={styles.productDescription}>{truncateString(product?.translations[lang]?.description, 110)}</p>

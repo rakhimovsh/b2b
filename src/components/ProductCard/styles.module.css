@@ -7,7 +7,7 @@
 
 .newProduct_card {
   max-width: 368px;
-  height: 426px;
+  height: 418px;
   text-align: start;
   cursor: pointer;
   background-color: #fff;
@@ -49,6 +49,7 @@
 }
 .productDescription {
   opacity: 0.9;
+  font-size: 15px;
 }
 
 .productCard_category {
@@ -65,13 +66,17 @@
   align-items: center;
   gap: 10px;
   margin-bottom: 10px;
+  font-weight: 400;
+  letter-spacing: 0.7px;
+  font-size: 14px;
 }
 .country {
   display: flex;
   align-items: center;
   gap: 10px;
   margin-bottom: 25px;
-  font-size: 15px;
+  font-size: 13px;
+  
 }
 @media screen and (max-width: 1100px){
   .newProduct_card {
@@ -83,29 +88,40 @@
   .newProduct_card {
     width: 100%;
     max-width: 350px;
-    height: 460px;
+    height: 450px;
+  }
+}
+@media screen and (max-width: 840px) {
+  .newProduct_card {
+    height: 420px;
+  }
+}
+@media screen and (max-width: 705px) {
+  .newProduct_card {
+    height: 430px;
   }
 }
 
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 610px) {
   .newProduct_img {
     height: 205px;
   }
-  
-}
-@media screen and (max-width: 550px) {
   .newProduct_card {
-    margin-left: 20px;
+    height: 455px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .newProduct_card {
+    height: 430px;
   }
 }
 @media screen and (max-width: 410px) {
-  .newProduct_card {
-    margin-left: 10px;
-  }
+  
 }
 @media screen and (max-width: 370px) {
   .newProduct_card {
     margin-left: 0;
+    max-width: 300px;
+    height: 440px;
   }
 }

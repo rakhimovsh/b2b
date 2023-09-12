@@ -78,6 +78,12 @@
 .arrowIcon_right:hover {
   cursor: pointer;
 }
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 @media screen and (max-width: 920px) {
   .newProductContainer {
    text-align: center;
@@ -91,5 +97,11 @@
   .newProductContainer {
     padding-top: 68px;
     padding-bottom: 93px;
+  }
+}
+@media screen and (max-width: 370px) {
+  .newProduct_button {
+    padding: 18px 16px;
+    font-size: 17px;
   }
 }

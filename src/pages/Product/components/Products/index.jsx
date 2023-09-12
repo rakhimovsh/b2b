@@ -25,14 +25,18 @@ const Products = () => {
     <div className={styles.productsContainer}>
       {products.items.length ? (
         products.items?.map((product) => (
-          <div onClick={() => navigate(`/company/product-info/${product?.id}`)} key={product?.id} className={styles.productsCard}>
-            <img className={styles.productImage} src={product.images[0]?.image} alt='product' />
-            <p className={styles.productName}>{product.translations[lang]?.name}</p>
-            <p style={{marginBottom: '10px', color: '#1876F2'}}>{product?.category?.translations[lang]?.name}</p>
-            <RatingStars rating={product?.average_rating || 0} />
+          // <div onClick={() => navigate(`/company/product-info/${product?.id}`)} key={product?.id} className={styles.productsCard}>
+          //   <img className={styles.productImage} src={product.images[0]?.image} alt='product' />
+          //   <p className={styles.productName}>{product.translations[lang]?.name}</p>
+          //   <p style={{marginBottom: '10px', color: '#1876F2'}}>{product?.category?.translations[lang]?.name}</p>
+          //   <RatingStars rating={product?.average_rating || 0} />
+          // </div>
+          <div className={styles.productCard_box}>
+            <ProductCard product={product} />
           </div>
+          
         ))
-        // <ProductCard product={products}/>
+        
       ) : (
         <h3>Ничего не найдено</h3>
       )}
