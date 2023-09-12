@@ -13,7 +13,6 @@ const Home = () => {
       <B2bSolution />
       <About />
       {/* <Trust /> */}
-      {/*<Trust />*/}
       {/* <NewProduct /> */}
       <PopularProduct />
       <ProductCategory />

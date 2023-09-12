@@ -81,10 +81,10 @@
 }
 @media screen and (max-width: 370px) {
     .sortBox {
-        width: 290px;
+        width: 300px;
     }
     .showFilter {
-        width: 290px;
+        width: 300px;
     }
 
 }

@@ -1,6 +1,9 @@
 .productCategoryContainer {
   padding-top: 117px;
 }
+.categoryTitle {
+
+}
 .productCategory_title {
   width: 511px;
   color: #000;
@@ -106,6 +109,9 @@
   } */
   .productCategory_card {
     margin-bottom: 0;
+  }
+  .categoryTitle {
+    justify-content: center;
   }
   .productCategory_title {
     /* width: 310px; */

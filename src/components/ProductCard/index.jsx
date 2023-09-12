@@ -7,6 +7,10 @@ import { truncateString } from '@/utils/truncateString.js';
 import {getCompaniesById} from "@/redux/actions/company.js";
 import Countries from "@components/CountrySelect/data.js"
 import styles from './styles.module.css';
+import CapImg from '@assets/images/cap.jpg'
+import JarTwist1 from '@assets/images/twist-jam2.jpg'
+import JarTwist2 from '@assets/images/twist-jam3.jpg'
+
 
 import {ReactComponent as CompanyIcon} from "@assets/svg/building-regular.svg";
 
@@ -26,25 +30,28 @@ const ProductCard = ({product}) => {
   }, [product])
 
   const findCountry = Countries.find(c => c.code === sortedCompanies[product?.campany]?.country)
+
   return (
     <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
-          <img className={styles.newProduct_img} src={getImage(product?.images[0]?.image)} alt='product-img' />
+          {/* <img className={styles.newProduct_img} src={getImage(product?.images[0]?.image)} alt='product-img' /> */}
+          <img className={styles.newProduct_img} src={JarTwist2} alt='product-img' />
       </div>
       <p className={styles.productCard_name}>
-        {truncateString(product?.translations[lang]?.name, 30)}
+        {truncateString(product?.translations[lang]?.name, 40)}
       </p>
       <p className={styles.productCard_category}>
         {product?.item?.category?.translations[lang]?.name} 
       </p>
       <p className={styles.company}>
-        <CompanyIcon/>
+        {/* <CompanyIcon/> */}
         {truncateString(sortedCompanies[product?.campany]?.name, 25)}
       </p>
-      <p className={styles.company}>
-        <img width={25} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
+      <p className={styles.country}>
+        <img width={16} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
         {findCountry?.name}
       </p>
+      <p className={styles.productDescription}>{truncateString(product?.translations[lang]?.description, 110)}</p>
       {/*<RatingStars rating={product?.average_rating} setRating={()=> {}} isEditable={false} />*/}
     </div>
   )

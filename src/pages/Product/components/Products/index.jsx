@@ -5,6 +5,7 @@ import {useNavigate, useSearchParams} from 'react-router-dom';
 import styles from './styles.module.css';
 import RatingStars from '@components/RatingStars';
 import { getProducts } from '@/redux/actions/product.js';
+import ProductCard from '../../../../components/ProductCard';
 
 const Products = () => {
   const dispatch = useDispatch();
@@ -24,13 +25,18 @@ const Products = () => {
     <div className={styles.productsContainer}>
       {products.items.length ? (
         products.items?.map((product) => (
-          <div onClick={() => navigate(`/company/product-info/${product?.id}`)} key={product?.id} className={styles.productsCard}>
-            <img className={styles.productImage} src={product.images[0]?.image} alt='product' />
-            <p className={styles.productName}>{product.translations[lang]?.name}</p>
-            <p style={{marginBottom: '10px', color: '#1876F2'}}>{product?.category?.translations[lang]?.name}</p>
-            <RatingStars rating={product?.average_rating || 0} />
+          // <div onClick={() => navigate(`/company/product-info/${product?.id}`)} key={product?.id} className={styles.productsCard}>
+          //   <img className={styles.productImage} src={product.images[0]?.image} alt='product' />
+          //   <p className={styles.productName}>{product.translations[lang]?.name}</p>
+          //   <p style={{marginBottom: '10px', color: '#1876F2'}}>{product?.category?.translations[lang]?.name}</p>
+          //   <RatingStars rating={product?.average_rating || 0} />
+          // </div>
+          <div className={styles.productCard_box}>
+            <ProductCard product={product} />
           </div>
+          
         ))
+        
       ) : (
         <h3>Ничего не найдено</h3>
       )}

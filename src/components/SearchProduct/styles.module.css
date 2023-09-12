@@ -110,6 +110,7 @@
     margin-bottom: 8px;
     padding: 22px 26px;
     user-select: none;
+    cursor: pointer;
 }
 .custom1 {
     position: absolute;

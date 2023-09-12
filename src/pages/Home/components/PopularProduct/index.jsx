@@ -15,15 +15,15 @@ const PopularProduct = () => {
   }, []);
 
   const renderProductCards = (products) => {
-    return products.map((product) => <ProductCard product={product} key={product.id} />);
+    return products.map((product) => <div className={styles.carousel}><ProductCard product={product} key={product.id} /></div> );
   };
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Популярные товары</h3>
-        <div>
+        
           <Carousel slides={renderProductCards(newProducts.items)} />
-        </div>
+       
         
         <button onClick={() => navigate('/product')} className={styles.newProduct_button}>
           Посмотреть больше продуктов
