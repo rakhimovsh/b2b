@@ -31,7 +31,7 @@ const Products = () => {
           //   <p style={{marginBottom: '10px', color: '#1876F2'}}>{product?.category?.translations[lang]?.name}</p>
           //   <RatingStars rating={product?.average_rating || 0} />
           // </div>
-          <div className={styles.productCard_box}>
+          <div key={product?.id} className={styles.productCard_box}>
             <ProductCard product={product} />
           </div>
           

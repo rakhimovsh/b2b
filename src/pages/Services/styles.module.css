@@ -9,23 +9,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    row-gap: 30px;
+    letter-spacing: 0.7px;
 }
 .serviceCard {
-    max-width: 280px;
+    max-width: 380px;
     border: 1px solid rgba(0, 0, 0, 0.12);
     border-radius: 8px;
     /* box-shadow: 0 10px 20px 0 rgba(60, 60, 59, .08); */
    
 }
 .serviceImage {
-    width: 278px;
+    width: 378px;
     height: 137px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    /* object-fit: contain; */
 }
 .serviceContent {
-    width: 280px;
+    width: 380px;
     padding: 22px;
+    letter-spacing: 1.1px;
 }
 .serviceName {
     margin-bottom: 30px;
@@ -37,7 +41,7 @@
     height: 266px;
 }
 .serviceButton {
-    width: 279px;
+    width: 379px;
     padding: 10px;
     background: #1876f2;
     color: #fff;

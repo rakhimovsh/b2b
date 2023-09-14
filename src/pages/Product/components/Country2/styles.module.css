@@ -1,0 +1,41 @@
+.countryInput {
+    border: 1px solid #EEE;
+    width: 100%;
+    padding: 20px;
+    font-size: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    /* color: #666; */
+}
+.countryInput::placeholder {
+    color: #111;
+  
+}
+.suggestionContainer {
+    border: 1px solid #EEE;
+    margin-bottom: 20px;
+    max-height: 157px;
+    overflow-y: auto;
+    
+}
+.suggestionItem {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* .suggestionList {
+    margin-top: 20px;
+} */
+@media screen and (max-width: 1150px) {
+    .countryInput {
+        width: 312px;
+        line-height: 24px;
+    }
+    .suggestionContainer {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .countryInput {
+        width: 300px;
+    }
+}

@@ -10,6 +10,21 @@ const ProductCategory = () => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
 
+  const responsive = {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    840: {
+      items: 3,
+    },
+    950: {
+      items: 4,
+    },
+  };
+
   const handleClick = (id) => {
     navigate({
       pathname: "product",
@@ -44,7 +59,7 @@ const ProductCategory = () => {
               </div>
             </div>
           ))}
-      
+          responsive={responsive}          
       
       />
     </div>

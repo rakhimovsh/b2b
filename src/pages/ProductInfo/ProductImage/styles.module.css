@@ -9,7 +9,7 @@
 .productImage {
     width: 501px;
     height: 390px;
-    object-fit: cover;
+    object-fit: contain;
 }
 .productTypes {
     max-width: 503px;

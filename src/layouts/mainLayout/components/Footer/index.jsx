@@ -66,7 +66,7 @@ const Footer = () => {
       <div className={styles.footerLine}></div>
       <div className={styles.developerRights}>
         <p className={styles.footerDeveloperRights}>©2023 all rights reserved</p>
-        <p className={styles.footerDeveloperRights}>Developped by: S-Orca IT center</p>
+        <p className={styles.footerDeveloperRights}>Developped by S-Orca </p>
       </div>
     </div>
   );
