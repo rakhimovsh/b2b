@@ -6,7 +6,7 @@
 }
 
 .newProduct_card {
-  max-width: 368px;
+  width: 368px;
   height: 418px;
   text-align: start;
   cursor: pointer;
@@ -86,7 +86,7 @@
 
 @media screen and (max-width: 950px) {
   .newProduct_card {
-    width: 100%;
+    width: 368px;
     max-width: 350px;
     height: 450px;
   }
@@ -115,13 +115,15 @@
     height: 430px;
   }
 }
-@media screen and (max-width: 410px) {
-  
+@media screen and (max-width: 395px) {
+  .newProduct_card {
+    max-width: 300px;
+  }
 }
 @media screen and (max-width: 370px) {
   .newProduct_card {
     margin-left: 0;
-    max-width: 300px;
+    max-width: 272px;
     height: 440px;
   }
 }

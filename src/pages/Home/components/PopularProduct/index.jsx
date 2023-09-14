@@ -14,6 +14,21 @@ const PopularProduct = () => {
     dispatch(getPopularProducts());
   }, []);
 
+  const responsive = {
+    0: {
+      items: 1,
+    },
+    500: {
+      items: 2,
+    },
+    840: {
+      items: 3,
+    },
+    950: {
+      items: 3,
+    },
+  };
+
   const renderProductCards = (products) => {
     return products.map((product) => <div className={styles.carousel}><ProductCard product={product} key={product.id} /></div> );
   };
@@ -22,7 +37,7 @@ const PopularProduct = () => {
       <div className={'container ' + styles.newProductContainer}>
         <h3 className={styles.newProduct_title}>Популярные товары</h3>
         
-          <Carousel slides={renderProductCards(newProducts.items)} />
+          <Carousel slides={renderProductCards(newProducts.items)} responsive={responsive} />
        
         
         <button onClick={() => navigate('/product')} className={styles.newProduct_button}>
