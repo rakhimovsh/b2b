@@ -24,7 +24,7 @@
     height: 137px;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
-    /* object-fit: contain; */
+    object-fit: contain;
 }
 .serviceContent {
     width: 380px;

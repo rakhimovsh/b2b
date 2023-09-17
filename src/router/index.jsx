@@ -18,6 +18,7 @@ import Payment from '@pages/Payment';
 import ReturnPolicy from '@pages/ReturnPolicy';
 import FAQ from '@pages/FAQ';
 import Services from '@pages/Services';
+import Companies from '../pages/Companies';
 
 const Router = () => {
   const { pathname } = useLocation();
@@ -43,6 +44,7 @@ const Router = () => {
         <Route path='/about' element={<About />} />
         <Route path='*' element={<NotFound />} />
         <Route path='/services' element={<Services />} />
+        <Route path='/companies' element={<Companies />} />
       </Route>
     </Routes>
   );

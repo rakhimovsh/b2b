@@ -89,10 +89,10 @@ const Company = () => {
             <BoxIcon />
             {singleCompany?.item?.products?.length} товаров
           </li>
-          <li>
+          {/* <li>
             <VerifiedIcon style={{width: '18px'}}/>
             Verified
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

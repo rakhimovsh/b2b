@@ -1,18 +1,19 @@
 .requestContainer {
     position: absolute;
     width: 60%;
-    height: 80vh;
+    height: 615px;
     display: flex;
     background: #FFF;
     box-shadow: 8px 22px 144px 0 rgba(51, 56, 63, 0.13);
-    overflow-y: auto;
+    border-radius: 4px;
+    /* overflow-y: auto; */
 }
 .requestBg {
     position: relative;
     background-color: #F3F6F8;
-    height: 783px;
-    padding: 69px 36px;
-    margin-right: 56px;
+    height: 615px;
+    padding: 30px 36px;
+    margin-right: 26px;
     
 }
 .requestTitle {
@@ -29,13 +30,13 @@
     right: 0;
 }
 .requestForm {
-    margin-top: 69px;
+    margin-top: 30px;
     padding-right: 50px;
 }
 .closeIcon {
     position: absolute;
-    top: 35px;
-    right: 42px;
+    top: 15px;
+    right: 22px;
     cursor: pointer;
 }
 

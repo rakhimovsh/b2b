@@ -5,7 +5,7 @@ import {ReactComponent as CloseIcon} from '@assets/svg/closeIcon.svg'
 
 const CallPopUp = ({closePhoneModal}) => {
   return (
-    <div className={styles.popUpContainer}>
+    <div className={styles.popUpContainer }>
         <div>
             <h3 className={styles.callTitle}>Связаться с продавцом</h3>
             <div className={styles.phoneNumber_box}>

@@ -38,7 +38,7 @@ const Footer = () => {
         <div className={styles.footerList}>
           <h4 className={styles.footerTitle}>Быстрые ссылки</h4>
           <Link to='/contact-us' className={styles.footerText}>
-            Свяжиьесь с нами
+            Свяжитесь с нами
           </Link>
           <Link to='/about' className={styles.footerText}>
             О компании

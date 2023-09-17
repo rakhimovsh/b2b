@@ -4,7 +4,7 @@ import { ReactComponent as CloseIcon } from '@assets/svg/redClose.svg';
 import { useTranslation } from 'react-i18next';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllCategories } from '@/redux/actions/category.js';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams  } from 'react-router-dom';
 import { getProducts } from '@/redux/actions/product.js';
 
 const Subcategory = ({
@@ -23,6 +23,7 @@ const Subcategory = ({
     const sortedSubcategory = subcategories.find((c) => checked.includes(c?.id));
     if (sortedSubcategory) setIsOpened((prev) => [...prev, categoryId]);
   }, [checked]);
+
   const handleChange = (evt, id) => {
     const isChecked = evt.target.checked;
     if (isChecked) {
@@ -30,7 +31,9 @@ const Subcategory = ({
     } else {
       setChecked((prev) => prev.filter((el) => el !== id));
     }
+    // console.log('checked' , checked)
   };
+
   return (
     <ul
       style={{ display: isOpened.includes(categoryId) ? 'flex' : 'none' }}
@@ -51,15 +54,16 @@ const Subcategory = ({
   );
 };
 
-const CategoryFilter = () => {
+const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { categories } = useSelector((state) => state.category);
   const [searchParams, setSearchParams] = useSearchParams();
-  const subcategoryId = searchParams.get('subcategoryId');
+  const subcategoryIds = searchParams.get('subcategoryIds');
   const search = searchParams.get('search') || '';
-  const [checkedSubcategories, setCheckedSubcategories] = useState([+subcategoryId]);
+  // const [checkedSubcategories, setCheckedSubcategories] = useState([]);
   const [openedCategoryIds, setOpenedCategoryIds] = useState([]);
   const [openFilter, setOpenFilter] = useState(false)
 
@@ -72,7 +76,6 @@ const CategoryFilter = () => {
     searchParams.delete("search")
   }, [search, checkedSubcategories])
 
-  
   const handleCategoryTitle = (categoryId) => {
     if (openedCategoryIds.includes(categoryId)) {
       setOpenedCategoryIds((prev) => prev.filter((el) => el !== categoryId));
@@ -80,6 +83,8 @@ const CategoryFilter = () => {
       setOpenedCategoryIds((prev) => [...prev, categoryId]);
     }
   };
+
+  // console.log('checkedSub' , checkedSubcategories);
 
 
   return (
@@ -119,4 +124,4 @@ const CategoryFilter = () => {
   );
 };
 
-export default CategoryFilter;
+export default ProductCategories;
