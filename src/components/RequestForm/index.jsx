@@ -15,7 +15,7 @@ const RequestForm = () => {
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
   
   const [phoneCode, setPhoneCode] = useState('+998');
-const [countryCode, setCountryCode] = useState('UZ');
+  const [countryCode, setCountryCode] = useState('UZ');
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const formElements = evt.target.elements;
@@ -70,7 +70,7 @@ const [countryCode, setCountryCode] = useState('UZ');
           name='text'
           className={styles.contactForm_textarea}
           cols='30'
-          rows='10'
+          rows='5'
           placeholder='Опишите продукт'
         ></textarea>
       </div>

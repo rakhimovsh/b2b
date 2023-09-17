@@ -1,0 +1,6 @@
+.companiesContainer {
+    padding-top: 50px;
+    padding-bottom: 200px;
+    display: flex;
+    gap: 20px;
+}

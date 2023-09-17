@@ -1,0 +1,55 @@
+.carouselContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 900px;
+}
+
+.customPrevButton {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  margin-left: -35px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #EEE;
+  border-radius: 50%;
+  fill: #FFF;
+  filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
+  cursor: pointer;
+  z-index: 10000;
+}
+
+.customNextButton {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  margin-right: -35px;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  border-radius: 50%;
+  fill: #FFF;
+  filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
+  cursor: pointer;
+  z-index: 500000;
+}
+@media screen and (max-width: 500px) {
+  .customNextButton {
+    margin-right: 0;
+    width: 36px;
+    height: 36px;
+  }
+  .customPrevButton {
+    margin-left: 0;
+    width: 36px;
+    height: 36px;
+  }
+  
+}

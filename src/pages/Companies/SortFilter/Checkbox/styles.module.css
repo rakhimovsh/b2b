@@ -1,0 +1,20 @@
+.active {
+    color: #1876F2;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 18px;
+    cursor: pointer;
+}
+.notActive {
+    color: #0F2E4A;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 18px;
+    cursor: pointer;
+}

@@ -7,6 +7,7 @@ import WhyMadeInKokand from './components/WhyMadeInKokand/index.jsx';
 import ProductSearch from './components/ProductSearch/index.jsx';
 
 const Home = () => {
+
   return (
     <>
       <Hero />

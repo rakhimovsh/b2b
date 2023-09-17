@@ -1,0 +1,90 @@
+.sortBox {
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    padding: 35px 56px 34px 20px;
+    width: 292px;
+    position: relative;
+}
+.sortTitle {
+    color: #1F1914;
+    font-family: SF Pro Display;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 31px;
+    text-align: center;
+}
+.closeButton {
+    display: flex;
+    gap: 5px;
+    cursor: pointer;
+    padding-top: 16px;
+}
+.clearFilter {
+    color: #F00;
+    font-family: SF Pro Display;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+}
+@media screen and (max-width: 1150px) {
+    .checkboxes {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        border-radius: 4px;
+        border: 1px solid #DDD;
+        background: #FFF;
+        width: 728px;
+        padding: 53px 46px;
+        margin-left: -396px;
+        margin-top: 30px;
+    }
+    
+    .showFilter {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        border-radius: 4px;
+        border: 1px solid #DDD;
+        background: #FFF;
+        width: 728px;
+        padding: 53px 46px;
+        margin-left: -396px;
+        margin-top: 30px;
+    }
+    .closeButton {
+        display: none;
+    }
+    .sortBox {
+        width: 312px;
+        padding: 20px;
+    }
+    .sortTitle {
+        margin-bottom: 0;
+    }
+}
+@media screen and (max-width: 710px) {
+    /* .checkboxes {
+        width: 600px;
+
+    } */
+}
+
+@media screen and (max-width: 670px) {
+    .showFilter {
+        width: 354px;
+        margin-left: -21px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .sortBox {
+        width: 300px;
+    }
+    .showFilter {
+        width: 300px;
+    }
+
+}
