@@ -40,7 +40,7 @@ const Companies = () => {
             <div className={styles.filterbox}>
                 <Countries setCountry={setCountry} />
                 <ProductCategories checkedSubcategories={checkedSubcategories} setCheckedSubcategories={setCheckedSubcategories}/>
-                <SortFilter />        
+                {/* <SortFilter />         */}
             </div>
             <div>
             {companies.items.map((company) => {

@@ -1,7 +1,7 @@
 .popUpContainer {
     position: absolute;
-    top: 260px;
-    left: 232px;
+    /* top: 260px;
+    left: 232px; */
     max-width: 776px;
     display: flex;
     background: #FFF;
@@ -9,6 +9,18 @@
     padding: 46px 36px 66px 42px;
     justify-content: space-between;
     align-items: center;
+    border-radius: 4px;
+}
+.popUpBox {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
 }
 .callTitle {
     color: #121212;

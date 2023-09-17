@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
   const {sortedCompanies} = useSelector(state => state.company)
   const {i18n} = useTranslation()
   const lang = i18n.language;
-
+  console.log(product);
   const handleClick = () => {
     navigate(`/company/product-info/${product.id}`)
   }

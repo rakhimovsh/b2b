@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './styles.module.css'
 import CategoryFilter from './components/CategoryFilter'
 import Sort from './components/Sort'
@@ -8,16 +8,17 @@ import Country from './components/Country'
 import Country2 from './components/Country2'
 
 const Product = () => {
-  
+  const [country , setCountry] = useState();
+
   return (
     <div className={'container ' + styles.filterBlock}>
       <div className={styles.filterbox}>
         {/* <Country /> */}
-        <Country2 />
+        <Country2 setCountry={setCountry}/>
         <CategoryFilter />
-        <Sort />        
+        {/* <Sort />         */}
       </div>
-      <Products />
+      <Products country={country}/>
     </div>
   )
 }

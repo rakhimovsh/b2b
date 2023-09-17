@@ -1,19 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import options1 from "@components/CountrySelect/data";
+import options from "@components/CountrySelect/data";
 import styles from './styles.module.css'
 
-const Country2 = () => {
+const Country2 = ({setCountry}) => {
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-  const options = [
-    'Uzbekistan',
-    'Kazakstan',
-    'Russia',
-    'Kirgizistan',
-    'Turkmenistan'
-    // Add more options as needed
-  ];
-
 
   const inputRef = useRef(null);
   const suggestionListRef = useRef(null);
@@ -29,15 +20,16 @@ const Country2 = () => {
 
     // Filter the options based on the input value
     const filteredOptions = options.filter((option) =>
-      option.toLowerCase().includes(value.toLowerCase())
+      option.name.toLowerCase().includes(value.toLowerCase())
     );
 
     setSuggestions(filteredOptions);
   };
 
   const handleSuggestionClick = (value) => {
-    setInputValue(value);
+    setInputValue(value.name);
     setSuggestions([]);
+    setCountry(value.code);
   };
 
   const handleWindowClick = (e) => {
@@ -79,7 +71,7 @@ const Country2 = () => {
                 className={styles.suggestionItem}
                 onClick={() => handleSuggestionClick(option)}
               >
-                {option}
+                {option.name}
               </div>
             ))}
           </div>

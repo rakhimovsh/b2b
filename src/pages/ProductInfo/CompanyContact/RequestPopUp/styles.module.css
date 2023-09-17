@@ -59,6 +59,7 @@
         background-color: #FFF;
         padding-bottom: 0;
         margin-right: 0;
+        height: 150px;
     }
     .requestForm {
          padding: 0;
@@ -67,8 +68,8 @@
         flex-direction: column;
         align-items: center;
         width: 580px;
-        height: 80vh;
-        padding-bottom: 42px;
+        height: 750px;
+        padding-bottom: 20px;
     }
 }
 @media screen and (max-width: 500px) {
@@ -80,25 +81,31 @@
     }
     .requestBg {
         width: 360px;
+        height: 100px;
     }
 
 }
 
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 380px) {
     .requestContainer {
-        width: 300px;
+        width: 340px;
         display: flex;
         flex-direction: column;
         align-items: center;
         margin: auto;
     }
     .requestTitle {
-        width: 290px;
+        width: 230px;
         font-size: 20px;
     }
     .requestBg {
         width: 300px;
     }
 
+}
+@media screen and (max-width: 340px) {
+    .requestContainer {
+        width: 300px;
+    }
 }
