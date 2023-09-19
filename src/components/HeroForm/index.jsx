@@ -1,11 +1,15 @@
-import CountrySelect from '@components/CountrySelect/index.jsx';
-import styles from './styles.module.css';
-import { createApplicationForPlacement } from '@/redux/actions/application.js';
-import { useDispatch, useSelector } from 'react-redux';
-import { useToast } from '@/hooks/useToast.jsx';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import InputMask from 'react-input-mask';
-import PhoneMasks from './phoneMasks.js';
+import { useDispatch, useSelector } from 'react-redux';
+import {useSearchParams} from "react-router-dom";
+import CountrySelect from '@components/CountrySelect/index.jsx';
+import { createApplicationForPlacement } from '@/redux/actions/application.js';
+import { useToast } from '@/hooks/useToast.jsx';
+import PhoneMasks from '@/data/phoneMasks.js';
+import {Services} from "@/data/services.js";
+import styles from './styles.module.css';
+import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
+
 
 const HeroForm = () => {
   const dispatch = useDispatch();
@@ -14,6 +18,8 @@ const HeroForm = () => {
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
   const [phoneCode, setPhoneCode] = useState('+998');
   const [countryCode, setCountryCode] = useState('UZ');
+  const [searchParams, setSearchParams] = useSearchParams();
+  const serviceId = +searchParams.get('serviceId') || 1;
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -21,17 +27,18 @@ const HeroForm = () => {
     const request = {
       name: formElements.name.value,
       phone_number: formElements.phone_number.value,
-      lacation: formElements.lacation.value,
-      campany_name: formElements.campany_name.value,
+      location: formElements.location.value,
+      company_name: formElements.company_name.value,
+      email: formElements.email.value,
+      tariflar: Services.find(s => s.id === +formElements.rates.value)?.title
     };
-    if (request.name && request.phone_number && request.lacation && request.campany_name) {
+    if (request.name && request.phone_number && request.location && request.company_name && request.email && request.tariflar) {
       dispatch(createApplicationForPlacement(request));
       evt.target.reset();
     } else {
       toast('Все поля формы должны быть заполнены', 'warning', { position: 'top-center' });
     }
   };
-
   useEffect(() => {
     if (applicationForPlacement.response) {
       toast('Заявка отправлена успешно', 'success', { position: 'top-center' });
@@ -44,6 +51,16 @@ const HeroForm = () => {
         {' '}
         Подать заявку на размещение продукта на оптовом рынке
       </h3>
+      <div className={styles.selectBox} style={{ textAlign: 'start' }}>
+        <select name='rates' defaultValue={serviceId}>
+          {
+            Services.map(el => (
+              <option key={el.id} value={el.id}>{el.title}</option>
+            ))
+          }
+        </select>
+        <IconDown className={styles.selectIcon} />
+      </div>
       <div style={{ textAlign: 'start' }}>
         <p className={styles.formInput_name}>Ваше имя</p>
         <input name='name' type='text' placeholder='Ваше имя' className={styles.formClient_name} />
@@ -51,7 +68,7 @@ const HeroForm = () => {
       <div style={{ textAlign: 'start' }}>
         <p className={styles.formInput_name}>Страна</p>
         <CountrySelect
-          name='lacation'
+          name='location'
           setPhoneNumber={setPhoneCode}
           setCountryCode={setCountryCode}
         />
@@ -67,16 +84,25 @@ const HeroForm = () => {
         />
       </div>
       <div style={{ textAlign: 'start' }}>
+        <p className={styles.formInput_name}>Эл. адрес</p>
+        <input
+          name='email'
+          type='email'
+          placeholder={'Эл. адрес'}
+          className={styles.formClient_name}
+        />
+      </div>
+      <div style={{ textAlign: 'start' }}>
         <p className={styles.formInput_name}>Название компании</p>
         <input
-          name='campany_name'
+          name='company_name'
           type='text'
           placeholder='Название компании'
           className={styles.formClient_name}
         />
       </div>
 
-      <button disabled={isFormBtnDisabled} className={styles.heroForm_button}>
+      <button type='submit' disabled={isFormBtnDisabled} className={styles.heroForm_button}>
         Отправить
       </button>
     </form>

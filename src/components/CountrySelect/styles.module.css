@@ -1,9 +1,8 @@
 .countrySelect {
-    padding: 20px;
-    width: 400px;
+    padding: 15px;
     border-radius: 5px;
     border: 1px solid #E1E1E1;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     color: #000;
     font-family: var(--font-family);
@@ -16,11 +15,14 @@
 
 .countrySelect_box {
   position: relative;
-  
+  width: 100%;
+}
+.countrySelect_box select {
+  width: 100%;
 }
 .selectIcon {
   position: absolute;
-  top: 20px;
+  top: 15px;
   right: 10px;
 }
 

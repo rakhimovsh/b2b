@@ -1,5 +1,4 @@
 import React, { useState, useRef, useEffect } from 'react';
-import options1 from "@components/CountrySelect/data";
 import styles from './styles.module.css'
 
 const Country2 = () => {

@@ -1,21 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import styles from './styles.module.css';
+import {useParams} from "react-router-dom";
+import InputMask from 'react-input-mask';
 import CountrySelect from '@components/CountrySelect';
 import { useDispatch, useSelector } from 'react-redux';
 import { useToast } from '@/hooks/useToast.jsx';
 import { createProductRequest } from '@/redux/actions/application.js';
-import InputMask from 'react-input-mask';
-import phoneMasks from '../HeroForm/phoneMasks';
+import phoneMasks from '../../data/phoneMasks.js';
+import styles from './styles.module.css';
 
 
 const RequestForm = () => {
   const dispatch = useDispatch();
+  const {productId} = useParams()
   const toast = useToast();
   const { createProduct } = useSelector((state) => state.application);
   const [isFormBtnDisabled, setIsFormBtnDisabled] = useState(false);
-  
   const [phoneCode, setPhoneCode] = useState('+998');
   const [countryCode, setCountryCode] = useState('UZ');
+
   const handleSubmit = (evt) => {
     evt.preventDefault();
     const formElements = evt.target.elements;
@@ -24,8 +26,11 @@ const RequestForm = () => {
       phone_number: formElements.phone_number.value,
       lacation: formElements.lacation.value,
       text: formElements.text.value,
+      product_id: productId || null,
+      location: "UZ",
+      email: formElements.email.value
     };
-    if(request.name && request.phone_number && request.lacation && request.text) {
+    if(request.name && request.phone_number && request.lacation && request.text && request.email) {
       dispatch(createProductRequest(request));
       evt.target.reset()
     } else {
@@ -50,7 +55,7 @@ const RequestForm = () => {
           placeholder='Ваше имя'
         />
       </div>
-      <div style={{ textAlign: 'start', maxWidth: '400px' }}>
+      <div style={{ textAlign: 'start' }}>
         <p className={styles.contactForm_p}>Страна</p>
         <CountrySelect name='lacation' setPhoneNumber={setPhoneCode} setCountryCode={setCountryCode}/>
       </div>
@@ -65,12 +70,21 @@ const RequestForm = () => {
         />
       </div>
       <div style={{ textAlign: 'start' }}>
+        <p className={styles.contactForm_p}>Эл. адрес</p>
+        <input
+          name='email'
+          className={styles.contactForm_name_input}
+          type='email'
+          placeholder={"Эл. адрес"}
+        />
+      </div>
+      <div style={{ textAlign: 'start' }}>
         <p className={styles.contactForm_p}>Какой продукт вы ищете?*</p>
         <textarea
           name='text'
           className={styles.contactForm_textarea}
           cols='30'
-          rows='5'
+          rows='2'
           placeholder='Опишите продукт'
         ></textarea>
       </div>

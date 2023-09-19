@@ -1,7 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useNavigate } from 'react-router-dom';
-import Countries from '../CountrySelect/data.js'
+import Countries from '../../data/countries.js'
 import styles from './style.module.css';
 import PhoneIcon from '@assets/svg/phoneIcon.svg';
 import BoxIcon from '@assets/svg/boxIcon.svg';

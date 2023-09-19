@@ -1,5 +1,5 @@
 import React from 'react'
-import Countries from './data.js'
+import Countries from '../../data/countries.js'
 import styles from './styles.module.css'
 import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
 
@@ -13,10 +13,10 @@ const CountrySelect = ({ name, setPhoneNumber, setCountryCode }) => {
   }
   return (
     <div className={styles.countrySelect_box}>
-      <select defaultValue="Uzbekistan" onChange={handleChange} id='country' name={name} className={styles.countrySelect}>
+      <select defaultValue="UZ" onChange={handleChange} id='country' name={name} className={styles.countrySelect}>
         {
           Countries.map(country => (
-            <option key={country.code} value={country.name}>{country.name}</option>
+            <option key={country.code} value={country.code}>{country.name}</option>
           ))
         }
       </select>
