@@ -139,13 +139,13 @@
     background: #FFF;
     position: absolute;
     margin-top: 30px;
-    width: 728px;
+    width: 312px;
     padding: 48px 36px;
     margin-left: -20px;
     margin-bottom: 100px;
     flex-direction: column;
     gap: 20px;
-    z-index: 2;
+    z-index: 45;
   }
   .categoryFilter_box {
     width: 312px;
@@ -161,15 +161,29 @@
     display: none;
   }
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 700px) {
   .filterDisplay {
-    width: 650px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .categoryFilter_box {
+    width: 400px;
   }
 }
 @media screen and (max-width: 670px) {
   .filterDisplay {
     width: 355px;
   }
+}
+@media screen and (max-width: 440px) {
+  .categoryFilter_box {
+    width: 320px;
+  }
+  .filterDisplay {
+    width: 320px;
+  }
+  
 }
 @media screen and (max-width: 370px) {
   .categoryFilter_box {

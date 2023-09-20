@@ -38,7 +38,7 @@
     margin-bottom: 20px;
 }
 .serviceText {
-    height: 266px;
+    height: 280px;
 }
 .serviceButton {
     width: 379px;
@@ -75,4 +75,34 @@
         text-align: center;
         margin-left: 0;
     }
+    .serviceImage {
+        max-width: 340px;
+    }
+    .serviceCard {
+        max-width: 340px;
+    }
+    .serviceContent {
+        max-width: 340px;
+    }
+    .serviceButton {
+        max-width: 340px;
+    }
 }
+
+@media screen and (max-width: 380px) {
+    .serviceCard {
+        max-width: 300px;
+    }
+    .serviceImage {
+        max-width: 300px;
+    }
+    .serviceContent {
+        max-width: 300px;
+    }
+    .serviceButton {
+        max-width: 300px;
+    }
+    .serviceText {
+        height: 330px;
+    }
+} 

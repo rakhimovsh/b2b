@@ -20,7 +20,7 @@ const ProductCard = ({product}) => {
   const {sortedCompanies} = useSelector(state => state.company)
   const {i18n} = useTranslation()
   const lang = i18n.language;
-  console.log(product);
+
   const handleClick = () => {
     navigate(`/company/product-info/${product.id}`)
   }
@@ -30,7 +30,7 @@ const ProductCard = ({product}) => {
   }, [product])
 
   const findCountry = Countries.find(c => c.code === sortedCompanies[product?.campany]?.country)
-
+  
   return (
     <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>

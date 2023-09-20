@@ -12,10 +12,15 @@
         gap: 20px;
         justify-content: center;
         align-items: center;
-        margin-bottom: 56px;
+        margin-bottom: 26px;
         position: relative;
     }
     
+}
+@media screen and (max-width: 840px) {
+    .filterbox {
+        flex-direction: column;
+    }
 }
 @media screen and (max-width: 670px) {
     .filterbox {

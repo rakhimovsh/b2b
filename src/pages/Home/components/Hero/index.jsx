@@ -13,9 +13,11 @@ const Hero = () => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
 
+  // console.log('current lang' , lang);
+
   const handleSearchBtn = () => {
     if (search) {
-      navigate(`/companies?search=${search}`)
+      navigate(`/companies?lng=${lang}&search=${search}`)
     } 
   };
   return (

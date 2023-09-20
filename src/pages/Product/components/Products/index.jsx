@@ -12,15 +12,17 @@ const Products = ({country}) => {
   const { i18n } = useTranslation();
   const { products } = useSelector((state) => state.product);
   const lang = i18n.language;
-  const [searchParams, setSearchParams] = useSearchParams();
-  const navigate = useNavigate()
-  // const [country , setCountry] = useState();
+  // const [searchParams, setSearchParams] = useSearchParams();
+  // const navigate = useNavigate()
+  // // const [country , setCountry] = useState();
 
-  const search = searchParams.get('search') || '';
-  const subcategoryId = searchParams.get('subcategoryId') || '';
-  useEffect(() => {
-    dispatch(getProducts(search, subcategoryId ? [+subcategoryId] : [], country));
-  }, [search, subcategoryId, country]);
+  // const search = searchParams.get('search') || '';
+  // const subcategoryId = searchParams.get('subcategoryId') || '';
+
+  // useEffect(() => {
+  //   dispatch(getProducts(search, subcategoryId ? [+subcategoryId] : [], country));
+
+  // }, [search, subcategoryId, country]);
 
   return (
     <div className={styles.productsContainer}>

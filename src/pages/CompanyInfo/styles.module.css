@@ -53,11 +53,14 @@
 .details {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
     /* padding: 20px 0; */
 }
 .businessType {
     display: flex;
     gap: 10px;
+    width: 152px;
 }
 .infoItem {
     margin-bottom: 7px;

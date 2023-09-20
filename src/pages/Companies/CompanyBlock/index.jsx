@@ -34,9 +34,9 @@ const CompanyBlock = ({company}) => {
                 <img 
                     src={company?.image} 
                     alt="company logo" 
-                    width={77}
+                    width={100}
                     height={77}
-                    style={{borderRadius: '50%', marginRight: '10px'}}
+                    style={{ marginRight: '10px'}}
                 />
                 <h3>{company?.name}</h3>
             </div>
@@ -54,12 +54,11 @@ const CompanyBlock = ({company}) => {
                         <CompProductCarousel 
                             slides={company?.products.map((product) => {
                                 return (
-                                    <div className={styles.sliderItem}>
+                                    <div key={product?.id} className={styles.sliderItem}>
                                         <img className={styles.itemImage} src={product?.images[0]?.image} alt="product image" />
                                         <p className={styles.itemName}>{truncateString(product?.translations[lang]?.name, 20)}</p>
-                                        {console.log(product?.images[0]?.image)}
-                                    </div>
-                                    
+                                        {console.log(product)}
+                                    </div>                                    
                                 )
                             
                             })}

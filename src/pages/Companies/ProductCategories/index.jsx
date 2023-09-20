@@ -84,8 +84,6 @@ const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) =>
     }
   };
 
-  // console.log('checkedSub' , checkedSubcategories);
-
 
   return (
     <div className={styles.categoryFilter_box}>
