@@ -7,6 +7,7 @@ import CompanyBlock from './CompanyBlock'
 import { useDispatch, useSelector } from 'react-redux'
 import { getAllCompanies } from '@/redux/actions/company.js'
 import { useSearchParams } from 'react-router-dom'
+import { getProducts } from '@/redux/actions/product'
 
 const Companies = () => {
     const dispatch = useDispatch() 
