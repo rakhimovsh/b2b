@@ -15,10 +15,10 @@
 
 .countrySelect_box {
   position: relative;
-  width: 100%;
+  width: 400px;
 }
 .countrySelect_box select {
-  width: 100%;
+  width: 400px;
 }
 .selectIcon {
   position: absolute;
@@ -30,9 +30,12 @@
   .countrySelect {
     width: 335px;
   }
-  /* .selectIcon {
-    right: 80px;
-  } */
+  .countrySelect_box {
+    width: 335px;
+  }
+  .countrySelect_box select {
+    width: 335px;
+  }
 }
 @media screen and (max-width: 400px) {
   /* .selectIcon {
@@ -41,6 +44,12 @@
 }
 @media screen and (max-width: 340px) {
   .countrySelect {
+    width: 290px;
+  }
+  .countrySelect_box {
+    width: 290px;
+  }
+  .countrySelect_box select {
     width: 290px;
   }
   .selectIcon {
