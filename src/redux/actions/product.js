@@ -89,10 +89,10 @@ export const getProducts = (search = '', subcategoryIds = [], country) => (dispa
               const filteredBySubCategories = subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : true;
               // console.log(subcategoryIds);
               // console.log('' , filteredBySubCategories);
-              console.log('placeCondition' , placeCondition);
+             
               return placeCondition && filteredBySubCategories
             })
-            console.log('result' , result)
+           
 
             dispatch(productSlice.actions.setProducts(result));
           } else {

@@ -57,7 +57,7 @@ const CompanyBlock = ({company}) => {
                                     <div key={product?.id} className={styles.sliderItem}>
                                         <img className={styles.itemImage} src={product?.images[0]?.image} alt="product image" />
                                         <p className={styles.itemName}>{truncateString(product?.translations[lang]?.name, 20)}</p>
-                                        {console.log(product)}
+                                       
                                     </div>                                    
                                 )
                             
