@@ -41,10 +41,11 @@ const CompanyBlock = ({company}) => {
                 <h3>{company?.name}</h3>
             </div>
             <div className={styles.country}>
-                <img width={20} src={`https://flagsapi.com/${company?.country}/flat/64.png`} alt="location" />
+                <img width={20} style={{marginRight: '8px'}} src={`https://flagsapi.com/${company?.country}/flat/64.png`} alt="location" />
                 <p>{getCountryName()}</p>
             </div>
-            <p className={styles.description}>{truncateString(company?.translations[lang]?.description, 480)}</p>
+            <p className={styles.description}>{(company?.translations[lang]?.short_description)}</p>
+            
             <div>
                 
                 { company?.products.length > 0 
