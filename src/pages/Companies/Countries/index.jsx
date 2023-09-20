@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import options from "@components/CountrySelect/data";
+import options from "@/data/countries.js";
 
 import styles from './styles.module.css'
 import { useNavigate } from 'react-router-dom';

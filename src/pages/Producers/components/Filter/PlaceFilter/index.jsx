@@ -1,5 +1,5 @@
 import React from 'react'
-import Countries from "@components/CountrySelect/data.js"
+import Countries from "@/data/countries.js"
 import styles from './styles.module.css'
 
 const Placefilter = ({setPlace, place}) => {

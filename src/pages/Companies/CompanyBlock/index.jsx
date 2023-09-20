@@ -1,8 +1,8 @@
 import React from 'react'
 import styles from './styles.module.css'
-import Countries from '../../../components/CountrySelect/data'
+import Countries from '../../../data/countries.js'
 import { useTranslation } from 'react-i18next'
-import CompProductCarousel from '@components/CompProductCarousel/index.jsx';
+import CompProductCarousel from '@components/CompProductCarousel';
 import { truncateString } from '@/utils/truncateString.js';
 
 

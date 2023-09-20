@@ -4,15 +4,15 @@
   border-radius: 8px;
 }
 .formClient_name {
-  padding: 20px;
+  padding: 15px;
   width: 400px;
   border-radius: 5px;
   border: 1px solid #E1E1E1;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   color: #000;
   font-family: var(--font-family);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 .heroForm_title {
   max-width: 356px;
@@ -31,13 +31,13 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   margin-left: 10px;
 }
 .heroForm_button {
   display: block;
   width: 173px;
-  padding: 20px 42px;
+  padding: 15px 30px;
   color: #fff;
   border-radius: 6px;
   background: #1876F2;
@@ -48,6 +48,32 @@
   line-height: 20px;
   cursor: pointer;
 }
+.selectBox {
+  position: relative;
+  width: 100%;
+}
+.selectBox select {
+  width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #E1E1E1;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  font-family: var(--font-family);
+  margin-bottom: 12px;
+  background-color: #fff;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.selectIcon {
+  position: absolute;
+  top: 15px;
+  right: 10px;
+}
+
 @media screen and (max-width: 800px) {
   .formContainer {
     display: flex;

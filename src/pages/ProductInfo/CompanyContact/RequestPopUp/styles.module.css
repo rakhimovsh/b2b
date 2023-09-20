@@ -5,21 +5,17 @@
     display: flex;
     background: #FFF;
     box-shadow: 8px 22px 144px 0 rgba(51, 56, 63, 0.13);
-    border-radius: 4px;
-    /* overflow-y: auto; */
 }
 .requestBg {
     position: relative;
     background-color: #F3F6F8;
-    height: 615px;
-    padding: 30px 36px;
-    margin-right: 26px;
-    
+    padding: 69px 36px;
+    margin-right: 56px;
 }
 .requestTitle {
     max-width: 406px;
     color: #121212;
-    font-size: 32px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -30,8 +26,9 @@
     right: 0;
 }
 .requestForm {
-    margin-top: 30px;
+    margin-top: 50px;
     padding-right: 50px;
+    overflow-y: auto;
 }
 .closeIcon {
     position: absolute;
@@ -50,6 +47,7 @@
     align-items: center;
     justify-content: center;
     z-index: 1000;
+    background-color: rgba(0,0,0, 0.6);
 }
 @media screen and (max-width: 1150px) {
     .requestImage {

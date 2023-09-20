@@ -2,13 +2,12 @@ import styles from './styles.module.css';
 import { ReactComponent as PhoneIcon } from '@assets/svg/u_phone-alt.svg';
 import { ReactComponent as LocationIcon } from '@assets/svg/u_location-point.svg';
 import { ReactComponent as BoxIcon } from '@assets/svg/box-icon.svg';
-import { ReactComponent as VerifiedIcon } from '@assets/svg/verified.svg';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { getCompanyById } from '@/redux/actions/company';
 import { useTranslation } from 'react-i18next';
-import countries from '@components/CountrySelect/data.js'
+import countries from '@/data/countries.js'
 
 
 

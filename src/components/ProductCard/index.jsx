@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 import { getImage } from '@/utils/api.js';
 import { truncateString } from '@/utils/truncateString.js';
 import {getCompaniesById} from "@/redux/actions/company.js";
-import Countries from "@components/CountrySelect/data.js"
+import Countries from "@/data/countries.js"
 import styles from './styles.module.css';
 import CapImg from '@assets/images/cap.jpg'
 import JarTwist1 from '@assets/images/twist-jam2.jpg'
@@ -51,7 +51,7 @@ const ProductCard = ({product}) => {
         <img width={16} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
         {findCountry?.name}
       </p>
-      <p className={styles.productDescription}>{truncateString(product?.translations[lang]?.description, 110)}</p>
+      <p className={styles.productDescription}>{truncateString(product?.translations[lang]?.short_description, 110)}</p>
       {/*<RatingStars rating={product?.average_rating} setRating={()=> {}} isEditable={false} />*/}
     </div>
   )

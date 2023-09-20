@@ -4,9 +4,8 @@ import Countries from './Countries'
 import SortFilter from './SortFilter'
 import ProductCategories from './ProductCategories'
 import CompanyBlock from './CompanyBlock'
-import { getProducts } from '@/redux/actions/product.js';
 import { useDispatch, useSelector } from 'react-redux'
-import { getAllCompanies } from '../../redux/actions/company'
+import { getAllCompanies } from '@/redux/actions/company.js'
 import { useSearchParams } from 'react-router-dom'
 
 const Companies = () => {
