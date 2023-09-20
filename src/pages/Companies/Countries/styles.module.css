@@ -29,13 +29,36 @@
     .countryInput {
         width: 312px;
         line-height: 24px;
+        margin-bottom: 0;
     }
     .suggestionContainer {
-        margin-top: 20px;
+        position: absolute;
+        width: 312px;
+        margin-top: 10px;
+        background-color: #fff;
+    }
+}
+@media screen and (max-width: 700px) {
+    .countryInput {
+        width: 400px;
+    }
+    .suggestionContainer {
+        width: 400px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .countryInput {
+        width: 320px;
+    }
+    .suggestionContainer {
+        width: 320px;
     }
 }
 @media screen and (max-width: 370px) {
     .countryInput {
+        width: 300px;
+    }
+    .suggestionContainer {
         width: 300px;
     }
 }

@@ -30,7 +30,7 @@ const ProductCard = ({product}) => {
   }, [product])
 
   const findCountry = Countries.find(c => c.code === sortedCompanies[product?.campany]?.country)
-
+  
   return (
     <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>

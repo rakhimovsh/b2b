@@ -20,7 +20,7 @@
   fill: #FFF;
   filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
   cursor: pointer;
-  z-index: 10000;
+  z-index: 40;
 }
 
 .customNextButton {
@@ -38,16 +38,16 @@
   fill: #FFF;
   filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
   cursor: pointer;
-  z-index: 500000;
+  z-index: 40;
 }
 @media screen and (max-width: 500px) {
   .customNextButton {
-    margin-right: 0;
+    /* margin-right: 0; */
     width: 36px;
     height: 36px;
   }
   .customPrevButton {
-    margin-left: 0;
+    /* margin-left: 0; */
     width: 36px;
     height: 36px;
   }

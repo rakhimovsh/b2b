@@ -26,7 +26,7 @@ const CompanyCard = ({company}) => {
           alt='company image'
           width={77}
           height={77}
-          style={{borderRadius: '50%'}}
+          // style={{borderRadius: '50%'}}
         />
         <div className={styles.companyName}>
           <h2>{company?.name}</h2>

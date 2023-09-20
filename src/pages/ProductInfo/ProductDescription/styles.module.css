@@ -20,4 +20,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    max-width: 800px;
+    text-align: justify;
 }

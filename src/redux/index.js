@@ -6,13 +6,14 @@ import subcategory from './reducers/subcategory.js';
 import application from './reducers/application.js';
 import newsInfo from './reducers/news.js'
 
+
 const rootReducer = combineReducers({
   product,
   category,
   company,
   subcategory,
   application,
-  newsInfo
+  newsInfo,
 });
 
 export default configureStore({ reducer: rootReducer });

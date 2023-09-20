@@ -51,7 +51,7 @@ const Subcategory = ({
   );
 };
 
-const CategoryFilter = () => {
+const CategoryFilter = ({ country }) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
   const dispatch = useDispatch();
@@ -68,7 +68,7 @@ const CategoryFilter = () => {
   }, []);
 
   useEffect(() => {
-    dispatch(getProducts(search, checkedSubcategories));
+    dispatch(getProducts(search, checkedSubcategories , country));
     searchParams.delete("search")
   }, [search, checkedSubcategories])
 

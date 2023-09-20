@@ -85,8 +85,8 @@
 .companyImg {
     width: 77px;
     height: 77px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     -o-object-position: center center;
        object-position: center center;
     border-radius: 50%;

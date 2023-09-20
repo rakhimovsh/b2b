@@ -145,10 +145,10 @@
     margin-bottom: 100px;
     flex-direction: column;
     gap: 20px;
-    z-index: 2;
+    z-index: 45;
   }
   .categoryFilter_box {
-    width: 312px;
+    width: 368px;
     padding: 20px;
     text-align: center;
     margin-bottom: 0;
@@ -161,6 +161,11 @@
     display: none;
   }
 }
+@media screen and (max-width: 950px) {
+  .categoryFilter_box {
+    width: 350px;
+  }
+}
 @media screen and (max-width: 750px) {
   .filterDisplay {
     width: 650px;
@@ -171,7 +176,7 @@
     width: 355px;
   }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 395px) {
   .categoryFilter_box {
     width: 300px;
   }
@@ -179,4 +184,9 @@
     width: 300px;
   }
   
+}
+@media screen and (max-width: 370px) {
+  .categoryFilter_box {
+    width: 272px;
+  }
 }

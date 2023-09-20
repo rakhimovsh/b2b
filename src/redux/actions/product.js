@@ -76,13 +76,29 @@ export const createProductComment = (request) => (dispatch) => {
     });
 };
 
-export const getProducts = (search = '', subcategoryIds = []) => (dispatch) => {
+export const getProducts = (search = '', subcategoryIds = [], country) => (dispatch) => {
     dispatch(productSlice.actions.setProductsLoading(true));
     api()
       .get(`/product/products/?search=${search}`)
       .then((res) => {
         if (res?.data) {
-          dispatch(productSlice.actions.setProducts(subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : res.data));
+         
+          if(search || country || subcategoryIds.length > 0) {
+            const result = res.data.filter((product) => {
+              const placeCondition = country ? product?.mode_in.toLowerCase() === country.toLowerCase() : true;
+              const filteredBySubCategories = subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : true;
+              // console.log(subcategoryIds);
+              // console.log('' , filteredBySubCategories);
+              console.log('placeCondition' , placeCondition);
+              return placeCondition && filteredBySubCategories
+            })
+            console.log('result' , result)
+
+            dispatch(productSlice.actions.setProducts(result));
+          } else {
+            dispatch(productSlice.actions.setProducts(res.data))
+          }
+          
         }
       })
       .catch((err) => {

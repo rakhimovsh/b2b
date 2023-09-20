@@ -16,7 +16,7 @@
     margin-bottom: 20px;
     max-height: 157px;
     overflow-y: auto;
-    
+    border-radius: 4px;
 }
 .suggestionItem {
     padding: 10px 20px;
@@ -27,15 +27,38 @@
 } */
 @media screen and (max-width: 1150px) {
     .countryInput {
-        width: 312px;
+        width: 368px;
         line-height: 24px;
+        margin-bottom: 0;
     }
     .suggestionContainer {
         margin-top: 20px;
+        position: absolute;
+        background-color: #fff;
+        width: 368px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .countryInput {
+        width: 350px;
+    }
+    .suggestionContainer {
+        width: 350px;
+    }
+}
+@media screen and (max-width: 395px) {
+    .countryInput {
+        width: 300px;
+    }
+    .suggestionContainer {
+        width: 300px;
     }
 }
 @media screen and (max-width: 370px) {
     .countryInput {
-        width: 300px;
+        width: 272px;
+    }
+    .suggestionContainer {
+        width: 272px;
     }
 }

@@ -19,7 +19,7 @@
   fill: #FFF;
   filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
   cursor: pointer;
-  z-index: 10000;
+  z-index: 40;
 }
 
 .customNextButton {
@@ -37,7 +37,7 @@
   fill: #FFF;
   filter: drop-shadow(-2px 4px 24px rgba(0, 0, 0, 0.10));
   cursor: pointer;
-  z-index: 500000;
+  z-index: 40;
 }
 @media screen and (max-width: 500px) {
   .customNextButton {
