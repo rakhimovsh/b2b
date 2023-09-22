@@ -76,29 +76,25 @@ export const createProductComment = (request) => (dispatch) => {
     });
 };
 
-export const getProducts = (search = '', subcategoryIds = [], country) => (dispatch) => {
+export const getProducts =
+  (search = '', subcategoryIds = [], country) =>
+  (dispatch) => {
     dispatch(productSlice.actions.setProductsLoading(true));
     api()
       .get(`/product/products/?search=${search}`)
       .then((res) => {
         if (res?.data) {
-         
-          if(search || country || subcategoryIds.length > 0) {
+          if (search || country || subcategoryIds.length > 0) {
             const result = res.data.filter((product) => {
               const placeCondition = country ? product?.mode_in.toLowerCase() === country.toLowerCase() : true;
-              const filteredBySubCategories = subcategoryIds.length ? filterProductsBySubcategories(res?.data, subcategoryIds) : true;
-              // console.log(subcategoryIds);
-              // console.log('' , filteredBySubCategories);
-             
+              const filteredBySubCategories = subcategoryIds.length > 0 ? subcategoryIds.includes(product.category?.id) : true;
               return placeCondition && filteredBySubCategories
             })
-           
-
             dispatch(productSlice.actions.setProducts(result));
+
           } else {
-            dispatch(productSlice.actions.setProducts(res.data))
+            dispatch(productSlice.actions.setProducts(res.data));
           }
-          
         }
       })
       .catch((err) => {

@@ -52,7 +52,7 @@ const Companies = () => {
                 {companies.items.map((company) => {
                     return (
                         <div key={company?.id}>
-                            <CompanyBlock key={company?.id} company={company}  />
+                            <CompanyBlock search={search} key={company?.id} company={company}  />
                         </div>  
                         
                     )                    
