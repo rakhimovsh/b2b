@@ -71,10 +71,10 @@ const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) =>
     dispatch(getAllCategories());
   }, []);
 
-  useEffect(() => {
-    dispatch(getProducts(search, checkedSubcategories));
-    searchParams.delete("search")
-  }, [search, checkedSubcategories])
+  // useEffect(() => {
+    // dispatch(getProducts(search, checkedSubcategories));
+    // searchParams.delete("search")
+  // }, [search, checkedSubcategories])
 
   const handleCategoryTitle = (categoryId) => {
     if (openedCategoryIds.includes(categoryId)) {

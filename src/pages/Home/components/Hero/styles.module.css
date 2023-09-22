@@ -1,8 +1,9 @@
 .heroBg {
   background: url('@assets/images/hero-background.png');
+  /* background-repeat: no-repeat; */
 }
 .heroContainer {
-  padding: 87px 0;
+  padding: 87px 0 42px 0;
   display: flex;
   justify-content: space-between;
 }

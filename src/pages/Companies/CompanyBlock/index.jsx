@@ -27,7 +27,6 @@ const CompanyBlock = ({company}) => {
         return(Countries.find(c => c.code.toLowerCase() === company?.country?.toLowerCase())?.name)
     }
 
-    
     return (
         <div className={styles.companyCard}>
             <div className={styles.companyHead}>

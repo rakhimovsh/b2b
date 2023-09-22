@@ -2,6 +2,9 @@ import { companySlice } from '../reducers/company';
 import { api } from '@/utils/api.js';
 import { handleHttpError } from '@/utils/handleHttpError.js';
 import { productSlice } from '../reducers/product';
+import store from '../index';
+import { useSelector } from 'react-redux';
+import { getProducts } from './product';
 
 export const getAllCompanies = (search = '' , companyId = null, placeCode, subCategoryIds = [] , lang , productSearch) => (dispatch) => {
   dispatch(companySlice.actions.setCompaniesLoading(true));
@@ -16,8 +19,8 @@ export const getAllCompanies = (search = '' , companyId = null, placeCode, subCa
           const result = res.data.filter((company) => {
             const idCondition = companyId ? company?.type_product?.id === companyId : true;
             const filteredBySubCategories = subCategoryIds.length > 0 ? company.products.some((product) => subCategoryIds.includes(product.category.id)) : true;
-            
             const searchCondition = search ? company?.name.toLowerCase().includes(search.toLowerCase()) : true;
+            
             const placeCondition = placeCode ? company?.country.toLowerCase() === placeCode.toLowerCase() : true;
             return idCondition && searchCondition && placeCondition && filteredBySubCategories;
           });
