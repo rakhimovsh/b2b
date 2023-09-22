@@ -70,7 +70,7 @@ const CategoryFilter = ({ country }) => {
   useEffect(() => {
     dispatch(getProducts(search, checkedSubcategories , country));
     searchParams.delete("search")
-  }, [search, checkedSubcategories])
+  }, [search, checkedSubcategories , country])
 
   
   const handleCategoryTitle = (categoryId) => {

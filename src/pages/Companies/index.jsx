@@ -8,7 +8,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getAllCompanies } from '@/redux/actions/company.js'
 import { useSearchParams } from 'react-router-dom'
 import { getProducts } from '@/redux/actions/product'
-
+import { use } from 'i18next'
 const Companies = () => {
     const dispatch = useDispatch() 
     const [searchParams , setSearch] = useSearchParams();
@@ -18,43 +18,28 @@ const Companies = () => {
 
     const lang = searchParams.get('lng');
     const search = searchParams.get('search');
-
-    // const { products } = useSelector((state) => state.product);
     const { companies } = useSelector((state) => state.company);
     const { products } = useSelector((state) => state.product);
     const [checkedSubcategories, setCheckedSubcategories] = useState([]);
-  
-    useEffect(() => {
-        dispatch(getProducts());
-    },[])
-
-    useEffect(() => {
-        dispatch(getAllCompanies())
-
-        if(country !== ''){
-            dispatch(getAllCompanies('','',country))
-        }
-
-        if(checkedSubcategories.length > 0){
-            dispatch(getAllCompanies('','', country, checkedSubcategories))
-        }
-        
-        if(search) {
-            dispatch(getProducts(search));
-            dispatch(getAllCompanies('','', country, checkedSubcategories , lang , search))
-        }
-        
-    },[country , checkedSubcategories , search])
     
+    useEffect(() => {
+        dispatch(getProducts(search));
+    },[])
 
 
     useEffect(() => {
         if(products.items.length > 0){
-            const subcategoryIds = products?.items.map(product => product?.category?.id)
-            setCheckedSubcategories(subcategoryIds)
+            const subcategoryIds = products.items?.map(product => product?.category?.id);
+            setCheckedSubcategories(subcategoryIds);
         }
-    },[search])
+    },[products])
 
+    useEffect(() => {
+        if(products.items.length > 0) {
+            dispatch(getAllCompanies('' , '' , country , checkedSubcategories))
+        }
+    },[country , checkedSubcategories , search])
+    
 
     return (
         <div className={'container ' + styles.companiesContainer}>
@@ -67,7 +52,7 @@ const Companies = () => {
                 {companies.items.map((company) => {
                     return (
                         <div key={company?.id}>
-                            <CompanyBlock key={company?.id} company={company}  />
+                            <CompanyBlock search={search} key={company?.id} company={company}  />
                         </div>  
                         
                     )                    

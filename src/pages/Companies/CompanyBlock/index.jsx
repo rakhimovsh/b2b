@@ -4,9 +4,9 @@ import Countries from '../../../data/countries.js'
 import { useTranslation } from 'react-i18next'
 import CompProductCarousel from '@components/CompProductCarousel';
 import { truncateString } from '@/utils/truncateString.js';
+import { useSearchParams } from 'react-router-dom';
 
-
-const CompanyBlock = ({company}) => {
+const CompanyBlock = ({company }) => {
     const responsive = {
         0: {
           items: 1,
@@ -22,11 +22,16 @@ const CompanyBlock = ({company}) => {
         },
       };
     const {i18n} = useTranslation()
+    const [searchParams , setSearch] = useSearchParams();
+    const search = searchParams.get('search');
     const lang = i18n.language  
     const getCountryName = () => {
         return(Countries.find(c => c.code.toLowerCase() === company?.country?.toLowerCase())?.name)
     }
 
+    console.log('company' , company.products)
+    console.log('lang' , lang)
+    const filtered = company.products.filter(product => product?.translations[lang]?.name.toLowerCase().includes(search.toLowerCase()));
     
     return (
         <div className={styles.companyCard}>
@@ -51,9 +56,9 @@ const CompanyBlock = ({company}) => {
                 { company?.products.length > 0 
                     ? 
                     <div className={styles.productCarousel}>
-                        <p className={styles.productsFor}>All the products for </p>
+                        <p className={styles.productsFor}>All the products for {search}</p>
                         <CompProductCarousel 
-                            slides={company?.products.map((product) => {
+                            slides={filtered.map((product) => {
                                 return (
                                     <div key={product?.id} className={styles.sliderItem}>
                                         <img className={styles.itemImage} src={product?.images[0]?.image} alt="product image" />
