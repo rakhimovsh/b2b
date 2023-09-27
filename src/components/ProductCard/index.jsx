@@ -38,7 +38,7 @@ const ProductCard = ({product}) => {
           {/* <img className={styles.newProduct_img} src={JarTwist2} alt='product-img' /> */}
       </div>
       <p className={styles.productCard_name}>
-        {truncateString(product?.translations[lang]?.name, 40)}
+        {truncateString(product?.translations[lang]?.name, 30)}
       </p>
       <p className={styles.productCard_category}>
         {product?.item?.category?.translations[lang]?.name} 

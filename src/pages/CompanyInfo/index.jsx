@@ -36,28 +36,28 @@ const CompanyInfo = () => {
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>Trader</p>
+                <p className={styles.infoItem}>{singleCompany?.item?.type_position}</p>
                 <p style={{color: 'gray'}}>Business type</p>
               </div>
             </div>
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>Uzbekistan</p>
+                <p className={styles.infoItem}>{singleCompany?.item?.country}</p>
                 <p style={{color: 'gray'}}>Country</p>
               </div>
             </div>
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>2023</p>
+                <p className={styles.infoItem}>{singleCompany?.item?.found_year}</p>
                 <p style={{color: 'gray'}}>Year established</p>
               </div>
             </div>
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>1-5</p>
+                <p className={styles.infoItem}>{singleCompany?.item?.workers_amount}</p>
                 <p style={{color: 'gray'}}>Workers amount</p>
               </div>
             </div>
