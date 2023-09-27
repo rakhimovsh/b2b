@@ -65,7 +65,7 @@ const HeroForm = () => {
         <p className={styles.formInput_name}>Ваше имя</p>
         <input name='name' type='text' placeholder='Ваше имя' className={styles.formClient_name} />
       </div>
-      <div style={{ textAlign: 'start' }}>
+      <div style={{ textAlign: 'start', width: '100%' }}>
         <p className={styles.formInput_name}>Страна</p>
         <CountrySelect
           name='location'

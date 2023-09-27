@@ -65,7 +65,7 @@ const Header = () => {
                 <div  className={styles.langDropdown}>
                   <p onClick={(e) => handleChange('en')} className={styles.langItem}> <EnFlag /> En</p>
                   <p onClick={(e) => handleChange('ru')} className={styles.langItem}> <RuFlag />Ru</p>
-                  <p onClick={(e) => handleChange('uz')} className={styles.langItem}> <UzFlag/> Uz</p>
+                  {/* <p onClick={(e) => handleChange('uz')} className={styles.langItem}> <UzFlag/> Uz</p> */}
                 </div>
               }
             </div>

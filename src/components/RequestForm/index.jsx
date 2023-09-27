@@ -55,7 +55,7 @@ const RequestForm = () => {
           placeholder='Ваше имя'
         />
       </div>
-      <div style={{ textAlign: 'start' }}>
+      <div style={{ textAlign: 'start', width: '100%' }}>
         <p className={styles.contactForm_p}>Страна</p>
         <CountrySelect name='lacation' setPhoneNumber={setPhoneCode} setCountryCode={setCountryCode}/>
       </div>
