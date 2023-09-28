@@ -1,5 +1,196 @@
 {
+  "header": {
+    "navbar": {
+      "companies": "Manufacturers",
+      "products": "Product catalogue",
+      "services": "Services",
+      "contactUs": "Contact us",
+      "addCompany": "+ Add company"
+    }
+  },
   "home": {
-    "title": "Hello world!!!"
+    "hero": {
+      "title": "International B2B platform for wholesale trade",
+      "text": "We will help you find products directly from manufacturers",
+      "serch": "Type a product name",
+      "form": {
+        "title": "Submit an application to list a product on the market",
+        "International": "International market",
+        "europe": "European market",
+        "asia": "Asian market",
+        "uzbekistan": "The market of Uzbekistan",
+        "clientName": "Your name",
+        "country": "Country",
+        "phoneNumber": "Phone number",
+        "eAddress": "Email",
+        "companyName": "Company name",
+        "send": "Send"
+      }
+    },
+    "b2bSolution": {
+      "title": "B2B solution for your business",
+      "item1": {
+        "name": "Search",
+        "text": "Do a search and find the product"
+      }, 
+      "item2": {
+        "name": "Manufacturer",
+        "text": "Contact manufacturers to discuss prices"
+      }, 
+      "item3": {
+        "name": "Make a deal",
+        "text": "Sign an agreement with the manufacturer"
+      } 
+    },
+    "emgu": {
+      "text": "Export Management Group of Uzbekistan is a platform where manufacturers, suppliers and buyers can find each other. Use the platform to expand your companies' exports and attract foreign buyers. Or find suppliers and products around the world and contact them for free."
+    },
+    "popularProducts": {
+      "title": "Latest selection of products",
+      "seeMore": "View more products"
+    },
+    "productCategory": {
+      "title": "Discover products by categories"
+    },
+    "productSearch": {
+      "title": "Use B2B to find a product",
+      "category": "Product category",
+      "subcategory": "Product subcategory",
+      "name": "Type product name",
+      "seemore": "See all products"
+    },
+    "addCompany": {
+      "title": "Become a supplier on the B2B market and sell your products",
+      "text": "International trade",
+      "button": "Add my company",
+      "producers": "+1000 manufacturers"
+    }
+  },
+  "companies": {
+    "search": "Search by name",
+    "businessCategory": "Business category",
+    "companyLocation": "Company location",
+    "applyFilter": "Apply filter",
+    "products": "Products",
+    "more": "More",
+    "nextButton": "Next page",
+    "companyInfo": {
+      "info": "Information",
+      "products": "Products"
+    },
+    "keyCompanyInfo": {
+      "title": "Key company info",
+      "businessType": "Business type",
+      "country": "Country",
+      "year": "Year established",
+      "workers": "Workers amount" 
+    }
+  },
+  "products": {
+    "country": "Choose a country",
+    "category": "Categories",
+    "clearFilter": "Clear filter",
+    "productInfo": {
+      "aboutProduct": "Short about product",
+      "category": "Categories",
+      "tags": "Tags",
+      "knowThePrice": {
+          "button": "Know wholesale price",
+          "title": "Fill out the product request form"
+      },
+      "contact": {
+        "button": "Contact the seller",
+        "title": "Contact the seller",
+        "phoneNumber": "Phone number"
+      },
+      "description": "Description",
+      "comments": {
+        "title": "Reviews",
+        "beFirst": "Be the first to review",
+        "text": "Your email address will not be published. Required fields are marked *",
+        "mark": "Your mark",
+        "comment": "Your review",
+        "name": "Name",
+        "email": "Email", 
+        "send": "Send"
+      }
+    }
+  },
+  "services": {
+    "title": "Services",
+    "serviceCard1": {
+      "name": "International market",
+      "price": "18 million uzs/year",
+      "text": "Information about your company and products will be available in 7 languages – the 5 most widely spoken European languages, as well as Turkish, Arabic and Chinese. Your company will be represented in all major world markets. You can place up to 150 products. Your company will be at the top of Google SER in the buyer's language. The price is excluding VAT.",
+      "button": "Get service" 
+    },
+    "serviceCard2": {
+      "name": "European market",
+      "price": "16 million uzs/year",
+      "text": "For those who want to focus on individual markets. Information about your company and its products will be published in the five most popular European languages - English, French, German, Italian and Spanish, as well as in another language of your choice, and can display up to 100 products. Your company will rank highly in Google SERP search results in selected languages. Reasonable price. The price is excluding VAT.",
+      "button": "Get service" 
+    },
+    "serviceCard3": {
+      "name": "Asian market",
+      "price": "12 million uzs/year",
+      "text": "Package for access to Asian markets. Information about your company and its products will be available in the four most popular Asian languages - Russian, Chinese, Japanese, Korean and one more language of the client's choice. List of up to 70 products. The price is excluding VAT.",
+      "button": "Get service" 
+    },
+    "serviceCard4": {
+      "name": "The market of Uzbekistan",
+      "price": "Free",
+      "text": "Free package for access to the markets of Uzbekistan. Information about your company and its products will be available in 1 language - Uzbek and another language of the client’s choice. Placement of up to 2 products. The price is excluding VAT.",
+      "button": "Get service" 
+    }
+  },
+  "contactUs": {
+    "title": "If you have any inquiries, please contact us",
+    "text": "We are here to assit you",
+    "address": "st. Turon 2, Kokand city, Fergana region, Republic of Uzbekistan",
+    "phoneNumber": "+998 88 415 0922",
+    "email": "info@emgu.uz",
+    "form": {
+      "clientName": "Your name",
+      "country": "Country",
+      "phoneNumber": "Phone number",
+      "email": "Email",
+      "product": "The product you are looking for...",
+      "send": "Submit a form"
+    }
+  },
+  "aboutUs": {
+    "title": "Export Management Group of Uzbekistan - The biggest international B2B platform in the city of Kokand",
+    "text": "Find products from over 1000 companies in all B2B sectors in the Republic of Uzbekistan. Choose and contact the best suppliers for free and we ship worldwide.",
+    "contact": {
+      "title": "We are ready to help you in difficult times",
+      "text": "If you are looking for wholesale products, feel free to contact us for product inquiry, we are here to help",
+      "button": "Contact us"
+    }
+  },
+  "howToBuy": {
+    "title": "How to buy",
+    "text": "Buying a product on EMGU is super easy. ",
+    "step1": "First, find a product which you desire to purchase by using search box or using the product categories.",
+    "step2": "On a product page,  find a button named 'Ask for a wholasale price' and send request or, contact directly with manufacturer by using their numbers",
+    "step3": "If you are still facing an issue for finding a product, please contact us here: info@emgu.uz "
+  },
+  "privacyPolicy": {
+
+  },
+  "termsConditions": {
+
+  },
+  "footer": {
+    "support": {
+      "title": "Support service",
+      "howToBuy": "How to buy",
+      "privacyPolicy": "Privacy and policy",
+      "termsConditions": "Terms and conditions"  
+    },
+    "links": {
+      "title": "Fast access",
+      "contactUs": "Contact us",
+      "aboutUs": "About us"
+    }
   }
 }

@@ -1,5 +1,195 @@
 {
+  "header": {
+    "navbar": {
+      "companies": "",
+      "products": "",
+      "services": "",
+      "contactUs": "",
+      "addCompany": ""
+    }
+  },
   "home": {
-    "title": "Salom dunyo!!!"
+    "hero": {
+      "title": "",
+      "text": "",
+      "serch": "",
+      "form": {
+        "title": "",
+        "International": "",
+        "europe": "",
+        "asia": "",
+        "uzbekistan": "",
+        "clientName": "",
+        "country": "",
+        "phoneNumber": "",
+        "eAddress": "",
+        "companyName": "",
+        "send": ""
+      }
+    },
+    "b2bSolution": {
+      "title": "",
+      "item1": {
+        "name": "",
+        "text": ""
+      }, 
+      "item2": {
+        "name": "",
+        "text": ""
+      }, 
+      "item3": {
+        "name": "",
+        "text": ""
+      } 
+    },
+    "emgu": {
+      "text": ""
+    },
+    "popularProducts": {
+      "title": "",
+      "seeMore": ""
+    },
+    "productCategory": {
+      "title": ""
+    },
+    "productSearch": {
+      "title": "",
+      "category": "",
+      "subcategory": "",
+      "name": "",
+      "seemore": ""
+    },
+    "addCompany": {
+      "title": "",
+      "text": "",
+      "button": "",
+      "producers": ""
+    }
+  },
+  "companies": {
+    "search": "",
+    "businessCategory": "",
+    "companyLocation": "",
+    "applyFilter": "",
+    "products": "",
+    "more": "",
+    "nextButton": "",
+    "companyInfo": {
+      "info": "",
+      "products": ""
+    },
+    "keyCompanyInfo": {
+      "title": "",
+      "businessType": "",
+      "country": "",
+      "year": "",
+      "workers": "" 
+    }
+  },
+  "products": {
+    "country": "",
+    "category": "",
+    "clearFilter": "",
+    "productInfo": {
+      "aboutProduct": "",
+      "category": "",
+      "tags": "",
+      "knowThePrice": {
+          "button": "",
+          "title": ""
+      },
+      "contact": {
+        "button": "",
+        "title": "",
+        "phoneNumber": ""
+      },
+      "description": "",
+      "comments": {
+        "title": "",
+        "beFirst": "",
+        "text": "",
+        "mark": "",
+        "comment": "",
+        "name": "",
+        "email": "", 
+        "send": ""
+      }
+    }
+  },
+  "services": {
+    "title": "",
+    "serviceCard1": {
+      "name": "",
+      "price": "",
+      "text": "",
+      "button": "" 
+    },
+    "serviceCard2": {
+      "name": "",
+      "price": "",
+      "text": "",
+      "button": "" 
+    },
+    "serviceCard3": {
+      "name": "",
+      "price": "",
+      "text": "",
+      "button": "" 
+    },
+    "serviceCard4": {
+      "name": "",
+      "price": "",
+      "text": "",
+      "button": "" 
+    }
+  },
+  "contactUs": {
+    "title": "",
+    "text": "",
+    "address": "",
+    "phoneNumber": "",
+    "email": "",
+    "form": {
+      "clientName": "",
+      "country": "",
+      "phoneNumber": "",
+      "email": "",
+      "product": "",
+      "send": ""
+    }
+  },
+  "aboutUs": {
+    "title": "",
+    "text": "",
+    "contact": {
+      "title": "",
+      "text": "",
+      "button": ""
+    }
+  },
+  "howToBuy": {
+    "title": "",
+    "text": "",
+    "step1": "",
+    "step2": "",
+    "step3": ""
+  },
+  "privacyPolicy": {
+
+  },
+  "termsConditions": {
+
+  },
+  "footer": {
+    "support": {
+      "title": "",
+      "howToBuy": "",
+      "privacyPolicy": "",
+      "termsConditions": ""  
+    },
+    "links": {
+      "contactUs": "",
+      "aboutUs": ""
+    }
   }
 }
