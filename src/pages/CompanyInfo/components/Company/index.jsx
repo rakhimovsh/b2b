@@ -27,6 +27,7 @@ const CompanyInfo = ({ name, category}) => {
 const Company = () => {
   const {i18n} = useTranslation()
   const lang = i18n.language  
+  const {t} = useTranslation()
   const {companyId} = useParams()
   const dispatch = useDispatch()
   const {singleCompany} = useSelector(state => state.company)
@@ -86,7 +87,7 @@ const Company = () => {
           </li>
           <li>
             <BoxIcon />
-            {singleCompany?.item?.products?.length} товаров
+            {singleCompany?.item?.products?.length} {t('companies.products')}
           </li>
           {/* <li>
             <VerifiedIcon style={{width: '18px'}}/>

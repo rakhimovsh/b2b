@@ -9,6 +9,7 @@ const ProductCategory = () => {
   const navigate = useNavigate();
   const { i18n } = useTranslation();
   const lang = i18n.language;
+  const {t} = useTranslation()
 
   const responsive = {
     0: {
@@ -35,7 +36,7 @@ const ProductCategory = () => {
   return (
     <div className={'container ' + styles.productCategoryContainer}>
       <div style={{display: 'flex', alignItems: 'center'}} className={styles.categoryTitle}>
-        <h3 className={styles.productCategory_title}>Просмотрите товары по категориям</h3>
+        <h3 className={styles.productCategory_title}>{t('home.productCategory.title')}</h3>
       </div>
       <Carousel slides=
           {categories.items?.map((category) => (

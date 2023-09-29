@@ -12,17 +12,17 @@
     "hero": {
       "title": "",
       "text": "",
-      "serch": "",
+      "search": "",
       "form": {
         "title": "",
-        "International": "",
+        "international": "",
         "europe": "",
         "asia": "",
         "uzbekistan": "",
         "clientName": "",
         "country": "",
         "phoneNumber": "",
-        "eAddress": "",
+        "email": "",
         "companyName": "",
         "send": ""
       }
@@ -57,12 +57,13 @@
       "category": "",
       "subcategory": "",
       "name": "",
-      "seemore": ""
+      "seeMore": ""
     },
     "addCompany": {
       "title": "",
       "text": "",
       "button": "",
+      "producerCount": "",
       "producers": ""
     }
   },

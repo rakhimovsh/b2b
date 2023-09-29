@@ -3,6 +3,7 @@ import styles from './styles.module.css'
 import {ReactComponent as IconSearch} from "@assets/svg/play-list-search.svg";
 import {ReactComponent as IconProducer} from '@assets/svg/u_react.svg'
 import {ReactComponent as IconContract} from "@assets/svg/ri_shake-hands-line.svg";
+import { useTranslation } from 'react-i18next';
 
 const B2bSolutionContent = ({ Icon, title, text }) => {
   return (
@@ -15,22 +16,23 @@ const B2bSolutionContent = ({ Icon, title, text }) => {
 };
 
 const B2bBlock = () => {
+  const {t} = useTranslation()
   return (
         <div data-aos="fade-right" className={styles.b2bSolution_content}>
           <B2bSolutionContent
             Icon={IconSearch}
-            title='Поиск'
-            text='Сделайте поиск и найдите продукт'
+            title={t('home.b2bSolution.item1.name')}
+            text={t('home.b2bSolution.item1.text')}
           />
           <B2bSolutionContent
             Icon={IconProducer}
-            title='Производитель'
-            text='Связаться с производителями для обсуждения цен'
+            title={t('home.b2bSolution.item2.name')}
+            text={t('home.b2bSolution.item2.text')}
           />
           <B2bSolutionContent
             Icon={IconContract}
-            title='Договор'
-            text='Заключите договор с производителем'
+            title={t('home.b2bSolution.item3.name')}
+            text={t('home.b2bSolution.item3.text')}
           />
         </div>
   )

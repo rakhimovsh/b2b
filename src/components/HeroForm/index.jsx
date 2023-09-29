@@ -9,6 +9,7 @@ import PhoneMasks from '@/data/phoneMasks.js';
 import {Services} from "@/data/services.js";
 import styles from './styles.module.css';
 import {ReactComponent as IconDown} from '@assets/svg/chevron-down.svg'
+import { useTranslation } from 'react-i18next';
 
 
 const HeroForm = () => {
@@ -20,6 +21,7 @@ const HeroForm = () => {
   const [countryCode, setCountryCode] = useState('UZ');
   const [searchParams, setSearchParams] = useSearchParams();
   const serviceId = +searchParams.get('serviceId') || 1;
+  const {t} = useTranslation()
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -49,24 +51,28 @@ const HeroForm = () => {
     <form onSubmit={handleSubmit} className={styles.formContainer}>
       <h3 className={styles.heroForm_title}>
         {' '}
-        Подать заявку на размещение продукта на оптовом рынке
+        {t('home.hero.form.title')}
       </h3>
       <div className={styles.selectBox} style={{ textAlign: 'start' }}>
         <select name='rates' defaultValue={serviceId}>
-          {
+          {/* {
             Services.map(el => (
-              <option key={el.id} value={el.id}>{el.title}</option>
-            ))
-          }
+              ))key={el.id} value={el.id}
+            } */}
+            <option >{t('home.hero.form.international')}</option>
+            <option >{t('home.hero.form.europe')}</option>
+            <option >{t('home.hero.form.asia')}</option>
+            <option >{t('home.hero.form.uzbekistan')}</option>
+          
         </select>
         <IconDown className={styles.selectIcon} />
       </div>
       <div style={{ textAlign: 'start' }}>
-        <p className={styles.formInput_name}>Ваше имя</p>
+        <p className={styles.formInput_name}>{t('home.hero.form.clientName')}</p>
         <input name='name' type='text' placeholder='Ваше имя' className={styles.formClient_name} />
       </div>
       <div style={{ textAlign: 'start', width: '100%' }}>
-        <p className={styles.formInput_name}>Страна</p>
+        <p className={styles.formInput_name}>{t('home.hero.form.country')}</p>
         <CountrySelect
           name='location'
           setPhoneNumber={setPhoneCode}
@@ -74,7 +80,7 @@ const HeroForm = () => {
         />
       </div>
       <div style={{ textAlign: 'start' }}>
-        <p className={styles.formInput_name}>Номер телефона</p>
+        <p className={styles.formInput_name}>{t('home.hero.form.phoneNumber')}</p>
         <InputMask
           name='phone_number'
           type='text'
@@ -84,26 +90,26 @@ const HeroForm = () => {
         />
       </div>
       <div style={{ textAlign: 'start' }}>
-        <p className={styles.formInput_name}>Эл. адрес</p>
+        <p className={styles.formInput_name}>{t('home.hero.form.email')}</p>
         <input
           name='email'
           type='email'
-          placeholder={'Эл. адрес'}
+          placeholder={t('home.hero.form.email')}
           className={styles.formClient_name}
         />
       </div>
       <div style={{ textAlign: 'start' }}>
-        <p className={styles.formInput_name}>Название компании</p>
+        <p className={styles.formInput_name}>{t('home.hero.form.companyName')}</p>
         <input
           name='company_name'
           type='text'
-          placeholder='Название компании'
+          placeholder={t('home.hero.form.companyName')}
           className={styles.formClient_name}
         />
       </div>
 
       <button type='submit' disabled={isFormBtnDisabled} className={styles.heroForm_button}>
-        Отправить
+        {t('home.hero.form.send')}
       </button>
     </form>
   );

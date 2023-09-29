@@ -10,6 +10,7 @@ import { ReactComponent as IconDown } from '@assets/svg/chevron-down.svg';
 
 const SearchProduct = () => {
   const dispatch = useDispatch();
+  const {t} = useTranslation()
   const { i18n } = useTranslation();
   const [filteredSubcategories, setFilteredSubcategories] = useState([]);
   const lang = i18n.language;
@@ -17,11 +18,12 @@ const SearchProduct = () => {
   const { subcategories } = useSelector((state) => state.subcategory);
   const [openFilter, setOpenFilter] = useState(false)
   const [openSubFilter, setOpenSubFilter] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState('Категория продукта ')
-  const [selectedSubcategory, setSelectedSubcategory] = useState('Субкатегория продукта ')
+  const [selectedCategory, setSelectedCategory] = useState(`${t('home.productSearch.category')}`)
+  const [selectedSubcategory, setSelectedSubcategory] = useState(`${t('home.productSearch.subcategory')}`)
   const [searchText, setSearchText] = useState('');
   const [subcategoryId, setSubcategoryId] = useState('');
   const navigate = useNavigate();
+  
 
   useEffect(() => {
     dispatch(getAllCategories());
@@ -45,7 +47,7 @@ const SearchProduct = () => {
   };
   return (
     <div data-aos='fade-right' className={styles.productSearchCard}>
-      <h3 className={styles.productSearch_title}>Пользуйтесь B2B чтобы найти продукт</h3>
+      <h3 className={styles.productSearch_title}>{t('home.productSearch.title')}</h3>
       <div className={styles.productSearch_inputs}>
         {/* <div className={styles.selectCategory_box}>
           <select
@@ -131,12 +133,12 @@ const SearchProduct = () => {
         <input
           onChange={(evt) => setSearchText(evt.target.value)}
           type='text'
-          placeholder='Введите название продукта'
+          placeholder={t('home.productSearch.name')}
           className={styles.productName_input}
         />
       </div>
       <button onClick={handleSearchBtn} className={styles.productSearch_button}>
-        Посмотреть все продукты
+        {t('home.productSearch.seeMore')}
       </button>
       <img className={styles.search_boxImage} src={BoxImage} alt='box' />
     </div>

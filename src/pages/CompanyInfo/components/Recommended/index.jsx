@@ -3,9 +3,11 @@ import styles from './styles.module.css'
 import CompanyCard from "../../../../components/CompanyCard/index";
 import { useEffect } from 'react';
 import { getAllCompanies } from '@/redux/actions/company';
+import { useTranslation } from 'react-i18next';
 
 
 const Recommended = () =>{
+  const {t} = useTranslation()
   const {companies, singleCompany} = useSelector(state => state.company)
   useEffect(()=>{
     
@@ -16,7 +18,7 @@ const Recommended = () =>{
   return (
     <>
       <h2 className={styles.recommendedTitle}>
-        Рекомендуем
+        {t('companies.recommend')}
 
       </h2>
       <div className={styles.recommendedList}>

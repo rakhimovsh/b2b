@@ -5,24 +5,24 @@
       "products": "Product catalogue",
       "services": "Services",
       "contactUs": "Contact us",
-      "addCompany": "+ Add company"
+      "addCompany": "+ Add my company"
     }
   },
   "home": {
     "hero": {
       "title": "International B2B platform for wholesale trade",
       "text": "We will help you find products directly from manufacturers",
-      "serch": "Type a product name",
+      "search": "Type a product name",
       "form": {
         "title": "Submit an application to list a product on the market",
-        "International": "International market",
+        "international": "International market",
         "europe": "European market",
         "asia": "Asian market",
         "uzbekistan": "The market of Uzbekistan",
         "clientName": "Your name",
         "country": "Country",
         "phoneNumber": "Phone number",
-        "eAddress": "Email",
+        "email": "Email",
         "companyName": "Company name",
         "send": "Send"
       }
@@ -57,13 +57,14 @@
       "category": "Product category",
       "subcategory": "Product subcategory",
       "name": "Type product name",
-      "seemore": "See all products"
+      "seeMore": "See all products"
     },
     "addCompany": {
       "title": "Become a supplier on the B2B market and sell your products",
       "text": "International trade",
       "button": "Add my company",
-      "producers": "+1000 manufacturers"
+      "producerCount": "+1000",
+      "producers": "manufacturers"
     }
   },
   "companies": {
@@ -71,7 +72,7 @@
     "businessCategory": "Business category",
     "companyLocation": "Company location",
     "applyFilter": "Apply filter",
-    "products": "Products",
+    "products": "products",
     "more": "More",
     "nextButton": "Next page",
     "companyInfo": {
@@ -84,12 +85,16 @@
       "country": "Country",
       "year": "Year established",
       "workers": "Workers amount" 
-    }
+    },
+    "empty": "Sorry, no products found from this seller.",
+    "advice": "We advise you to look at other companies",
+    "recommend": "We recommend"
   },
   "products": {
     "country": "Choose a country",
     "category": "Categories",
     "clearFilter": "Clear filter",
+    "empty": "Nothing is found",
     "productInfo": {
       "aboutProduct": "Short about product",
       "category": "Categories",
@@ -154,7 +159,8 @@
       "country": "Country",
       "phoneNumber": "Phone number",
       "email": "Email",
-      "product": "The product you are looking for...",
+      "product": "Product name",
+      "description": "The product you are looking for...",
       "send": "Submit a form"
     }
   },

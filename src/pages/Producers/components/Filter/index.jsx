@@ -14,11 +14,12 @@ const Filter = () => {
     const dispatch = useDispatch()
     const {i18n} = useTranslation()
     const lang = i18n.language  
+    const {t} = useTranslation()
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
     const [openFiltergroup, setOpenFiltergroup] = useState(false)
-    const [major, setMajor] = useState('Направление компании')
-    const [place, setPlace] = useState('Расположение  компании')
+    const [major, setMajor] = useState(`${t('companies.businessCategory')}`)
+    const [place, setPlace] = useState(`${t('companies.companyLocation')}`)
     const [search, setSearch] = useState('')
     useEffect(() => {
       dispatch(getAllCompanies(search, major?.id, place?.code))
@@ -37,7 +38,7 @@ const Filter = () => {
                 } 
             </div>
             <div className={styles.searchInput_box}>
-                <input className={styles.searchInput} placeholder='Поиск по имени' onChange={(e) => setSearch(e.target.value)} />
+                <input className={styles.searchInput} placeholder={t('companies.search')} onChange={(e) => setSearch(e.target.value)} />
                 <img className={styles.searchIcon} src={SearchIcon} alt="" />
             </div>
             <div className={styles.checkbox_box}>
@@ -71,7 +72,7 @@ const Filter = () => {
                 }
                 
             </div> */}
-            <button className={styles.filterButton}>Применить фильтр</button>
+            <button className={styles.filterButton}>{t('companies.applyFilter')}</button>
         </div>
     )
 }

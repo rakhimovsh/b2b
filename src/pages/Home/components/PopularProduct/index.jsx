@@ -5,8 +5,10 @@ import ProductCard from '@components/ProductCard/index.jsx';
 import Carousel from '@components/Carousel/index.jsx';
 import { getPopularProducts } from '@/redux/actions/product.js';
 import styles from './styles.module.css';
+import { useTranslation } from 'react-i18next';
 
 const PopularProduct = () => {
+  const {t} = useTranslation()
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { newProducts } = useSelector((state) => state.product);
@@ -35,13 +37,13 @@ const PopularProduct = () => {
   return (
     <div className={styles.layoutBg}>
       <div className={'container ' + styles.newProductContainer}>
-        <h3 className={styles.newProduct_title}>Популярные товары</h3>
+        <h3 className={styles.newProduct_title}>{t('home.popularProducts.title')}</h3>
         
           <Carousel slides={renderProductCards(newProducts.items)} responsive={responsive} />
        
         
         <button onClick={() => navigate('/product')} className={styles.newProduct_button}>
-          Посмотреть больше продуктов
+        {t('home.popularProducts.seeMore')}
         </button>
       </div>
     </div>
