@@ -3,14 +3,14 @@
 }
 
 .wrapper {
-  max-width: 776px;
+  max-width: 900px;
 }
 
 .content {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 70px;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
 }
 
 .title {

@@ -176,10 +176,314 @@
     "step3": ""
   },
   "privacyPolicy": {
-
+    "title": "",
+    "date": "",
+    "text1": "",
+    "text2": "",
+    "internDef": {
+      "title": "",
+      "name": "",
+      "text": ""
+    },
+    "defenitions": "",
+    "defText": "",
+    "defList": {
+      "account": {
+        "name": "",
+        "text": "" 
+      },
+      "Affiliate": {
+        "name": "",
+        "text": "" 
+      },
+      "Company": {
+        "name": "",
+        "text": "" 
+      },
+      "Cookies": {
+        "name": "",
+        "text": "" 
+      },
+      "Country": {
+        "name": "",
+        "text": "" 
+      },
+      "Device": {
+        "name": "",
+        "text": "" 
+      },
+      "PersonalData": {
+        "name": "",
+        "text": "" 
+      },
+      "Service": {
+        "name": "",
+        "text": "" 
+      },
+      "ServiceProvider": {
+        "name": "",
+        "text": "" 
+      },
+      "UsageData": {
+        "name": "",
+        "text": "" 
+      },
+      "Website": {
+        "name": "",
+        "text": "" 
+      },
+      "You": {
+        "name": "",
+        "text": "" 
+      }      
+    },
+    "colUseData": "",
+    "typOfData": "",
+    "persData": {
+      "name": "",
+      "text": "",
+      "list": {
+        "item1": "",
+        "item2": "",
+        "item3": "",
+        "item4": ""
+      }
+    },
+    "usageData": {
+      "name": "",
+      "text": ""
+    },  
+    "trackCook": {
+      "name": "",
+      "text": "",
+      "list": {
+        "strong1": "",
+        "text1": "",
+        "strong2": "",
+        "text2": "",
+        "innerList": {
+          "text1": "",
+          "text2": "",
+          "text3": ""
+        },
+        "strong3": "Necessary / Essential Cookies",
+        "innerList2": {
+          "text1": "",
+          "text2": "",
+          "text3": ""
+        },
+        "strong4": "Cookies Policy / Notice Acceptance Cookies",
+        "innerList3": {
+          "text1": "",
+          "text2": "",
+          "text3": ""
+        },
+        "strong5": "Functionality Cookies",
+        "innerList4": {
+          "text1": "",
+          "text2": "",
+          "text3": "",
+          "text4": ""
+        }
+      }
+    },
+    "useUPerData": {
+      "title": "Use of Your Personal Data",
+      "text": "",
+      "list": {
+        "item1": {
+          "strong": "",
+          "text": ""
+        },
+        "item2": {
+          "strong": "",
+          "text": ""
+        },
+        "item3": {
+          "strong": "",
+          "text": ""
+        },
+        "item4": {
+          "strong": "",
+          "text": ""
+        },
+        "item5": {
+          "strong": "",
+          "text": ""
+        },
+        "item6": {
+          "strong": "",
+          "text": ""
+        },
+        "item7": {
+          "strong": "",
+          "text": ""
+        },
+        "item8": {
+          "strong": "",
+          "text": ""
+        },
+        "item9": {
+          "strong": "",
+          "text": ""
+        },
+        "item10": {
+          "strong": "",
+          "text": ""
+        },
+        "item11": {
+          "strong": "",
+          "text": ""
+        },
+        "item12": {
+          "strong": "",
+          "text": ""
+        }
+      }
+    },
+    "RetenPerData": "",
+    "RetenPerDataText": "",
+    "TransPerData": "",
+    "TransPerDataText": "",
+    "DelPerData": "",
+    "DiscPerData": {
+      "title": "",
+      "list": {
+        "item1": "",
+        "item1Text": "",
+        "item2": "",
+        "item2Text": "",
+        "item3": "",
+        "item3Text": "",
+        "item4": "",
+        "item4Text": "",
+        "item5": "",
+        "item5Text": "",
+        "item6": "",
+        "item6Text": "",
+        "item7": "",
+        "item7Text": "",
+        "item8": "",
+        "item8Text": ""
+      }
+    }
   },
   "termsConditions": {
-
+    "title": "",
+    "data": "",
+    "text": "",
+    "interNDef": "",
+    "inter": "",
+    "interText": "",
+    "defen": "",
+    "defenText": "",
+    "mainList": {
+      "item1": {
+        "strong": "",
+        "text": ""
+      },
+      "item2": {
+        "strong": "",
+        "text": ""
+      },
+      "item3": {
+        "strong": "",
+        "text": ""
+      },
+      "item4": {
+        "strong": "",
+        "text": ""
+      },
+      "item5": {
+        "strong": "",
+        "text": ""
+      },
+      "item6": {
+        "strong": "",
+        "text": ""
+      },
+      "item7": {
+        "strong": "",
+        "text": ""
+      },
+      "item8": {
+        "strong": "",
+        "text": ""
+      },
+      "item9": {
+        "strong": "",
+        "text": ""
+      }
+    },
+    "Acknowledgment": {
+      "title": "",
+      "text1": "",
+      "text2": "",
+      "text3": ""
+    },
+    "LinkToWeb": {
+      "title": "",
+      "text": "" 
+    },  
+    "Termination": {
+      "title": "",
+      "text": "" 
+    },  
+    "LimLiab": {
+      "title": "",
+      "text": "" 
+    },
+    "AsIs": {
+      "title": "",
+      "item1": {
+        "name": "",
+        "text": ""
+      },
+      "item2": {
+        "name": "",
+        "text": ""
+      },
+      "item3": {
+        "name": "",
+        "text": ""
+      },
+      "item4": {
+        "name": "",
+        "text": ""
+      },
+      "item5": {
+        "name": "",
+        "text": ""
+      }
+    },
+    "sevWaiv": {
+      "title": "",
+      "item1": {
+        "name": "",
+        "text": ""
+      },
+      "item2": {
+        "name": "",
+        "text": ""
+      },
+      "item3": {
+        "name": "",
+        "text": ""
+      }
+    },
+    "chanTerm": {
+      "title": "",
+      "item1": {
+        "name": "",
+        "text": "" 
+      },
+      "item2": {
+        "name": "",
+        "text1": "", 
+        "text2": "", 
+        "text3": ""
+      }
+    }
   },
   "footer": {
     "support": {

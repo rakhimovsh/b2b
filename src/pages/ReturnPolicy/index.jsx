@@ -8,34 +8,79 @@ const ReturnPolicy = () => {
     <div className={'container ' + styles.container}>
       <aside className={styles.wrapper}>
         <div className={styles.content}>
-          <h2 className={styles.title}>Политика возврата товара</h2>
-          <img className={styles.img} src={Shield} alt='shield' />
+          <h2 className={styles.title}>Terms and Conditions</h2>
+          <p>Last updated: August 31, 2023</p>
+          <p>Please read these terms and conditions carefully before using Our Service.</p>
+          {/* <img className={styles.img} src={Shield} alt='shield' /> */}
         </div>
-        <ol className={styles.list}>
-          <li>
-            ndustry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-            when an unknown printer took a galley of type and scrambled it to make a type specimen
-            book. It was popularised in the 1960s with the release of Letraset sheets containing m
-            passages, and more recently with desktop publishing software like Aldus PageMaker
-            including version
-          </li>
-          <li>
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </li>
-          <li>
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </li>
-          <li>
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </li>
-          <li>
-            It has survived not only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged.
-          </li>
-        </ol>
+        <h2>Interpretation and Definitions</h2>
+        <h2>Interpretation</h2>
+        <p></p>
+        <h2>Definitions</h2>
+        <p></p>
+        <ul>
+        <li>
+              <strong>To provide and maintain our Service </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+            <li>
+              <strong>Web Beacons. </strong> means
+            </li>
+        </ul>
+        <h2>Acknowledgment</h2>
+        <p></p>
+        <p></p>
+        <p></p>
+        <h2>Links to Other Websites</h2>
+        <p></p>
+        <h2>Termination</h2>
+        <p></p>
+        <h2>Limitation of Liability</h2>
+        <p></p>
+        <h2>"AS IS" and "AS AVAILABLE" </h2>
+        <h2>Disclaimer</h2>
+        <p></p>
+        <h2>Disclaimer</h2>
+        <p></p>
+        <h2>Disclaimer</h2>
+        <p></p>
+        <h2>Disclaimer</h2>
+        <p></p>
+        <h2>Disclaimer</h2>
+        <p></p>
+        <h2>Severability and Waiver</h2>
+        <h2>Severability</h2>
+        <p></p>
+        <h2>Waiver</h2>
+        <p></p>
+        <h2>Translation Interpretation</h2>
+        <p></p>
+        <h2>Changes to These Terms and Conditions</h2>
+        <p></p>
+        <h2>Contact Us</h2>
+        <p></p>
+        <p></p>
+        <p></p>
       </aside>
       <ContactUs />
     </div>
