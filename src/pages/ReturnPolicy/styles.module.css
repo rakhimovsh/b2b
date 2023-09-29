@@ -1,9 +1,10 @@
 .container {
-  padding: 115px 0 200px;
+  padding: 115px 0 200px 0;
 }
 
 .wrapper {
   max-width: 900px;
+  padding-bottom: 100px;
 }
 
 .content {

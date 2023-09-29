@@ -37,14 +37,14 @@ const CompanyInfo = () => {
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}></p>
+                <p className={styles.infoItem}>{singleCompany?.item?.type_position?.translations[lang]?.name}</p>
                 <p style={{color: 'gray'}}>{t('companies.keyCompanyInfo.businessType')}</p>
               </div>
             </div>
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>{singleCompany?.item?.type_position?.translations[lang]?.name}</p>
+                <p className={styles.infoItem}>{singleCompany?.item?.country}</p>
                 <p style={{color: 'gray'}}>{t('companies.keyCompanyInfo.country')}</p>
               </div>
             </div>
