@@ -3,10 +3,11 @@ import {createSearchParams, useNavigate} from 'react-router-dom';
 import { Services as ServicesArr } from '@/data/services.js';
 
 import styles from './styles.module.css';
+import { useTranslation } from 'react-i18next';
 
 const Services = () => {
   const navigate = useNavigate();
-
+  const {t} = useTranslation()
   const handleNavigateBtn = (serviceId) => {
     navigate({
       pathname: "/application",
@@ -15,7 +16,7 @@ const Services = () => {
   }
   return (
     <div className={'container ' + styles.serviceContainer}>
-      <h2 className={styles.serviceTitle}>Сервисы-EMGU</h2>
+      <h2 className={styles.serviceTitle}>{t('services.title')}-EMGU</h2>
       <div className={styles.serviceBox}>
         {ServicesArr.map((service) => (
           <div key={service.id} className={styles.serviceCard}>
@@ -30,6 +31,7 @@ const Services = () => {
             </button>
           </div>
         ))}
+       
       </div>
     </div>
   );

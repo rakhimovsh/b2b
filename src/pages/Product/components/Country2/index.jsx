@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
 import options from "@/data/countries";
 import styles from './styles.module.css'
+import { useTranslation } from 'react-i18next';
 
 const Country2 = ({setCountry}) => {
   const [inputValue, setInputValue] = useState('');
   const [suggestions, setSuggestions] = useState([]);
-
+  const {t} = useTranslation()
   const inputRef = useRef(null);
   const suggestionListRef = useRef(null);
 
@@ -55,7 +56,7 @@ const Country2 = ({setCountry}) => {
     <div className={styles}>
       <input
         type="text"
-        placeholder="Выберите страну"
+        placeholder={t('products.country')}
         value={inputValue}
         onFocus={handleInputFocus}
         onChange={handleInputChange}

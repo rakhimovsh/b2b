@@ -1,6 +1,6 @@
 .countryInput {
     border: 1px solid #EEE;
-    width: 100%;
+    width: 292px;
     padding: 20px;
     font-size: 15px;
     border-radius: 4px;
@@ -17,6 +17,7 @@
     max-height: 157px;
     overflow-y: auto;
     border-radius: 4px;
+    width: 292px;
 }
 .suggestionItem {
     padding: 10px 20px;

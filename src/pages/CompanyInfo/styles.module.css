@@ -60,7 +60,7 @@
 .businessType {
     display: flex;
     gap: 10px;
-    width: 152px;
+    width: 200px;
 }
 .infoItem {
     margin-bottom: 7px;

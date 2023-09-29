@@ -11,14 +11,15 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    width: 100%;
   }
 
 .countrySelect_box {
   position: relative;
-  width: 400px;
+  width: 100%;
 }
 .countrySelect_box select {
-  width: 400px;
+  width: 100%;
 }
 .selectIcon {
   position: absolute;

@@ -27,6 +27,7 @@ const Header = () => {
   const handleChange = (lang) => {
     i18n.changeLanguage(lang);
   };
+  const {t} = useTranslation()
   useEffect(() => {
     const handlewindowClick = (e) => {
       if(isLangSelectOpen && e.target === document.body) {
@@ -65,7 +66,7 @@ const Header = () => {
                 <div  className={styles.langDropdown}>
                   <p onClick={(e) => handleChange('en')} className={styles.langItem}> <EnFlag /> En</p>
                   <p onClick={(e) => handleChange('ru')} className={styles.langItem}> <RuFlag />Ru</p>
-                  <p onClick={(e) => handleChange('uz')} className={styles.langItem}> <UzFlag/> Uz</p>
+                  {/* <p onClick={(e) => handleChange('uz')} className={styles.langItem}> <UzFlag/> Uz</p> */}
                 </div>
               }
             </div>
@@ -85,7 +86,7 @@ const Header = () => {
           </div>
           {/* <button className={styles.headerFisrtButton}>Войти</button> */}
           <button onClick={() => navigate('/application')} className={styles.headerSecondButton}>
-            + Добавить свою компанию
+          {t('header.navbar.addCompany')}
           </button>
           <button onClick={() => setIsNavbarOpen(prevState => !prevState)} className={styles.menuBtn}>
             <Menu />

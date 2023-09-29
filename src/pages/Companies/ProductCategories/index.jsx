@@ -57,6 +57,7 @@ const Subcategory = ({
 const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
+  const {t} = useTranslation()
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { categories } = useSelector((state) => state.category);
@@ -81,7 +82,7 @@ const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) =>
       setOpenedCategoryIds((prev) => prev.filter((el) => el !== categoryId));
     } else {
       setOpenedCategoryIds((prev) => [...prev, categoryId]);
-    }
+    } 
   };
 
 

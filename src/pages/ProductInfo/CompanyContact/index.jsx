@@ -54,7 +54,7 @@ const CompanyContact = ({ companyId }) => {
       
       </div>
       <div className={styles.requestPopUp}>{openMail && <RequestPopUp closeMailModal={setOpenMail} />}</div>
-      <div >{openPhone && <CallPopUp closePhoneModal={setOpenPhone} />}</div>
+      <div >{openPhone && <CallPopUp closePhoneModal={setOpenPhone} singleCompany={singleCompany} />}</div>
     </>
   );
 };

@@ -6,14 +6,16 @@ import B2bBlock from '@components/B2bBlock'
 import SearchProduct from '@components/SearchProduct'
 import CreateCompany from '@components/CreateCompany'
 import ContactUs from '@components/ContactUs'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const {t} = useTranslation()
   return (
     <div className={'container ' + styles.about}>
         <div className={styles.aboutMain}>
             <div className={styles.aboutContent}>
-                <h2 className={styles.aboutTitle}>Export Management Group of Uzbekistan - Крупнейшая международная B2B площадка в городе Коканд.</h2>
-                <p className={styles.aboutText}>Найдите продукцию более 1000 компаний во всех секторах B2B в Ферганской области. Выбирайте и связывайтесь с лучшими поставщиками бесплатно, и мы отправляем по всему миру.</p>
+                <h2 className={styles.aboutTitle}>{t('aboutUs.title')}</h2>
+                <p className={styles.aboutText}>{t('aboutUs.text')}</p>
             </div>
             <LogoSvg className={styles.logo} />
         </div>

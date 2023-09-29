@@ -3,7 +3,7 @@ import styles from './styles.module.css'
 import CallImage from '@assets/images/callImage.png'
 import {ReactComponent as CloseIcon} from '@assets/svg/closeIcon.svg'
 
-const CallPopUp = ({closePhoneModal}) => {
+const CallPopUp = ({closePhoneModal, singleCompany}) => {
   return (
     <div className={styles.popUpBox}>
         <div className={styles.popUpContainer}>
@@ -11,12 +11,12 @@ const CallPopUp = ({closePhoneModal}) => {
             <h3 className={styles.callTitle}>Связаться с продавцом</h3>
             <div className={styles.phoneNumber_box}>
                 <p className={styles.phoneText}>Номер телефона:</p>
-                <p className={styles.phoneNumber}>+998 71 968 99 88</p>
+                <p className={styles.phoneNumber}>{singleCompany?.item?.phone_number}</p>
             </div>
-            <div className={styles.phoneNumber_box}>
+            {/* <div className={styles.phoneNumber_box}>
                 <p className={styles.phoneText}>Номер телефона:</p>
                 <p className={styles.phoneNumber}>+998 71 968 99 88</p>
-            </div>
+            </div> */}
         </div>
         <div>
             <img src={CallImage} className={styles.popUpImage} alt="phone image" />

@@ -1,16 +1,18 @@
+import { useTranslation } from 'react-i18next';
 import styles from './styles.module.css'
 
 import EmptyBox from '@assets/images/empty-box.png'
 
 
 const EmptyProducts = () => {
+  const {t} = useTranslation()
   return (
     <div className={styles.emptyProducts}>
       <div className={styles.emptyProducts_content}>
         <h2>
-          К сожалению, товары этого продавца не найдены
+          {t('companies.empty')}
         </h2>
-        <p>Советуем посмотреть на другие компании</p>
+        <p>{t('companies.advice')}</p>
       </div>
       <img src={EmptyBox} alt='empty box'/>
     </div>

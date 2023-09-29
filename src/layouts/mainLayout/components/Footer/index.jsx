@@ -5,8 +5,10 @@ import { ReactComponent as InstagramIcon } from '@assets/svg/ant-design_instagra
 import { ReactComponent as TelegramIcon } from '@assets/svg/akar-icons_telegram-fill.svg';
 import { ReactComponent as YoutubeIcon } from '@assets/svg/akar-icons_youtube-fill.svg';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Footer = () => {
+  const {t} = useTranslation()
   return (
     <div className='container'>
       <div className={styles.footerContent}>
@@ -18,30 +20,30 @@ const Footer = () => {
           <p className={styles.footerText}>Другие продукты</p>
         </div> */}
         <div className={styles.footerList}>
-          <h4 className={styles.footerTitle}>Служба поддержки</h4>
+          <h4 className={styles.footerTitle}>{t('footer.support.title')}</h4>
           <Link to='/how-to-buy-product ' className={styles.footerText}>
-            Как купить
+            {t('footer.support.howToBuy')}
           </Link>
           <Link to='/for-companies' className={styles.footerText}>
-            Для покупателей
+            {t('footer.support.privacyPolicy')}
           </Link>
-          <Link to='/payment' className={styles.footerText}>
+          {/* <Link to='/payment' className={styles.footerText}>
             Платежи
-          </Link>
+          </Link> */}
           <Link to='/return-policy' className={styles.footerText}>
-            Политика возврата
+            {t('footer.support.termsConditions')}
           </Link>
-          <Link to='/faq' className={styles.footerText}>
+          {/* <Link to='/faq' className={styles.footerText}>
             Вопросы Ответы
-          </Link>
+          </Link> */}
         </div>
         <div className={styles.footerList}>
-          <h4 className={styles.footerTitle}>Быстрые ссылки</h4>
+          <h4 className={styles.footerTitle}>{t('footer.links.title')}</h4>
           <Link to='/contact-us' className={styles.footerText}>
-            Свяжитесь с нами
+            {t('footer.links.contactUs')}
           </Link>
           <Link to='/about' className={styles.footerText}>
-            О компании
+            {t('footer.links.aboutUs')}
           </Link>
         </div>
         <div className={styles.footerSocial}>

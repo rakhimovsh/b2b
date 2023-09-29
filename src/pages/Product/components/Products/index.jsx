@@ -10,6 +10,7 @@ import ProductCard from '../../../../components/ProductCard';
 const Products = ({country}) => {
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
+  const {t} = useTranslation()
   const { products } = useSelector((state) => state.product);
   const lang = i18n.language;
   // const [searchParams, setSearchParams] = useSearchParams();
@@ -41,7 +42,7 @@ const Products = ({country}) => {
         ))
         
       ) : (
-        <h3>Ничего не найдено</h3>
+        <h3>{t('products.empty')}</h3>
       )}
     </div>
   );

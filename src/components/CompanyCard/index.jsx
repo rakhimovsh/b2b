@@ -13,6 +13,7 @@ import { ReactComponent as VerifiedIcon } from '@assets/svg/verified.svg';
 const CompanyCard = ({company}) => {
   const {i18n} = useTranslation()
   const lang = i18n.language  
+  const {t} = useTranslation()
   const navigate = useNavigate()
 
   const getCountryName = () => {
@@ -48,7 +49,7 @@ const CompanyCard = ({company}) => {
         </div>
         <div className={styles.companyInfo}>
           <img src={BoxIcon} alt='box' />
-          <p>{company?.products?.length} товаров</p>
+          <p>{company?.products?.length} {t('companies.products')}</p>
         </div>
         {/* <div className={styles.companyInfo}>
           <VerifiedIcon style={{width: '18px', marginRight: '8px'}} />
@@ -61,7 +62,7 @@ const CompanyCard = ({company}) => {
         {/* <Social /> */}
       </div>
       <div className={styles.moreInfo}>
-        <a href=''>подробнее</a>
+        <a href=''>{t('companies.more')}</a>
         <img src={ArrowRight} alt='arrow' />
       </div>
     </div>

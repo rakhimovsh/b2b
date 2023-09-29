@@ -11,6 +11,7 @@ const Hero = () => {
   const [search, setSearch] = useState('');
   const navigate = useNavigate();
   const { i18n } = useTranslation();
+  const { t } = useTranslation()
   const lang = i18n.language;
 
   // console.log('current lang' , lang);
@@ -24,14 +25,14 @@ const Hero = () => {
     <div className={styles.heroBg}>
       <div className={'container ' + styles.heroContainer}>
         <div className={styles.heroMain}>
-          <h1 className={styles.heroTitle}>Оптовый рынок для каждого случая</h1>
+          <h1 className={styles.heroTitle}>{t('home.hero.title')}</h1>
           <p className={styles.heroText}>
-            Мы поможем вам найти товары произведенные в Узбекистане напрямую от производителей
+            {t('home.hero.text')}
           </p>
           <div className={styles.heroProductCategory}>
             <div className={styles.heroSearch}>
               <input
-                placeholder='Название продукта'
+                placeholder={t('home.hero.search')}
                 className={styles.heroCategory_search}
                 type='text'
                 onChange={(evt) => setSearch(evt.target.value)}

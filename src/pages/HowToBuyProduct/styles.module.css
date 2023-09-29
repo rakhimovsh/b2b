@@ -38,9 +38,9 @@
   display: flex;
   flex-direction: column;
   gap: 65px;
-  padding-left: 30px;
+  padding-left: 50px;
   margin-left: 10px;
-  margin-bottom: 200px;
+  margin-bottom: 100px;
   border-left: 1px solid #1876F2;
   position: relative;
 }
@@ -73,18 +73,18 @@
 
 .item:nth-child(2)::after {
   content: "2";
-  top: 150px;
+  top: 200px;
 }
 
 .item:nth-child(3)::after {
   content: "3";
-  top: 280px;
+  top: 400px;
 }
 
-.item:nth-child(4)::after {
+/* .item:nth-child(4)::after {
   content: "4";
   bottom: 0;
-}
+} */
 
 @media screen and (max-width: 900px) {
   .container {

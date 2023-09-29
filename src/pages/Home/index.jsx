@@ -17,7 +17,7 @@ const Home = () => {
       {/* <NewProduct /> */}
       <PopularProduct />
       <ProductCategory />
-      <WhyMadeInKokand />
+      {/* <WhyMadeInKokand /> */}
       <ProductSearch />
       {/* <FAQHome /> */}
       {/* <Useful /> */}

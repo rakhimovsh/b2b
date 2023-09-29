@@ -54,6 +54,7 @@ const Subcategory = ({
 const CategoryFilter = ({ country }) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
+  const {t} = useTranslation()
   const dispatch = useDispatch();
   const { categories } = useSelector((state) => state.category);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -84,7 +85,7 @@ const CategoryFilter = ({ country }) => {
 
   return (
     <div className={styles.categoryFilter_box}>
-      <h3 onClick={() => {setOpenFilter(!openFilter)}} className={styles.categoryTitle}>Категории</h3>
+      <h3 onClick={() => {setOpenFilter(!openFilter)}} className={styles.categoryTitle}>{t('products.category')}</h3>
       <div className={!openFilter ? styles.categoryBox : styles.filterDisplay} >
         {categories.items?.map((category) => (
           <div key={category?.id}>
@@ -112,7 +113,7 @@ const CategoryFilter = ({ country }) => {
             setOpenedCategoryIds([]);
           }}
         >
-          <CloseIcon /> <p className={styles.clearFilter}>очистить фильтр</p>
+          <CloseIcon /> <p className={styles.clearFilter}>{t('products.clearFilter')}</p>
         </div>
       </div>
     </div>
