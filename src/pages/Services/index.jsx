@@ -14,6 +14,7 @@ const Services = () => {
       search: `?${createSearchParams({serviceId})}`
     })
   }
+  const title = 'fefe'
   return (
     <div className={'container ' + styles.serviceContainer}>
       <h2 className={styles.serviceTitle}>{t('services.title')}-EMGU</h2>
@@ -22,12 +23,13 @@ const Services = () => {
           <div key={service.id} className={styles.serviceCard}>
             <img className={styles.serviceImage} src={service.image} alt='service image' />
             <div className={styles.serviceContent}>
-              <h3 className={styles.serviceName}>{service.title}</h3>
-              <h4 className={styles.servicePrice}>{service.amount}</h4>
-              <p className={styles.serviceText}>{service.desc}</p>
+              <h3 className={styles.serviceName}>{t(service.title)}</h3>
+              {/* <h3 className={styles.serviceName}>{service.title}</h3> */}
+              <h4 className={styles.servicePrice}>{t(service.amount)}</h4>
+              <p className={styles.serviceText}>{t(service.desc)}</p>
             </div>
             <button onClick={() => handleNavigateBtn(service.id)} className={styles.serviceButton}>
-              Получить услугу
+              {t('services.serviceCard1.button')}
             </button>
           </div>
         ))}

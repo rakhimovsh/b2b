@@ -55,14 +55,12 @@ const HeroForm = () => {
       </h3>
       <div className={styles.selectBox} style={{ textAlign: 'start' }}>
         <select name='rates' defaultValue={serviceId}>
-          {/* {
+          {
             Services.map(el => (
-              ))key={el.id} value={el.id}
-            } */}
-            <option >{t('home.hero.form.international')}</option>
-            <option >{t('home.hero.form.europe')}</option>
-            <option >{t('home.hero.form.asia')}</option>
-            <option >{t('home.hero.form.uzbekistan')}</option>
+              <option key={el.id} value={el.id} >{t(el.title)}</option>
+              
+            ))
+          }
           
         </select>
         <IconDown className={styles.selectIcon} />
