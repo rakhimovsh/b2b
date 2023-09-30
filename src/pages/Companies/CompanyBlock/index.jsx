@@ -4,7 +4,7 @@ import Countries from '../../../data/countries.js'
 import { useTranslation } from 'react-i18next'
 import CompProductCarousel from '@components/CompProductCarousel';
 import { truncateString } from '@/utils/truncateString.js';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const CompanyBlock = ({company }) => {
     const responsive = {
@@ -25,16 +25,17 @@ const CompanyBlock = ({company }) => {
     const [searchParams , setSearch] = useSearchParams();
     const search = searchParams.get('search');
     const lang = i18n.language  
+    const {t} = useTranslation()
+    const navigate = useNavigate()
     const getCountryName = () => {
         return(Countries.find(c => c.code.toLowerCase() === company?.country?.toLowerCase())?.name)
     }
 
-    console.log('company' , company.products)
-    console.log('lang' , lang)
+  
     const filtered = company.products.filter(product => product?.translations[lang]?.name.toLowerCase().includes(search.toLowerCase()));
     
     return (
-        <div className={styles.companyCard}>
+        <div onClick={() => {navigate(`/company/info/${company?.id}`)}} className={styles.companyCard}>
             <div className={styles.companyHead}>
                 <img 
                     src={company?.image} 
@@ -56,7 +57,7 @@ const CompanyBlock = ({company }) => {
                 { company?.products.length > 0 
                     ? 
                     <div className={styles.productCarousel}>
-                        <p className={styles.productsFor}>All the products for {search}</p>
+                        <p className={styles.productsFor}>{t('companies.searchCompanies.searchResult')} {search}</p>
                         <CompProductCarousel 
                             slides={filtered.map((product) => {
                                 return (
@@ -73,7 +74,7 @@ const CompanyBlock = ({company }) => {
                     </div>
                     
                     :
-                    <p>No products</p>
+                    <p>{t('companies.searchCompanies.noProducts')}</p>
                 }
                 
                 

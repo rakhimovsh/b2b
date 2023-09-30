@@ -14,9 +14,9 @@ import { ReactComponent as RuFlag } from '@assets/svg/ruFlag.svg';
 import { ReactComponent as EnFlag } from '@assets/svg/enFlag.svg';
 
 const langSelect = {
-  uz: <><UzFlag/> Uz</>,
-  ru: <><RuFlag />Ru</>,
-  en: <><EnFlag /> En</>
+  uz: <><UzFlag/>Uz</>,
+  ru: <><RuFlag/>Ru</>,
+  en: <><EnFlag/>En</>
 }
 
 const Header = () => {
