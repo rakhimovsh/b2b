@@ -3,6 +3,7 @@ import options from "@/data/countries.js";
 
 import styles from './styles.module.css'
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Countries = ({ setCountry}) => {
   const [inputValue, setInputValue] = useState('');
@@ -10,7 +11,7 @@ const Countries = ({ setCountry}) => {
   const navigate = useNavigate();
   const inputRef = useRef(null);
   const suggestionListRef = useRef(null);
-
+  const {t} = useTranslation()
   const handleInputFocus = () => {
     // Show all options when the input is focused
     setSuggestions(options);
@@ -59,7 +60,7 @@ const Countries = ({ setCountry}) => {
     <div className={styles}>
       <input
         type="text"
-        placeholder="Выберите страну"
+        placeholder={t('companies.searchCompanies.country')}
         value={inputValue}
         onFocus={handleInputFocus}
         onChange={handleInputChange}

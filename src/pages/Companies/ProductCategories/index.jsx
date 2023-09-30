@@ -88,7 +88,7 @@ const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) =>
 
   return (
     <div className={styles.categoryFilter_box}>
-      <h3 onClick={() => {setOpenFilter(!openFilter)}} className={styles.categoryTitle}>Категории</h3>
+      <h3 onClick={() => {setOpenFilter(!openFilter)}} className={styles.categoryTitle}>{t('companies.searchCompanies.category')}</h3>
       <div className={!openFilter ? styles.categoryBox : styles.filterDisplay} >
         {categories.items?.map((category) => (
           <div key={category?.id}>
@@ -116,7 +116,7 @@ const ProductCategories = ({ checkedSubcategories , setCheckedSubcategories}) =>
             setOpenedCategoryIds([]);
           }}
         >
-          <CloseIcon /> <p className={styles.clearFilter}>очистить фильтр</p>
+          <CloseIcon /> <p className={styles.clearFilter}>{t('companies.searchCompanies.clearFilter')}</p>
         </div>
       </div>
     </div>

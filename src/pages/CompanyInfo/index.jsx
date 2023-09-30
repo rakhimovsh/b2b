@@ -2,6 +2,7 @@ import styles from './styles.module.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { Parser } from "html-to-react";
 import Company from './components/Company';
+import Countries from '@/data/countries.js'
 import Products from './components/Products';
 import { useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -18,6 +19,10 @@ const CompanyInfo = () => {
   const {t} = useTranslation()
   const lang = i18n.language;
   const htmlParser = new Parser();
+  const getCountryName = () => {
+    return(Countries.find(c => c.code.toLowerCase() === singleCompany?.item?.country?.toLowerCase())?.name)
+  }
+ 
   useEffect(() => {dispatch(getCompanyById(companyId))}, [companyId])
   return (
     <div className='container'>
@@ -37,14 +42,14 @@ const CompanyInfo = () => {
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}></p>
+                <p className={styles.infoItem}>{singleCompany?.item?.type_position?.translations[lang]?.name}</p>
                 <p style={{color: 'gray'}}>{t('companies.keyCompanyInfo.businessType')}</p>
               </div>
             </div>
             <div className={styles.businessType}>
               <BusinessTypeIcon />
               <div>
-                <p className={styles.infoItem}>{singleCompany?.item?.type_position?.translations[lang]?.name}</p>
+                <p className={styles.infoItem}>{getCountryName()}</p>
                 <p style={{color: 'gray'}}>{t('companies.keyCompanyInfo.country')}</p>
               </div>
             </div>

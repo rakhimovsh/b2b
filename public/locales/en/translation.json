@@ -75,6 +75,13 @@
     "products": "products",
     "more": "More",
     "nextButton": "Next page",
+    "searchCompanies": {
+      "country": "Choose a country",
+      "category": "Categories",
+      "clearFilter": "Clear filter",
+      "searchResult": "All the products for ",
+      "noProducts": "No products"
+    },
     "companyInfo": {
       "info": "Information",
       "products": "Products"
@@ -491,7 +498,7 @@
       },
       "item5": {
         "name": "Contact Us",
-        "text": "If you have any questions about these Terms and Conditions, You can contact us:",
+        "text1": "If you have any questions about these Terms and Conditions, You can contact us:",
         "text2": "By visiting this page on our website: https://emgu.uz/contact-us",
         "text3": "By phone number: 998 88 415 0922"
       }
