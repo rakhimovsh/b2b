@@ -28,19 +28,24 @@ const Header = () => {
     i18n.changeLanguage(lang);
   };
   const {t} = useTranslation()
-  useEffect(() => {
-    const handlewindowClick = (e) => {
-      if(isLangSelectOpen && e.target === document.body) {
-        setIsLangSelectOpen(flase)
-      };
-      if(isLangSelectOpen) {
-        window.addEventListener('click', handlewindowClick);
-      }
-      return () => {
-        window.removeEventListener('click', handlewindowClick);
-      };
-    } 
-  }, [isLangSelectOpen])
+  // useEffect(() => {
+  //   const handleWindowClick = (e) => {
+  //     if (isLangSelectOpen && !e.target.closest(`.${styles.langDropdown}`)) {
+  //       setIsLangSelectOpen(false);
+  //     }
+  //   };
+  
+  //   if (isLangSelectOpen) {
+  //     window.addEventListener('click', handleWindowClick);
+  //   } else {
+  //     window.removeEventListener('click', handleWindowClick);
+  //   }
+  
+  //   return () => {
+  //     window.removeEventListener('click', handleWindowClick);
+  //   };
+  // }, [isLangSelectOpen]);
+  
   return (
     <div className={isNavbarOpen ? styles.headerWrapper : ""}>
       <div className={styles.header}>
