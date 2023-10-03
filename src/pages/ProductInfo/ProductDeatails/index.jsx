@@ -43,7 +43,7 @@ const ProductDetails = ({ details }) => {
           </div>
         </div>
       </div>
-      <CompanyContact companyId={details?.campany} />
+      <CompanyContact companyId={details?.company} />
     </div>
   );
 };

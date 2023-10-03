@@ -7,12 +7,6 @@ import { truncateString } from '@/utils/truncateString.js';
 import {getCompaniesById} from "@/redux/actions/company.js";
 import Countries from "@/data/countries.js"
 import styles from './styles.module.css';
-import CapImg from '@assets/images/cap.jpg'
-import JarTwist1 from '@assets/images/twist-jam2.jpg'
-import JarTwist2 from '@assets/images/twist-jam3.jpg'
-
-
-import {ReactComponent as CompanyIcon} from "@assets/svg/building-regular.svg";
 
 const ProductCard = ({product}) => {
   const navigate = useNavigate()
@@ -26,11 +20,11 @@ const ProductCard = ({product}) => {
   }
 
   useEffect(() => {
-    dispatch(getCompaniesById(product?.campany))
+    dispatch(getCompaniesById(product?.company))
   }, [product])
 
-  const findCountry = Countries.find(c => c.code === sortedCompanies[product?.campany]?.country)
-  
+  const findCountry = Countries.find(c => c.code === sortedCompanies[product?.company]?.country)
+   console.log(product)
   return (
     <div id={product?.id} onClick={handleClick} className={styles.newProduct_card}>
       <div className={styles.newProduct_image}>
@@ -45,10 +39,10 @@ const ProductCard = ({product}) => {
       </p>
       <p className={styles.company}>
         {/* <CompanyIcon/> */}
-        {truncateString(sortedCompanies[product?.campany]?.name, 25)}
+        {truncateString(sortedCompanies[product?.company]?.name, 25)}
       </p>
       <p className={styles.country}>
-        <img width={16} src={`https://flagsapi.com/${sortedCompanies[product?.campany]?.country}/flat/64.png`} alt='location' />
+        <img width={16} src={`https://flagsapi.com/${sortedCompanies[product?.company]?.country}/flat/64.png`} alt='location' />
         {findCountry?.name}
       </p>
       <p className={styles.productDescription}>{truncateString(product?.translations[lang]?.short_description, 110)}</p>
