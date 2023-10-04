@@ -170,9 +170,9 @@
   }
 }
 @media screen and (max-width: 750px) {
-  .filterDisplay {
-    /* width: 650px; */
-  }
+  /* .filterDisplay {
+    width: 650px;
+  } */
 }
 @media screen and (max-width: 670px) {
   /* .filterDisplay {

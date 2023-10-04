@@ -57,7 +57,7 @@ const CompanyBlock = ({company }) => {
                 { company?.products.length > 0 
                     ? 
                     <div className={styles.productCarousel}>
-                        <p className={styles.productsFor}>{t('companies.searchCompanies.searchResult')} {search}</p>
+                        <p className={styles.productsFor}>{t('companies.searchCompanies.searchResult')} "{search}"</p>
                         <CompProductCarousel 
                             slides={filtered.map((product) => {
                                 return (
