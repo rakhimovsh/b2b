@@ -15,6 +15,7 @@ const CompanyContact = ({ companyId }) => {
   const { singleCompany } = useSelector((state) => state.company);
   const { i18n } = useTranslation();
   const lang = i18n.language;
+  const {t} = useTranslation()
 
   useEffect(() => {
     if (companyId) dispatch(getCompanyById(companyId));
@@ -44,11 +45,11 @@ const CompanyContact = ({ companyId }) => {
         <div className={styles.btnWrapper}>
           <button onClick={toggleMail} className={styles.btn + " " + styles.primary}>
             <img style={{ marginRight: '6px' }} src={MailSvg} alt='mail icon' />
-            Узнать оптовую цену
+            {t('products.productInfo.knowThePrice.button')}
           </button>
           <button onClick={togglePhone} className={styles.btn}>
             <img style={{ marginRight: '6px' }} src={PhoneIcon} alt='phone icon' />
-            Связаться с продавцом
+            {t('products.productInfo.contact.button')}
           </button>
         </div>
       

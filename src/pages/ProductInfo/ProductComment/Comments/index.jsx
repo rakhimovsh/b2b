@@ -20,6 +20,7 @@ const Comments = ({ comments }) => {
   const [formValues, setFormValues] = useState(initialFormValues);
   const dispatch = useDispatch();
   const { i18n } = useTranslation();
+  const {t} = useTranslation()
   const lang = i18n.language;
   const toast = useToast();
   const { singleProduct, productComment } = useSelector((state) => state.product);
@@ -67,14 +68,14 @@ const Comments = ({ comments }) => {
       {!comments?.length && (
         <>
           <h3 className={styles.commentsTitle}>
-            Будьте первым, кто оставил отзыв на “{singleProduct.item?.translations[lang]?.name}”
+            {t('products.productInfo.comments.beFirst')} “{singleProduct.item?.translations[lang]?.name}”
           </h3>
           <p className={styles.commentNote}>
-            Ваш адрес email не будет опубликован. Обязательные поля помечены *
+            {t('products.productInfo.comments.text')}
           </p>
         </>
       )}
-      <p className={styles.clientNote}>Ваша оценка *</p>
+      <p className={styles.clientNote}>{t('products.productInfo.comments.mark')}</p>
       <div className={styles.productMark}>
         <RatingStars rating={rating} setRating={setRating} isEditable />
       </div>
@@ -82,7 +83,7 @@ const Comments = ({ comments }) => {
       
       <div className={styles.contactInputs_box} >
         <div>
-          <p className={styles.clientNote}>Ваш отзыв *</p>
+          <p className={styles.clientNote}>{t('products.productInfo.comments.comment')}</p>
           <textarea
             onChange={handleChange}
             value={formValues.review_comment}
@@ -94,7 +95,7 @@ const Comments = ({ comments }) => {
         </div>
         <div>
         <div>
-          <p className={styles.clientNote}>Имя *</p>
+          <p className={styles.clientNote}>{t('products.productInfo.comments.name')}</p>
           <input
             value={formValues.name}
             name='name'
@@ -104,7 +105,7 @@ const Comments = ({ comments }) => {
           />
         </div>
         <div>
-          <p className={styles.clientNote}>Email *</p>
+          <p className={styles.clientNote}>{t('products.productInfo.comments.email')}</p>
           <input
             value={formValues.email}
             name='email'
@@ -127,7 +128,7 @@ const Comments = ({ comments }) => {
         onClick={handleFormBtn}
         className={styles.sendButton}
       >
-        Отправить
+        {t('products.productInfo.comments.send')}
       </button>
       <div>
         {comments?.map((comment) => (
