@@ -7,6 +7,7 @@ import RatingStars from '@components/RatingStars/index.jsx';
 const ProductDetails = ({ details }) => {
   const { i18n } = useTranslation();
   const lang = i18n.language;
+  const {t} = useTranslation()
   return (
     <div className={styles.productData}>
       <div className={styles.productDetails_conatiner}>
@@ -20,13 +21,13 @@ const ProductDetails = ({ details }) => {
         <div className={styles.productDetails}>
           {/*<ProductDescription compound={details?.translations[lang]?.compound} />*/}
           <div>
-            <p className={styles.description}>Коротко о продукте</p>
+            <p className={styles.description}>{t('products.productInfo.aboutProduct')}</p>
             <div className={styles.productCategory}>
               {details?.translations[lang]?.short_description}
             </div>
           </div>
           <div>
-            <p className={styles.description}>Категории</p>
+            <p className={styles.description}>{t('products.productInfo.category')}</p>
             <div className={styles.productCategory}>
               <button className={styles.productCategory_button}>
                 {details?.category?.translations[lang]?.name}
@@ -34,7 +35,7 @@ const ProductDetails = ({ details }) => {
             </div>
           </div>
           <div>
-            <p className={styles.description}>Метки</p>
+            <p className={styles.description}>{t('products.productInfo.tags')}</p>
             <div className={styles.productCategory}>
               <button className={styles.productCategory_button}>
                 {details?.translations[lang]?.tag}

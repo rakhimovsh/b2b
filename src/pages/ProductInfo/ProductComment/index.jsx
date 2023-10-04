@@ -9,6 +9,7 @@ const ProductComment = ({product}) => {
   const [commentBlock, setCommentblock] = useState(1)
   const {i18n} = useTranslation()
   const lang = i18n.language;
+  const {t} = useTranslation()  
   const htmlParser = new Parser();
   return (
     <div>
@@ -18,10 +19,10 @@ const ProductComment = ({product}) => {
           className={ commentBlock === 1 ? styles.active : styles.notActive }
           onClick={ () => setCommentblock(1) }
         >
-          Описание
+          {t('products.productInfo.description')}
         </p>
         <p className={ commentBlock === 2 ? styles.active : styles.notActive }
-           onClick={ () => setCommentblock(2) }>Отзывы ({product?.product_reviews?.length})</p>
+           onClick={ () => setCommentblock(2) }>{t('products.productInfo.comments.title')} ({product?.product_reviews?.length})</p>
         {/*<p className={ commentBlock === 3 ? styles.active : styles.notActive }*/}
         {/*   onClick={ () => setCommentblock(3) }>Информация о продавце</p>*/}
       </div>

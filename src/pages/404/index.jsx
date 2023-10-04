@@ -1,8 +1,10 @@
+import { useTranslation } from 'react-i18next'
 import styles from './styles.module.css'
 import NotFoundImg from '@assets/images/not-found.png'
 
 
 const NotFound = () =>{
+  const {t} = useTranslation()
   return (
     <div className={'container ' + styles.notFoundContainer}>
       <div>
@@ -10,7 +12,7 @@ const NotFound = () =>{
           404 error
         </h1>
         <p>
-          к сожалению ничего не найдено
+          {t('companies.noCompany')}
         </p>
       </div>
       <div>

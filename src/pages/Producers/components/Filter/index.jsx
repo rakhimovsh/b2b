@@ -29,7 +29,7 @@ const Filter = () => {
         <div className={styles.filterContainer}>
             <div className={styles.filterGroup_container}>
                 <div onClick={() => {setOpenFiltergroup(!openFiltergroup)}} className={styles.filterGroup}>
-                    <p className={styles.filterName}>Фильтр</p><IconDown />
+                    <p className={styles.filterName}>{t('companies.filter')}</p><IconDown />
                 </div>
                 {openFiltergroup && 
                     <div className={styles.filterGroup_box}>

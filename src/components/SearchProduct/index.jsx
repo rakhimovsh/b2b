@@ -18,8 +18,8 @@ const SearchProduct = () => {
   const { subcategories } = useSelector((state) => state.subcategory);
   const [openFilter, setOpenFilter] = useState(false)
   const [openSubFilter, setOpenSubFilter] = useState(false)
-  const [selectedCategory, setSelectedCategory] = useState(`${t('home.productSearch.category')}`)
-  const [selectedSubcategory, setSelectedSubcategory] = useState(`${t('home.productSearch.subcategory')}`)
+  const [selectedCategory, setSelectedCategory] = useState('home.productSearch.category')
+  const [selectedSubcategory, setSelectedSubcategory] = useState('home.productSearch.subcategory')
   const [searchText, setSearchText] = useState('');
   const [subcategoryId, setSubcategoryId] = useState('');
   const navigate = useNavigate();
@@ -73,7 +73,7 @@ const SearchProduct = () => {
         </div> */}
         <div>
           <div className={styles.selectCategory_box1} onClick={() => setOpenFilter(!openFilter)}>
-            <p  className={styles.filterTitle}>{selectedCategory}</p> 
+            <p  className={styles.filterTitle}>{t(selectedCategory)}</p> 
             <IconDown className={styles.selectIcon}/>
           </div>
           {openFilter && 
@@ -93,7 +93,7 @@ const SearchProduct = () => {
         </div>
         <div>
           <div style={{opacity: filteredSubcategories?.length ? 1 : 0.6}} className={styles.selectCategory_box1} onClick={() => filteredSubcategories?.length ? setOpenSubFilter(!openSubFilter) : null}>
-            <p  className={styles.filterTitle} >{selectedSubcategory}</p> 
+            <p  className={styles.filterTitle} >{t(selectedSubcategory)}</p> 
             <IconDown className={styles.selectIcon}/>
           </div>
           {openSubFilter && 
