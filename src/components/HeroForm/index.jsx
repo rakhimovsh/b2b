@@ -67,7 +67,7 @@ const HeroForm = () => {
       </div>
       <div style={{ textAlign: 'start' }}>
         <p className={styles.formInput_name}>{t('home.hero.form.clientName')}</p>
-        <input name='name' type='text' placeholder='Ваше имя' className={styles.formClient_name} />
+        <input name='name' type='text' placeholder={t('home.hero.form.clientName')} className={styles.formClient_name} />
       </div>
       <div style={{ textAlign: 'start', width: '100%' }}>
         <p className={styles.formInput_name}>{t('home.hero.form.country')}</p>
