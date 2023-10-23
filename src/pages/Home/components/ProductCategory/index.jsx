@@ -40,7 +40,9 @@ const ProductCategory = () => {
       </div>
       <Carousel slides=
           {categories.items?.map((category) => (
+            
             <div className={styles.productCategory_box}>
+              
               <div key={category?.id} className={styles.productCategory_card}>
                 <div className={styles.productImage2_bg}>
                   <img src={category?.image}  alt='thread' />
@@ -60,9 +62,11 @@ const ProductCategory = () => {
               </div>
             </div>
           ))}
+          
           responsive={responsive}          
       
       />
+      
     </div>
   );
 };

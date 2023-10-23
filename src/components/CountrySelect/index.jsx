@@ -9,6 +9,7 @@ const CountrySelect = ({ name, setPhoneNumber, setCountryCode }) => {
       const res = Countries.find(country => country.code === evt.target.value)
       setPhoneNumber(res.dial_code)
       setCountryCode(res.code)
+      
     }
   }
   return (
