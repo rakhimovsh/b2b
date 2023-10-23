@@ -40,6 +40,9 @@
         margin-left: 0;
         gap: 20px;
     }
+    .productCard_box {
+        height: 442px;
+    }
     
 }
 @media screen and (max-width: 1000px) {
@@ -48,6 +51,14 @@
     }
     .productImage {
         width: 355px;
+    }
+    .productCard_box{
+        height: 452px;
+    }
+}
+@media screen and (max-width: 610px) {
+    .productCard_box {
+        height: 457px;
     }
 }
 @media screen and (max-width: 580px) {
@@ -60,5 +71,10 @@
     }
     .productsContainer {
         gap: 12px;
+    }
+}
+@media screen and (max-width: 395px) {
+    .productCard_box {
+        height: 462px;
     }
 }

@@ -47,6 +47,7 @@ const HeroForm = () => {
     }
     setIsFormBtnDisabled(applicationForPlacement.loading);
   }, [applicationForPlacement.response]);
+  
   return (
     <form onSubmit={handleSubmit} className={styles.formContainer}>
       <h3 className={styles.heroForm_title}>
@@ -86,7 +87,9 @@ const HeroForm = () => {
           className={styles.formClient_name}
           mask={`${PhoneMasks[countryCode].replace(/9/gim, '\\9').replace(/#/gim, '9')} `}
         />
+       
       </div>
+      
       <div style={{ textAlign: 'start' }}>
         <p className={styles.formInput_name}>{t('home.hero.form.email')}</p>
         <input
@@ -110,6 +113,7 @@ const HeroForm = () => {
         {t('home.hero.form.send')}
       </button>
     </form>
+    
   );
 };
 

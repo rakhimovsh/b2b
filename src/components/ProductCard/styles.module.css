@@ -118,7 +118,9 @@
 @media screen and (max-width: 395px) {
   .newProduct_card {
     max-width: 300px;
+    height: 461px;
   }
+
 }
 @media screen and (max-width: 370px) {
   .newProduct_card {
