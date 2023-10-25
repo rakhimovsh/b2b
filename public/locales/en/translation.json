@@ -8,6 +8,10 @@
       "addCompany": "+ Add my company"
     }
   },
+  "toast": {
+    "fill": "All form fields must be filled out",
+    "success": "Application sent successfully"
+  },
   "home": {
     "hero": {
       "title": "International B2B platform for wholesale trade",
