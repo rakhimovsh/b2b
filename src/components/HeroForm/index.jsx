@@ -38,12 +38,12 @@ const HeroForm = () => {
       dispatch(createApplicationForPlacement(request));
       evt.target.reset();
     } else {
-      toast('Все поля формы должны быть заполнены', 'warning', { position: 'top-center' });
+      toast(`${t('toast.fill')}`, 'warning', { position: 'top-center' });
     }
   };
   useEffect(() => {
     if (applicationForPlacement.response) {
-      toast('Заявка отправлена успешно', 'success', { position: 'top-center' });
+      toast(`${t('toast.success')}`, 'success', { position: 'top-center' });
     }
     setIsFormBtnDisabled(applicationForPlacement.loading);
   }, [applicationForPlacement.response]);
