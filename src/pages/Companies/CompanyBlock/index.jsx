@@ -35,8 +35,8 @@ const CompanyBlock = ({company }) => {
     const filtered = company.products.filter(product => product?.translations[lang]?.name.toLowerCase().includes(search.toLowerCase()));
     
     return (
-        <div onClick={() => {navigate(`/company/info/${company?.id}`)}} className={styles.companyCard}>
-            <div className={styles.companyHead}>
+        <div  className={styles.companyCard}>
+            <div onClick={() => {navigate(`/company/info/${company?.id}`)}} className={styles.companyHead}>
                 <img 
                     src={company?.image} 
                     alt="company logo" 
@@ -56,7 +56,7 @@ const CompanyBlock = ({company }) => {
                 
                 { company?.products.length > 0 
                     ? 
-                    <div className={styles.productCarousel}>
+                    <div onClick={() => {navigate(`/company/info/${company?.id}`)}} className={styles.productCarousel}>
                         <p className={styles.productsFor}>{t('companies.searchCompanies.searchResult')} "{search}"</p>
                         <CompProductCarousel 
                             slides={filtered.map((product) => {
