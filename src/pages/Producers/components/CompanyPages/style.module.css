@@ -36,8 +36,13 @@
     align-items: center;
     cursor: pointer;
 }
-@media screen and (max-width: 1150px) {
-    .pagesButtons {
-        display: none;
+@media screen and (max-width: 800px) {
+    .pagesBtn1 {
+        /* display: none; */
+        padding: 10px 12px;
+        font-size: 14px;
+    }
+    .pagesbtn_next {
+        padding: 8px 12px;
     }
 }
