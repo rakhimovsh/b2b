@@ -18,8 +18,8 @@ const Filter = () => {
     const [openMajor, setOpenMajor] = useState(false)
     const [openPlace, setOpenPlace] = useState(false)
     const [openFiltergroup, setOpenFiltergroup] = useState(false)
-    const [major, setMajor] = useState(`${t('companies.businessCategory')}`)
-    const [place, setPlace] = useState(`${t('companies.companyLocation')}`)
+    const [major, setMajor] = useState('companies.businessCategory')
+    const [place, setPlace] = useState('companies.companyLocation')
     const [search, setSearch] = useState('')
     useEffect(() => {
       dispatch(getAllCompanies(search, major?.id, place?.code))
@@ -43,7 +43,7 @@ const Filter = () => {
             </div>
             <div className={styles.checkbox_box}>
                 <div onClick={() => {setOpenMajor(!openMajor)}} className={styles.companyMajor_box}>
-                    <p className={styles.filterName}>{typeof major === "string" ? major : truncateString(major.translations[lang].name) }</p><IconDown />
+                    <p className={styles.filterName}>{typeof major === "string" ? t(major) : truncateString(major.translations[lang].name) }</p><IconDown />
                 </div>
                 {openMajor && 
                 <div  className={styles.checkboxes}>
@@ -53,7 +53,7 @@ const Filter = () => {
             </div>
             <div className={styles.companyPlace_box}>
                 <div  onClick={() => {setOpenPlace(!openPlace)}} className={styles.placeFilter}>
-                    <p className={styles.filterName}>{typeof place === "string" ? place : place.name}</p><IconDown />
+                    <p className={styles.filterName}>{typeof place === "string" ? t(place) : place.name}</p><IconDown />
                 </div>
                 { openPlace && 
                     <div className={styles.placeCheckboxes}>
